@@ -1,0 +1,14 @@
+.git
+.superpowers
+.worktrees
+**/.venv
+__pycache__/
+*.py[cod]
+.pytest_cache
+.mypy_cache
+.ruff_cache
+ai/.cache
+ai/runs
+ai/artifacts/transformer
+ai/tests
+.idea

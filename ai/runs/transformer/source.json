@@ -1,0 +1,20 @@
+{
+  "file_checksums": {
+    "model.safetensors": "c8c8abe5914f2543bd6a65019b685dacf25ad39da5f01b680b082876e1947627"
+  },
+  "intended_use": "The model is intended for research and educational purposes.",
+  "license_id": "bsd-3-clause-clear, other",
+  "license_metadata": {
+    "license": [
+      "bsd-3-clause-clear",
+      "other"
+    ],
+    "license_link": "https://www.qualcomm.com/site/responsible-ai-license",
+    "license_name": "qualcomm-responsible-ai-license"
+  },
+  "license_text": "This model is released under the BSD 3-Clause Clear license and the Qualcomm responsible AI license: https://www.qualcomm.com/site/responsible-ai-license",
+  "model_card_checksum": "6b23dbeffa7ed1e3b4ccf95fb5d6b9eb2f8e8041b334042f54f9c3926c128b61",
+  "repo_id": "Qualcomm-AI-Research/BamiBERT",
+  "revision": "57bc1340debbe4e348ec549047a763caebe4a977",
+  "transformers_requirement": "<=5.5.0"
+}

@@ -1,0 +1,23 @@
+.superpowers/
+.worktrees/
+.venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+ai/.cache/
+ai/runs/**/checkpoints/
+ai/runs/**/payload/
+ai/runs/**/.cache/
+ai/runs/**/cache/
+ai/artifacts/transformer/**
+!ai/artifacts/transformer/.gitkeep
+
+# Frontend (Next.js)
+frontend/node_modules/
+frontend/.next/
+frontend/.env*.local

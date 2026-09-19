@@ -1,0 +1,26 @@
+{
+  "backend": "linear",
+  "calibration": {
+    "fitted_on": "720 development OOF rows; five persisted fold calibrators ensembled",
+    "method": "sigmoid"
+  },
+  "data_checksum": "sha256:1675769ac6872f2fff06ab2b4f6ae9f2458a6d7b21f3c59ea38472d2d5c30043",
+  "evaluation_report": "reports/model-selection.md",
+  "git_revision": "3ebcc6e93eb39efe2ddf16abe51b768168a41b15",
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "license": "internal-use-only",
+  "max_input_tokens": null,
+  "model_name": "tfidf-word-char-logreg",
+  "model_version": "1.0.0",
+  "payload_checksum": "sha256:997d2cc2545b9fed99f49b4b0f395fe69aa2b0be6dae045685d96b00b7295337",
+  "preprocessor": {
+    "config_checksum": "sha256:756735fe3ef5f0eac1a6ef38ea32e1d535dcd501c79e9ceef9e491346703bdba",
+    "name": "tfidf-word-bigram-char_wb-trigram (raw view)",
+    "version": "2.0.0"
+  },
+  "schema_version": "1"
+}

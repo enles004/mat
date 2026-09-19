@@ -1,0 +1,10 @@
+id,raw_text,normalized_text,label,aspect,style,noise_types,difficulty,canonical_group_id,generation_batch,review_status
+controlled-v1-negative-00-00-0,Hyundai: máy rung và phản hồi chậm.,Hyundai: máy rung và phản hồi chậm.,negative,engine,review,[],easy,family-negative-00-00,controlled-v1,approved
+controlled-v1-negative-00-00-1,Mình thấy xe Hyundai máy rung và phản hồi chậm.,Mình thấy xe Hyundai máy rung và phản hồi chậm.,negative,engine,comment,[],easy,family-negative-00-00,controlled-v1,approved
+controlled-v1-negative-00-00-5,"Nói thật nha, con H. này máy rung và phản hồi chậm!","Nói thật nha, con H. này máy rung và phản hồi chậm!",negative,engine,conversational,"[""brand_alias""]",hard,family-negative-00-00,controlled-v1,approved
+controlled-v1-neutral-00-00-0,Hyundai: động cơ có thông số ở mức tiêu chuẩn.,Hyundai: động cơ có thông số ở mức tiêu chuẩn.,neutral,engine,review,[],easy,family-neutral-00-00,controlled-v1,approved
+controlled-v1-neutral-00-00-1,Mình thấy xe Hyundai động cơ có thông số ở mức tiêu chuẩn.,Mình thấy xe Hyundai động cơ có thông số ở mức tiêu chuẩn.,neutral,engine,comment,[],easy,family-neutral-00-00,controlled-v1,approved
+controlled-v1-neutral-00-00-5,"Nói thật nha, con Hyundai này động cơ có thông số ở mức tiêu chuẩn! 😐","Nói thật nha, con Hyundai này động cơ có thông số ở mức tiêu chuẩn! 😐",neutral,engine,conversational,"[""emoji""]",hard,family-neutral-00-00,controlled-v1,approved
+controlled-v1-positive-00-00-0,Hyundai: máy chạy êm và phản hồi tốt.,Hyundai: máy chạy êm và phản hồi tốt.,positive,engine,review,[],easy,family-positive-00-00,controlled-v1,approved
+controlled-v1-positive-00-00-1,Mình thấy xe Hyundai máy chạy êm và phản hồi tốt.,Mình thấy xe Hyundai máy chạy êm và phản hồi tốt.,positive,engine,comment,[],easy,family-positive-00-00,controlled-v1,approved
+controlled-v1-positive-00-00-5,"Nói thật nha, con Hyundai này máy chạy êm và phản hồi tốt! overall good","Nói thật nha, con Hyundai này máy chạy êm và phản hồi tốt! overall good",positive,engine,conversational,"[""code_switching""]",hard,family-positive-00-00,controlled-v1,approved

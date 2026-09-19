@@ -1,0 +1,21 @@
+seed: 42
+labels: [negative, neutral, positive]
+baseline:
+  word_ngram_range: [1, 2]
+  char_ngram_range: [3, 5]
+  min_df: 2
+  sublinear_tf: true
+  classifier_c: 2.0
+  max_iter: 2000
+transformer:
+  family: bamibert
+  repo_id: Qualcomm-AI-Research/BamiBERT
+  revision_policy: resolve_main_to_commit_before_download
+  learning_rate: 0.00002
+  train_batch_size: 16
+  eval_batch_size: 32
+  epochs: 4
+  weight_decay: 0.01
+  warmup_ratio: 0.10
+selection:
+  calibration_max_macro_f1_drop: 0.01

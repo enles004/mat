@@ -1,0 +1,11 @@
+.git
+.idea
+docs
+ai/.venv
+ai/.hf-cache
+ai/artifacts/transformer
+ai/runs
+ai/reports
+ai/tests
+frontend/node_modules
+frontend/.next

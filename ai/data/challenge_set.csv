@@ -1,0 +1,75 @@
+id,kind,text,paired_text,expected_label,paired_expected_label,minimum_delta,phenomenon
+mft-01,MFT,"Xe không êm, chạy qua gờ giảm tốc là dội vào ghế.",,negative,,0,negation
+mft-02,MFT,"Sau bảo dưỡng, vô-lăng không còn rung ở tốc độ thấp.",,positive,,0,negation
+mft-03,MFT,Nội thất đẹp nhưng phanh trễ khiến mình không yên tâm.,,negative,,0,mixed_sentiment
+mft-04,MFT,Máy hơi ồn lúc đề-pa nhưng lên đường trường lại rất mượt.,,positive,,0,mixed_sentiment
+mft-05,MFT,"Điều hòa mát nhanh, bù lại hộp số giật rõ khi kẹt xe.",,negative,,0,aspect_conflict
+mft-06,MFT,Khoang sau hơi chật nhưng động cơ bốc và phản hồi chân ga tốt.,,positive,,0,aspect_conflict
+mft-07,MFT,Bản mới cách âm tốt hơn chiếc sedan cũ mình từng lái.,,positive,,0,comparison
+mft-08,MFT,Mức tiêu hao cao hơn mẫu cùng phân khúc dù chạy cùng cung đường.,,negative,,0,comparison
+mft-09,MFT,"Hay thật, xe mới nhận mà màn hình đã treo hai lần.",,negative,,0,restrained_sarcasm
+mft-10,MFT,"Đúng là tiện nghi, cứ mưa là cảm biến lùi báo loạn.",,negative,,0,restrained_sarcasm
+mft-11,MFT,Mình đang xem thông số của Jaecoo J7 bản dẫn động bốn bánh.,,neutral,,0,unseen_model_names
+mft-12,MFT,BYD Sealion 6 cho cảm giác tăng tốc liền mạch trong lần lái thử.,,positive,,0,unseen_model_names
+mft-13,MFT,Xe chay bi giat khi len doc va may keu rat to.,,negative,,0,missing_diacritics
+mft-14,MFT,"Ghế ôm lưng vừa vặn, đi xa đỡ mỏi 🙂",,positive,,0,emoji
+mft-15,MFT,Màn hình phản hồi chậm quá 😞,,negative,,0,emoji
+mft-16,MFT,Phanh chắc!!! Vô-lăng cũng rất thật tay.,,positive,,0,punctuation
+mft-17,MFT,"Xe khum êm, qua đường xấu là rung cả cabin.",,negative,,0,slang_negation
+mft-18,MFT,KIA EV5 VẬN HÀNH ÊM VÀ CÁCH ÂM TỐT.,,positive,,0,casing
+mft-19,MFT,Bản tiêu chuẩn dùng mâm 18 inch và camera lùi.,,neutral,,0,unseen_model_names
+mft-20,MFT,"Giá mềm hơn bản cao cấp, còn trang bị an toàn giữ nguyên.",,positive,,0,comparison
+inv-01,INV,Hyundai chạy êm khi đi phố.,H. chạy êm khi đi phố.,positive,positive,0,brand_abbreviation
+inv-02,INV,Phanh của Hyundai phản hồi hơi trễ.,Phanh của H. phản hồi hơi trễ.,negative,negative,0,brand_abbreviation
+inv-03,INV,Xe không bị hụt ga khi vượt.,Xe ko bị hụt ga khi vượt.,positive,positive,0,slang_negation
+inv-04,INV,Điều hòa không mát khi dừng lâu.,Điều hòa khum mát khi dừng lâu.,negative,negative,0,slang_negation
+inv-05,INV,Khoang lái rất yên tĩnh.,KHOANG LÁI RẤT YÊN TĨNH.,positive,positive,0,casing
+inv-06,INV,HỘP SỐ GIẬT KHI ĐI CHẬM.,Hộp số giật khi đi chậm.,negative,negative,0,casing
+inv-07,INV,Vô-lăng nhẹ và chính xác.,Vô-lăng  nhẹ   và chính xác.,positive,positive,0,spacing
+inv-08,INV,Ghế sau chật khi đủ ba người.,Ghế sau   chật khi đủ ba người.,negative,negative,0,spacing
+inv-09,INV,Camera lùi hiển thị rất nét,Camera lùi hiển thị rất nét!!!,positive,positive,0,punctuation
+inv-10,INV,Máy gằn khi tăng tốc,Máy gằn khi tăng tốc...,negative,negative,0,punctuation
+inv-11,INV,Chạy đường dài vẫn thoải mái 🙂,Chạy đường dài vẫn thoải mái 😊,positive,positive,0,emoji
+inv-12,INV,Mùi nhựa trong cabin khá khó chịu 😞,Mùi nhựa trong cabin khá khó chịu 😔,negative,negative,0,emoji
+inv-13,INV,Phanh êm và dễ kiểm soát.,Phanh em va de kiem soat.,positive,positive,0,missing_diacritics
+inv-14,INV,Động cơ rung mạnh lúc nổ máy.,Dong co rung manh luc no may.,negative,negative,0,missing_diacritics
+inv-15,INV,Ghế ngồi êm ái trên đường dài.,Ghế ngồi êm ái trên đường dài.,positive,positive,0,unicode_normalization
+inv-16,INV,Điều hòa làm lạnh yếu.,Điều hòa làm lạnh yếu.,negative,negative,0,unicode_normalization
+inv-17,INV,Omoda C5 cách âm khá tốt.,omoda c5 cách âm khá tốt.,positive,positive,0,unseen_model_names
+inv-18,INV,Toyota này giữ làn ổn định.,T. này giữ làn ổn định.,positive,positive,0,brand_abbreviation
+inv-19,INV,Bản này có sáu túi khí.,Ban nay co sau tui khi.,neutral,neutral,0,missing_diacritics
+inv-20,INV,Mình không thích độ trễ chân ga.,Mình ko thích độ trễ chân ga.,negative,negative,0,slang_negation
+dir-01,DIR,Xe chạy rất êm.,Xe chạy không êm.,positive,negative,0.20,negation
+dir-02,DIR,Phanh cho cảm giác chắc chắn.,Phanh không cho cảm giác chắc chắn.,positive,negative,0.20,negation
+dir-03,DIR,Nội thất đẹp và vật liệu chắc chắn.,Nội thất đẹp nhưng vật liệu ọp ẹp.,positive,negative,0.15,mixed_sentiment
+dir-04,DIR,"Điều hòa mát nhanh, hộp số sang số mượt.","Điều hòa mát nhanh, nhưng hộp số giật liên tục.",positive,negative,0.15,aspect_conflict
+dir-05,DIR,Mẫu này êm hơn xe cũ của mình.,Mẫu này ồn hơn xe cũ của mình.,positive,negative,0.20,comparison
+dir-06,DIR,Xe mới chạy ổn định ngay từ ngày đầu.,"Hay thật, xe mới mà ngày đầu đã báo lỗi.",positive,negative,0.20,restrained_sarcasm
+dir-07,DIR,Jaecoo J7 tăng tốc mượt.,Jaecoo J7 tăng tốc bị giật.,positive,negative,0.15,unseen_model_names
+dir-08,DIR,Camera ko bị trễ khi vào số lùi.,Camera bị trễ khi vào số lùi.,positive,negative,0.15,slang_negation
+dir-09,DIR,Cabin rộng rãi cho cả gia đình.,Cabin chật chội cho cả gia đình.,positive,negative,0.20,aspect_conflict
+dir-10,DIR,Mức tiêu hao khá tiết kiệm.,Mức tiêu hao rất hao xăng.,positive,negative,0.20,comparison
+dir-11,DIR,Động cơ phản hồi nhanh.,Động cơ phản hồi chậm.,positive,negative,0.20,mixed_sentiment
+dir-12,DIR,Hệ thống giữ làn hoạt động ổn định.,Hệ thống giữ làn hoạt động chập chờn.,positive,negative,0.15,unseen_model_names
+dir-13,DIR,Màn hình sáng rõ và thao tác mượt.,Màn hình mờ và thao tác lag.,positive,negative,0.20,aspect_conflict
+dir-14,DIR,Hàng ghế sau đủ chỗ duỗi chân.,Hàng ghế sau thiếu chỗ duỗi chân.,positive,negative,0.20,aspect_conflict
+dir-15,DIR,Tiếng lốp được cách âm tốt.,Tiếng lốp vọng lớn vào cabin.,positive,negative,0.20,comparison
+dir-16,DIR,Phản hồi chân ga dễ kiểm soát.,Phản hồi chân ga thất thường.,positive,negative,0.15,mixed_sentiment
+dir-17,DIR,Xe không bị rung khi dừng đèn đỏ.,Xe bị rung khi dừng đèn đỏ.,positive,negative,0.20,negation
+dir-18,DIR,Điều hòa mát đều cả hai hàng ghế.,Điều hòa chỉ mát ở hàng ghế trước.,positive,negative,0.15,aspect_conflict
+dir-19,DIR,Cửa đóng chắc và không có tiếng lọc xọc.,Cửa đóng lỏng và có tiếng lọc xọc.,positive,negative,0.20,negation
+dir-20,DIR,Lần lái thử BYD Sealion 6 khá dễ chịu.,Lần lái thử BYD Sealion 6 khá mệt mỏi.,positive,negative,0.15,unseen_model_names
+mft-21,MFT,"Xe dùng hộp số tự động 6 cấp, dung tích bình xăng 55 lít.",,neutral,,0,specification
+mft-22,MFT,Đại lý hẹn giao xe vào cuối tháng này.,,neutral,,0,specification
+mft-23,MFT,"Bản này có thêm màu xám, giá không đổi so với năm ngoái.",,neutral,,0,specification
+mft-24,MFT,Hôm qua mình lái thử 30 phút quanh khu đô thị.,,neutral,,0,specification
+inv-21,INV,Xe có cửa sổ trời toàn cảnh.,Xe co cua so troi toan canh.,neutral,neutral,0,missing_diacritics
+inv-22,INV,Bảo hành 5 năm hoặc 150.000 km.,Bảo hành 5 năm hoặc 150.000 km. 🙂,neutral,neutral,0,emoji
+inv-23,INV,Ghế lái chỉnh điện 8 hướng.,Ghe lai chinh dien 8 huong.,neutral,neutral,0,missing_diacritics
+mft-25,MFT,"Tuyệt vời, xe mới một tuần đã nằm xưởng hai lần.",,negative,,0,restrained_sarcasm
+mft-26,MFT,"Đúng là xe sang, mở điều hòa là nghe tiếng ve kêu.",,negative,,0,restrained_sarcasm
+mft-27,MFT,"Chúc mừng mình, mua xe xong giá xăng tăng luôn.",,negative,,0,restrained_sarcasm
+dir-21,DIR,Hài lòng với mức tiêu hao nhiên liệu của xe.,"Hài lòng ghê, đổ đầy bình đi được có 200 cây.",positive,negative,0.2,restrained_sarcasm
+mft-28,MFT,Không thể chê được độ êm của động cơ này.,,positive,,0,negation
+mft-29,MFT,Chạy đường dài không hề thấy mệt chút nào.,,positive,,0,negation
+dir-22,DIR,"Xe ồn, không muốn ngồi lâu.","Xe không ồn chút nào, ngồi lâu vẫn thoải mái.",negative,positive,0.2,negation

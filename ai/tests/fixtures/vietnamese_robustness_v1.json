@@ -1,0 +1,745 @@
+{
+  "schema_version": "1",
+  "suite": "vietnamese-robustness",
+  "version": 1,
+  "description": "Reviewed 90-case Vietnamese robustness suite (15 categories x 6).",
+  "categories": [
+    "regional-north",
+    "regional-central",
+    "regional-south",
+    "channel-automotive-forum",
+    "channel-social-video-comment",
+    "channel-ecommerce-review",
+    "channel-sales-service-chat",
+    "teencode-abbreviation",
+    "missing-diacritics-typos",
+    "code-switching",
+    "negation-scope",
+    "mixed-aspects",
+    "sarcasm-idiom",
+    "automotive-jargon",
+    "target-ambiguity"
+  ],
+  "cases": [
+    {
+      "id": "RN-01",
+      "category": "regional-north",
+      "text": "Sáng mùa đông Hà Nội nổ máy phát ăn ngay, sưởi kính lái nhanh.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-north/positive)."
+    },
+    {
+      "id": "RN-02",
+      "category": "regional-north",
+      "text": "Đi đèo đá trắng về xe vẫn bốc, phanh ăn là yên tâm.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-north/positive)."
+    },
+    {
+      "id": "RN-03",
+      "category": "regional-north",
+      "text": "Bến xe Nước Ngầm giờ cấm ô tô khách vào đón trong giờ cao điểm.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-north/neutral)."
+    },
+    {
+      "id": "RN-04",
+      "category": "regional-north",
+      "text": "Trạm đăng kiểm Hoàng Mai hẹn tôi sáng thứ Ba tuần sau.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-north/neutral)."
+    },
+    {
+      "id": "RN-05",
+      "category": "regional-north",
+      "text": "Đường Láng giờ tan tầm kẹt cứng, côn số liên tục mỏi nhừ chân.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-north/negative)."
+    },
+    {
+      "id": "RN-06",
+      "category": "regional-north",
+      "text": "Sương muối Phủ Lý bám kính mờ tịt, gạt mưa kêu rít khó chịu.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-north/negative)."
+    },
+    {
+      "id": "RC-01",
+      "category": "regional-central",
+      "text": "Chạy đèo Hải Vân buổi sớm mát rượi, xe ôm cua chắc nịch.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-central/positive)."
+    },
+    {
+      "id": "RC-02",
+      "category": "regional-central",
+      "text": "Cầu Rồng về đêm đẹp, dừng ngắm cảnh mà máy vẫn êm ru.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-central/positive)."
+    },
+    {
+      "id": "RC-03",
+      "category": "regional-central",
+      "text": "Trạm thu phí Hòa Phước đang bảo trì làn số ba.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-central/neutral)."
+    },
+    {
+      "id": "RC-04",
+      "category": "regional-central",
+      "text": "Tui đổ xăng ở cây xăng Thuận Phước gần cầu vượt.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-central/neutral)."
+    },
+    {
+      "id": "RC-05",
+      "category": "regional-central",
+      "text": "Nắng Quảng Trị hắt vô cabin hầm hập, điều hòa thổi mãi ko mát.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-central/negative)."
+    },
+    {
+      "id": "RC-06",
+      "category": "regional-central",
+      "text": "Đường tránh Huế ổ gà chi chít, đi mà xót cả xe.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-central/negative)."
+    },
+    {
+      "id": "RS-01",
+      "category": "regional-south",
+      "text": "Kẹt xa lộ Hà Nội mà chế độ giữ làn chạy mượt, đỡ mệt ghê.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-south/positive)."
+    },
+    {
+      "id": "RS-02",
+      "category": "regional-south",
+      "text": "Máy lạnh sâu, đi Vũng Tàu trưa nắng mà trong xe mát rượi.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-south/positive)."
+    },
+    {
+      "id": "RS-03",
+      "category": "regional-south",
+      "text": "Tui hẹn bảo dưỡng ở đại lý Võ Văn Kiệt sáng mai.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-south/neutral)."
+    },
+    {
+      "id": "RS-04",
+      "category": "regional-south",
+      "text": "Phà Cát Lái bữa nay chạy tới chín giờ tối.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-south/neutral)."
+    },
+    {
+      "id": "RS-05",
+      "category": "regional-south",
+      "text": "Ngập Nguyễn Hữu Cảnh, nước vô tới bậc cửa, mùi ẩm mấy ngày chưa hết.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-south/negative)."
+    },
+    {
+      "id": "RS-06",
+      "category": "regional-south",
+      "text": "Bị xe bồn ép ở vòng xoay An Sương, trầy cả cản mà không ai chịu.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (regional-south/negative)."
+    },
+    {
+      "id": "AF-01",
+      "category": "channel-automotive-forum",
+      "text": "Review sau 10k km: gầm chắc, cách âm tốt, xăng đường trường 6L/100km.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-automotive-forum/positive)."
+    },
+    {
+      "id": "AF-02",
+      "category": "channel-automotive-forum",
+      "text": "So với đời trước thì vô-lăng đầm hơn hẳn, đáng tiền nâng cấp.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-automotive-forum/positive)."
+    },
+    {
+      "id": "AF-03",
+      "category": "channel-automotive-forum",
+      "text": "Bác nào biết lịch thay dầu hộp số CVT của bản này không?",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-automotive-forum/neutral)."
+    },
+    {
+      "id": "AF-04",
+      "category": "channel-automotive-forum",
+      "text": "Em xin thông số mâm zin để mua lốp dự phòng cùng cỡ.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-automotive-forum/neutral)."
+    },
+    {
+      "id": "AF-05",
+      "category": "channel-automotive-forum",
+      "text": "Cảnh báo anh em: bản base cắt mất cảm biến áp suất lốp.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-automotive-forum/negative)."
+    },
+    {
+      "id": "AF-06",
+      "category": "channel-automotive-forum",
+      "text": "Hộp số giật khi kẹt đường, hãng bảo bình thường mà tôi không tin.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-automotive-forum/negative)."
+    },
+    {
+      "id": "SV-01",
+      "category": "channel-social-video-comment",
+      "text": "Clip test xe quá đã, nghe tiếng máy là muốn xuống tiền liền!!!",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-social-video-comment/positive)."
+    },
+    {
+      "id": "SV-02",
+      "category": "channel-social-video-comment",
+      "text": "Chủ kênh review có tâm, quay rõ gầm bệ cho anh em coi.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-social-video-comment/positive)."
+    },
+    {
+      "id": "SV-03",
+      "category": "channel-social-video-comment",
+      "text": "Ai cho mình xin link mua bạt phủ xe với.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-social-video-comment/neutral)."
+    },
+    {
+      "id": "SV-04",
+      "category": "channel-social-video-comment",
+      "text": "Video này quay ở salon nào vậy ad?",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-social-video-comment/neutral)."
+    },
+    {
+      "id": "SV-05",
+      "category": "channel-social-video-comment",
+      "text": "Kênh này nhận tiền quảng cáo rồi khen lố, xe lỗi mà giấu nhẹm.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-social-video-comment/negative)."
+    },
+    {
+      "id": "SV-06",
+      "category": "channel-social-video-comment",
+      "text": "Xem xong clip tai nạn mà rùng mình, xe này an toàn kém quá.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-social-video-comment/negative)."
+    },
+    {
+      "id": "EC-01",
+      "category": "channel-ecommerce-review",
+      "text": "Shop giao thảm lót sàn vừa khít, mùi da nhẹ, 5 sao.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-ecommerce-review/positive)."
+    },
+    {
+      "id": "EC-02",
+      "category": "channel-ecommerce-review",
+      "text": "Bơm lốp điện tử xài ngon, đóng gói kỹ, giao nhanh.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-ecommerce-review/positive)."
+    },
+    {
+      "id": "EC-03",
+      "category": "channel-ecommerce-review",
+      "text": "Đơn này shop tách làm hai kiện, kiện hai tới sau một ngày.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-ecommerce-review/neutral)."
+    },
+    {
+      "id": "EC-04",
+      "category": "channel-ecommerce-review",
+      "text": "Mình đặt màu đen, shop nhắn xác nhận trước khi gửi.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-ecommerce-review/neutral)."
+    },
+    {
+      "id": "EC-05",
+      "category": "channel-ecommerce-review",
+      "text": "Camera hành trình mờ căm, quay đêm không thấy biển số, thất vọng.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-ecommerce-review/negative)."
+    },
+    {
+      "id": "EC-06",
+      "category": "channel-ecommerce-review",
+      "text": "Đặt bạt phủ mà gửi nhầm size, đổi trả phiền phức.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-ecommerce-review/negative)."
+    },
+    {
+      "id": "SC-01",
+      "category": "channel-sales-service-chat",
+      "text": "Em tư vấn nhiệt tình, lái thử xong chốt cọc luôn trong chiều.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-sales-service-chat/positive)."
+    },
+    {
+      "id": "SC-02",
+      "category": "channel-sales-service-chat",
+      "text": "Xưởng gọi báo trước khi thay phụ tùng, minh bạch chi phí.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-sales-service-chat/positive)."
+    },
+    {
+      "id": "SC-03",
+      "category": "channel-sales-service-chat",
+      "text": "Anh cho em xin biển số để tra lịch bảo hành giúp mình nhé.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-sales-service-chat/neutral)."
+    },
+    {
+      "id": "SC-04",
+      "category": "channel-sales-service-chat",
+      "text": "Dạ lịch hẹn của anh dời sang 9 giờ sáng mai giúp em.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-sales-service-chat/neutral)."
+    },
+    {
+      "id": "SC-05",
+      "category": "channel-sales-service-chat",
+      "text": "Hẹn 8 giờ mà 10 giờ chưa ai ngó tới xe tôi.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-sales-service-chat/negative)."
+    },
+    {
+      "id": "SC-06",
+      "category": "channel-sales-service-chat",
+      "text": "Báo giá một đằng, thanh toán một nẻo, làm ăn kiểu gì vậy?",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (channel-sales-service-chat/negative)."
+    },
+    {
+      "id": "TT-01",
+      "category": "teencode-abbreviation",
+      "text": "Xe chay ngon vc, dieu hoa mat lanh lun á.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (teencode-abbreviation/positive)."
+    },
+    {
+      "id": "TT-02",
+      "category": "teencode-abbreviation",
+      "text": "Mâm đẹp xỉu, lên hình bao ngầu lun.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (teencode-abbreviation/positive)."
+    },
+    {
+      "id": "TT-03",
+      "category": "teencode-abbreviation",
+      "text": "Cho e hỏi xe này có bản số sàn ko z?",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (teencode-abbreviation/neutral)."
+    },
+    {
+      "id": "TT-04",
+      "category": "teencode-abbreviation",
+      "text": "Ai bít chỗ dán phim cách nhiệt ok chỉ e vs.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (teencode-abbreviation/neutral)."
+    },
+    {
+      "id": "TT-05",
+      "category": "teencode-abbreviation",
+      "text": "Máy kêu to vl, đi đường dài nhức hết cả đầu.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (teencode-abbreviation/negative)."
+    },
+    {
+      "id": "TT-06",
+      "category": "teencode-abbreviation",
+      "text": "Seller chém giá ghê, né gấp nha mn.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (teencode-abbreviation/negative)."
+    },
+    {
+      "id": "DT-01",
+      "category": "missing-diacritics-typos",
+      "text": "Xe chay em ru, tiet kiem xang dang ke.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (missing-diacritics-typos/positive)."
+    },
+    {
+      "id": "DT-02",
+      "category": "missing-diacritics-typos",
+      "text": "Noi that rong rai, ghe ngoi thoai mai lam.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (missing-diacritics-typos/positive)."
+    },
+    {
+      "id": "DT-03",
+      "category": "missing-diacritics-typos",
+      "text": "Ban nay co may mau, gia bao nhieu vay shop.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (missing-diacritics-typos/neutral)."
+    },
+    {
+      "id": "DT-04",
+      "category": "missing-diacritics-typos",
+      "text": "Cho minh xin dia chi gara gan quan 7.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (missing-diacritics-typos/neutral)."
+    },
+    {
+      "id": "DT-05",
+      "category": "missing-diacritics-typos",
+      "text": "Mua ve chua duoc tuan da hu bom xang, buc minh.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (missing-diacritics-typos/negative)."
+    },
+    {
+      "id": "DT-06",
+      "category": "missing-diacritics-typos",
+      "text": "Giam soc rung lac, chay toc do cao so chet khiep.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (missing-diacritics-typos/negative)."
+    },
+    {
+      "id": "CS-01",
+      "category": "code-switching",
+      "text": "Driving mode Sport phản hồi cực nhạy, very impressive.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (code-switching/positive)."
+    },
+    {
+      "id": "CS-02",
+      "category": "code-switching",
+      "text": "Nội thất luxury thật sự, màn hình full HD nét căng.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (code-switching/positive)."
+    },
+    {
+      "id": "CS-03",
+      "category": "code-switching",
+      "text": "Em cần contact của service center gần nhất ạ.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (code-switching/neutral)."
+    },
+    {
+      "id": "CS-04",
+      "category": "code-switching",
+      "text": "Check giúp mình warranty còn hiệu lực không.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (code-switching/neutral)."
+    },
+    {
+      "id": "CS-05",
+      "category": "code-switching",
+      "text": "Carplay disconnect liên tục, drive mà bực mình.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (code-switching/negative)."
+    },
+    {
+      "id": "CS-06",
+      "category": "code-switching",
+      "text": "Dealer push mua thêm package, feel bị ép giá.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (code-switching/negative)."
+    },
+    {
+      "id": "NS-01",
+      "category": "negation-scope",
+      "text": "Không phải xe nào tầm giá này cũng có cửa sổ trời panorama.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (negation-scope/positive)."
+    },
+    {
+      "id": "NS-02",
+      "category": "negation-scope",
+      "text": "Chẳng những không ồn mà cách âm còn tốt hơn đời cũ.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (negation-scope/positive)."
+    },
+    {
+      "id": "NS-03",
+      "category": "negation-scope",
+      "text": "Không rõ bản này có lốp dự phòng không nữa.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (negation-scope/neutral)."
+    },
+    {
+      "id": "NS-04",
+      "category": "negation-scope",
+      "text": "Chưa thấy hãng công bố mức tiêu hao chính thức.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (negation-scope/neutral)."
+    },
+    {
+      "id": "NS-05",
+      "category": "negation-scope",
+      "text": "Không phải chê nhưng ghế sau chật thì phải nói là chật.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (negation-scope/negative)."
+    },
+    {
+      "id": "NS-06",
+      "category": "negation-scope",
+      "text": "Đừng nói là tiết kiệm, đi phố ngốn không kém xe nào.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (negation-scope/negative)."
+    },
+    {
+      "id": "MA-01",
+      "category": "mixed-aspects",
+      "text": "Máy hơi ồn nhưng bù lại ghế êm và điều hòa mát sâu.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (mixed-aspects/positive)."
+    },
+    {
+      "id": "MA-02",
+      "category": "mixed-aspects",
+      "text": "Giá cao hơn đối thủ chút mà option an toàn đầy đủ.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (mixed-aspects/positive)."
+    },
+    {
+      "id": "MA-03",
+      "category": "mixed-aspects",
+      "text": "Màu trắng cộng thêm tiền, màu đen thì phải chờ hai tháng.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (mixed-aspects/neutral)."
+    },
+    {
+      "id": "MA-04",
+      "category": "mixed-aspects",
+      "text": "Bản số sàn rẻ hơn số tự động đúng mười triệu.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (mixed-aspects/neutral)."
+    },
+    {
+      "id": "MA-05",
+      "category": "mixed-aspects",
+      "text": "Ngoại hình đẹp mà gầm thấp, leo lề là cạ gầm.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (mixed-aspects/negative)."
+    },
+    {
+      "id": "MA-06",
+      "category": "mixed-aspects",
+      "text": "Tiết kiệm xăng thật nhưng máy yếu, vượt xe tải run tay.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (mixed-aspects/negative)."
+    },
+    {
+      "id": "SI-01",
+      "category": "sarcasm-idiom",
+      "text": "Đúng là tiền nào của nấy, sờ vào đâu cũng thấy chắc chắn.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (sarcasm-idiom/positive)."
+    },
+    {
+      "id": "SI-02",
+      "category": "sarcasm-idiom",
+      "text": "Ngon bổ rẻ đúng nghĩa, tìm đỏ mắt mới thấy con này.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (sarcasm-idiom/positive)."
+    },
+    {
+      "id": "SI-03",
+      "category": "sarcasm-idiom",
+      "text": "Người ta bảo của bền tại người, xe nào cũng vậy thôi.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (sarcasm-idiom/neutral)."
+    },
+    {
+      "id": "SI-04",
+      "category": "sarcasm-idiom",
+      "text": "Trăm nghe không bằng một thấy, cứ lái thử rồi tính.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (sarcasm-idiom/neutral)."
+    },
+    {
+      "id": "SI-05",
+      "category": "sarcasm-idiom",
+      "text": "Hay thật, xe mới rửa xong trời đổ mưa ngay được.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (sarcasm-idiom/negative)."
+    },
+    {
+      "id": "SI-06",
+      "category": "sarcasm-idiom",
+      "text": "Tuyệt vời ông mặt trời, bảo dưỡng lần nào cũng phát sinh thêm tiền.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (sarcasm-idiom/negative)."
+    },
+    {
+      "id": "AJ-01",
+      "category": "automotive-jargon",
+      "text": "Turbo lag gần như không có, moment xoắn tới sớm ở vòng tua thấp.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (automotive-jargon/positive)."
+    },
+    {
+      "id": "AJ-02",
+      "category": "automotive-jargon",
+      "text": "Hệ dẫn động AWD bám đường tốt, ESP can thiệp mượt.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (automotive-jargon/positive)."
+    },
+    {
+      "id": "AJ-03",
+      "category": "automotive-jargon",
+      "text": "Xe này dùng phanh đĩa cả bốn bánh, ABS hai kênh.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (automotive-jargon/neutral)."
+    },
+    {
+      "id": "AJ-04",
+      "category": "automotive-jargon",
+      "text": "Dung tích khoang hành lý 514 lít khi gập hàng ghế sau.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (automotive-jargon/neutral)."
+    },
+    {
+      "id": "AJ-05",
+      "category": "automotive-jargon",
+      "text": "Rotuyn lái rơ, đánh lái có độ trễ thấy rõ.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (automotive-jargon/negative)."
+    },
+    {
+      "id": "AJ-06",
+      "category": "automotive-jargon",
+      "text": "Bơm cao áp kêu to, kim phun bẩn nên máy rung giật cục.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (automotive-jargon/negative)."
+    },
+    {
+      "id": "TA-01",
+      "category": "target-ambiguity",
+      "text": "Vợ tôi khen xe êm, còn tôi thì mê nhất cái cốp rộng.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (target-ambiguity/positive)."
+    },
+    {
+      "id": "TA-02",
+      "category": "target-ambiguity",
+      "text": "Thằng bạn lái thử xong khen nức nở, đòi đổi xe luôn.",
+      "expected_label": "positive",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (target-ambiguity/positive)."
+    },
+    {
+      "id": "TA-03",
+      "category": "target-ambiguity",
+      "text": "Người ta đồn đại lý này sắp mở thêm chi nhánh mới.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (target-ambiguity/neutral)."
+    },
+    {
+      "id": "TA-04",
+      "category": "target-ambiguity",
+      "text": "Nghe nói hãng sắp ra bản facelift cuối năm nay.",
+      "expected_label": "neutral",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (target-ambiguity/neutral)."
+    },
+    {
+      "id": "TA-05",
+      "category": "target-ambiguity",
+      "text": "Thợ bảo xe này hay hỏng vặt, nghe mà nản.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (target-ambiguity/negative)."
+    },
+    {
+      "id": "TA-06",
+      "category": "target-ambiguity",
+      "text": "Vợ tôi chê ghế cứng, đi xa là than đau lưng.",
+      "expected_label": "negative",
+      "secondary_tags": [],
+      "notes": "Reviewed robustness case (target-ambiguity/negative)."
+    }
+  ]
+}

@@ -1,0 +1,5441 @@
+version: "2.0.0"
+generation_batch: curated-v2
+# Brands chỉ mang tính metadata tham khảo — generator KHÔNG đọc.
+brands:
+  - name: "Hyundai"
+    alias: "H."
+  - name: "Toyota"
+    alias: "Toy"
+  - name: "Vinfast"
+    alias: "VF"
+  - name: "Kia"
+    alias: ""
+  - name: "Mazda"
+    alias: ""
+  - name: "Ford"
+    alias: ""
+  - name: "Honda"
+    alias: ""
+  - name: "Mitsubishi"
+    alias: "Mitsu"
+  - name: "Mercedes"
+    alias: "Mẹc"
+  - name: "BMW"
+    alias: ""
+aspects:
+  - "động cơ"
+  - "mức tiêu hao nhiên liệu"
+  - "nội thất"
+  - "thiết kế"
+  - "dịch vụ hậu mãi"
+  - "giá cả"
+  - "an toàn"
+  - "công nghệ & tiện nghi"
+styles:
+  - review
+  - comment
+  - comparison
+  - question
+  - short
+  - conversational
+pool:
+  - text: "Sau 20.000 km, động cơ Mazda CX-5 vẫn êm như lúc mới nhận xe, tăng tốc mượt không giật cục."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toy Camry 2.5 của anh chạy nghề 5 năm máy vẫn bốc, lên 120km/h nhẹ nhàng lắm."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Động cơ Vinfast VF 7 chạy đường trường rất im, tới 100km/h là chỉ còn nghe gió thôi."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Ghế da của Hyundai SantaFe ngồi đường dài không mỏi lưng, đệm dày vừa đủ êm."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Sorento hoàn thiện cabin rấttt chắc tay, đi 2 năm không thấy kêu ọp ẹp gì sất."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Mazda2 ở mức dưới 500 triệu mà được trang bị như vậy là quá hời cho người lần đầu mua xe."
+    label: positive
+    aspect: "giá cả"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Giá Ford Territory sau khi giảm đang tốt ghê, mua dc tặng thêm phụ kiện đủ luôn."
+    label: positive
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Máy Hyundai Tucson trên cao tốc có phần hụt hơi, vượt xe phải đạp sâu mới gượng nổi."
+    label: negative
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Nội thất Mitsubishi Xforce ồn quá trời, đi qua đường xấu nghe lạch cạch rõ 😡"
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Vinfast VF 6 sau 3 năm bán lại mất gần nửa giá, ai định chạy lâu phải tính kỹ chuyện này."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Động cơ diesel của Ford Everest ồn và rung khi nguội máy, sáng sớm nổ lên cả xóm nghe."
+    label: negative
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Đi 30.000 km thì ghế trước của Toyota Corolla Cross đã xẹp lún, ngồi lâu ê ối cả lưng."
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Lăn bánh có 1 năm mà giá xe Hyundai Creta đã rớt mạnh, bán lại thiệt nặng hơn tưởng tượng."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Mức tiêu hao của Kia K3 dao động 6.5 đến 7 lít/100km tùy tuyến, đúng như hãng công bố."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Nội thất Vinfast VF 8 dùng vật liệu khá ổn trong tầm giá, chẳng sang cũng chẳng tệ."
+    label: neutral
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Giá xe Mercedes GLC 2026 nhỉnh hơn thế hệ cũ chừng 60 triệu, coi như điều chỉnh theo thị trường."
+    label: neutral
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Động cơ hybrid của Toyota Corolla Cross vận hành mượt, tiết kiệm nhiên liệu rõ rệt so với bản xăng."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 5plus đi phố tiêu hao khoảng 8 lít, chấp nhận được với chiếc xe nặng cỡ này."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Cabin Hyundai Accent cách âm ở mức trung bình, tốc độ cao vẫn nghe hơi nhiều tiếng đường."
+    label: neutral
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Giá Toyota Fortuner tuy cao nhưng giữ giá tốt, bán sau 5 năm thiệt hại ít hơn hẳn mặt bằng chung."
+    label: positive
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Máy Kia Seltos 1.4 turbo bốc ở dải số thấp, chạy trong phố vượt xe thoải mái không chậm chân."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toy Vios tiêu hao chỉ 5.8 lít/100km đường hỗn hợp, chạy nghề tiết kiệm thấy rõ mỗi tháng."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Nội thất Mazda CX-8 nhiều mùi nhựa mới, mới mua về phải mở cửa xe phơi mấy hôm mới chịu được."
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Honda Civic bản 2025 tăng giá gần 100 triệu so với đời trước, đơn giản là không còn hấp dẫn."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Động cơ Vinfast VF 9 nặng gần 2.5 tấn nhưng tăng tốc vẫn khá mượt khi pin đầy, hết nửa pin là chậm dần."
+    label: neutral
+    aspect: "động cơ"
+    style: review
+    difficulty: hard
+    noise_types: []
+  - text: "Máy Mercedes E200 êm như nhung, chạy 150km liên tục không nghe một tiếng động lạ nào cả."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Xăng của BMW 520i khoảng 7.5 lít/100km trên cao tốc, với sedan hạng sang thì thuộc nhóm tốt."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Ford Territory máy 1.5 turbo có phần nhả hơi ít, chạy phố 9 lít là bình thường thôi anh em ạ."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Động cơ của Kia Carnival kéo đủ 7 người cùng hành lý vẫn không ì, leo dốc Đà Lạt phàn nàn được."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 đi 500km đầu máy hơi kêu, sau bảo dưỡng lần đầu thì êm lại bình thường."
+    label: neutral
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "So với xe Nhật, máy Hyundai Stargazer chạy đường trường có phần nhanh chán hơn, dải điện hồi đáp đều."
+    label: positive
+    aspect: "động cơ"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Innova tiêu xăng hơn hẳn Kia Carnival khi kéo đủ người, khác nhau tới 2 lít mỗi trăm cây."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast rẻ hơn đối thủ Nhật khoảng 100 đến 150 triệu cùng phân khúc, đây là lợi thế rõ nhất."
+    label: positive
+    aspect: "giá cả"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Ghế hàng 3 của Hyundai Stargazer thoải mái hơn Mitsubishi Xpander, hai đứa nhỏ ngồi thoải mái suốt chặng dài."
+    label: positive
+    aspect: "nội thất"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Máy Mazda3 yếu hơn Honda Civic một nhịp ở tầm tốc độ trung bình, ai thích phanh gấp sẽ thấy chậm."
+    label: negative
+    aspect: "động cơ"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Về giá trị còn lại sau 5 năm, Toyota giữ tiền tốt hơn Vinfast rõ rệt, đây là điều nhiều người cân nhắc."
+    label: neutral
+    aspect: "giá cả"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Cách âm của Kia K5 tốt hơn Toyota Camry ở dải tiếng gió, nhưng tiếng mặt đường thì ngược lại."
+    label: positive
+    aspect: "nội thất"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Vinfast VF 6 hao hơn Vinfast VF 7 chút xíu dù nhẹ hơn, pin và phương thức chạy quyết định hết."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Nội thất Ford Ranger rít hơn Ford Everest, ai chở gia đình nên chọn Everest cho thoáng ghế sau."
+    label: neutral
+    aspect: "nội thất"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Máy Mazda CX-8 yếu hơn Hyundai SantaFe khi leo dốc, đoàn 6 người là phải nhả số rõ rệt."
+    label: negative
+    aspect: "động cơ"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Morning rẻ nhất phân khúc nhưng trang bị không hề nghèo, so với xe Trung cùng giá vẫn hơn một bậc."
+    label: positive
+    aspect: "giá cả"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsubishi Attrage tiết kiệm hơn Toyota Vios khoảng nửa lít, nhưng cách âm thì thua xa luôn."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Corolla Altis cách âm tốt hơn Mazda3, chạy cao tốc tai không mệt bằng."
+    label: positive
+    aspect: "nội thất"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Xe Trung giá mềm hơn Honda City khoảng 150 triệu, nhưng rồi giữ giá và độ bền thì chuyện khác hẳn."
+    label: neutral
+    aspect: "giá cả"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Máy Vinfast VF 6 yếu hơn đối thủ cùng khối, lấy lại bằng mô-men điện ở dải đầu nhưng dài đường là thấy."
+    label: negative
+    aspect: "động cơ"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Động cơ của Vinfast VF 9 lấy được bao nhiêu km khi chạy cao tốc?"
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Seltos 2026 có máy mới hay vẫn giữ khối 1.4 cũ vậy mọi người?"
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Xăng Vinfast VF 8 cao tốc thực tế bao nhiêu lít, ai chạy dài rồi cho em xin số với."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner máy dầu có đáng cộng thêm 100 triệu so với máy xăng không anh em?"
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Accent giá lăn bánh giờ còn bao nhiêu, có khuyến mãi gì cuối năm không?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Nội thất Kia Carnival có chỉnh điện hàng 3 không hay chỉ hàng 1 vậy mọi người?"
+    label: neutral
+    aspect: "nội thất"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Ford Territory có đáng mua hơn Honda CR-V về máy móc không, ai đi cả hai rồi cho xin ý kiến."
+    label: positive
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 5plus chạy 400km mỗi tuần thì có cần sạc giữa đường không các bác?"
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Mazda CX-5 sau 5 năm máy có ì đi nhiều không, ai dùng lâu rồi trả lời giúp em với."
+    label: negative
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 giá bản cao nhất có đáng chênh 80 triệu so với bản giữa không mọi người?"
+    label: negative
+    aspect: "giá cả"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Động cơ Toyota Hilux máy dầu 2.8 có thực sự bền hơn bản 2.4 không anh em ơi?"
+    label: positive
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Xe Vinfast chạy quãng 300km đầu máy có cần chạy rớt không hay dùng luôn được?"
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Nội thất Mercedes GLB 7 chỗ có chật quá không, chở hai người lớn ba đứa nhỏ có thoải mái không mọi người?"
+    label: neutral
+    aspect: "nội thất"
+    style: question
+    difficulty: hard
+    noise_types: []
+  - text: "Honda CR-V 2026 giá đang là bao nhiêu và có kèm gói bảo dưỡng không mấy bác?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Máy BMW 320i chạy phố tiêu hao thực tế bao nhiêu lít, có tốn như lời đồn không?"
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Yaris Cross có ghế chỉnh điện ghế lái không hay toàn chỉnh tay hết vậy?"
+    label: negative
+    aspect: "nội thất"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF e34 giờ giá còn bao nhiêu và có chương trình đổi pin mới không mọi người?"
+    label: negative
+    aspect: "giá cả"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Máy tuyệt, êm và không tiếng ồn gì hết."
+    label: positive
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Pin sạc nhanh, 30 phút đạt 80%."
+    label: positive
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Cabin rộng, cửa mở thoáng."
+    label: positive
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Ghế êm, đồng hồ kỹ thuật số đẹp mắt."
+    label: positive
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Giá mềm, trả góp nhẹ."
+    label: positive
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Máy ì quá, vượt xe khó chịu."
+    label: negative
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Nội thất kêu lạch cạch ngay năm đầu."
+    label: negative
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Giá cao mà trang bị không tương xứng."
+    label: negative
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Hao xăng bất thường, 10 lít/100km trong phố."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Vận hành bình thường, không điểm nhấn."
+    label: neutral
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Giá thị trường, không đắt không rẻ."
+    label: neutral
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Nội thất đủ dùng, không màu mè."
+    label: neutral
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Tiêu hao trung bình tầm 7 lít."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Máy Toy chạy bốc quáaa, vượt xe nhẹ tênh luôn."
+    label: positive
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: [brand_alias, elongation]
+  - text: "Nội thất Hyundai tạm ổn nhưng cách âm hơi kém."
+    label: negative
+    aspect: "nội thất"
+    style: short
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Vinfast giá giờ cx cạnh tranh hẳn so với trước."
+    label: positive
+    aspect: "giá cả"
+    style: short
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Kia K3 máy hụt, chậm phản hồi 😡"
+    label: negative
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Honda City máy đc, xăng hơi hao chút thôi."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Máy bốc, nội thất ổn, giá hơi chát nhưng đáng."
+    label: positive
+    aspect: "giá cả"
+    style: short
+    difficulty: medium
+    noise_types: []
+  - text: "Vận hành trơn tru, đủ dùng mọi ngày."
+    label: positive
+    aspect: "động cơ"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Xe tôi sạc 2 lần mỗi tuần, mỗi lần 45 phút, cũng tiện đấy chứ."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Bảo hành Vinfast 7 năm nên tôi chạy rất an tâm, hỏng gì cũng có hãng lo."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Nội thất Toyota Raize nhìn đơn giản nhưng dùng thì tiện, đúng chất Nhật."
+    label: neutral
+    aspect: "nội thất"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Động cơ Vinfast Fadil lần nào leo dốc cũng rú lên, nhỏ mà có võ đó mọi người."
+    label: negative
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Mua Mazda CX-8, chủ đại lý giảm ngay 50 triệu, tính ra hời hơn mua trung tâm nhiều."
+    label: positive
+    aspect: "giá cả"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Đi Vinfast VF 6 một tuần, sạc ở nhà ban đêm, sáng ra đầy pin, khỏi ghé trạm."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai Tucson bảo dưỡng lần 2 hết có 1 triệu rưỡi, rẻ hơn tưởng tượng của tôi nhiều."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Máy Kia Seltos của vợ tôi giờ khởi động lúc nào cũng lì lợm, phải đề 2 lần mới nổ 😡"
+    label: negative
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Toyota Vios của bố 10 năm chưa bao giờ dở chứng giữa đường, tin được thật sự."
+    label: positive
+    aspect: "động cơ"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 7 giờ cx đông trên đường phết, thấy hãng nội đã khác rồi."
+    label: neutral
+    aspect: "động cơ"
+    style: conversational
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Giá xe Hyundai đang xuống đều mỗi quý, mua sớm hơn là thiệt ngay ý."
+    label: negative
+    aspect: "giá cả"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Ford Ranger đi phượt 3 năm, chưa lần nào bỏ tôi giữa đường núi."
+    label: positive
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Corolla Cross máy dầu là lựa chọn ổn áp nhất phân khúc hiện tại, ý kiến cá nhân thôi."
+    label: neutral
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast vf 7 chạy đêm lên Ba Vì đầy pin vẫn còn 40%, quá ổn cho chuyến cuối tuần."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Động cơ Mercedes GLB của tôi phát tiếng lách tách khi nguội, hãng bảo là bình thường nhưng tôi không yên tâm."
+    label: negative
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Xăng xe giờ đắt, xe Vinfast sạc ở nhà tiết kiệm hẳn 2 triệu mỗi tháng cho tôi."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Nội thất Kia Morning nhựa là chủ yếu, tiền đó thì thôi, chấp nhận được còn gì."
+    label: neutral
+    aspect: "nội thất"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Đại lý Mazda trả lời hotline nhanh, đặt lịch bảo dưỡng chỉ 5 phút là xong."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Innova máy dầu hụt hơi trên đốc dẫn, chạy đủ tải là rõ nhất mọi người nhá."
+    label: negative
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Thiết kế của Hyundai Elantra nhìn sang hẳn đời cũ, dải đèn ban ngày chạy dọc hốc xe rất tinh."
+    label: positive
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 có dáng xe khép kín và cân đối, đứng trước nhìn lúc nào cũng đã mắt."
+    label: positive
+    aspect: "thiết kế"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Mâm xăm của Kia K5 là chi tiết tôi ưng nhất, nhìn xuống đầu gối nào cũng thấy đẹp."
+    label: positive
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Đuôi xe Ford Ranger Raptor thô nhưng rất ngầu, đèn kiểu dọc nhận diện tốt ban đêm."
+    label: positive
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Veloz Cross nhìn bên ngoài tầm thường quá, như một chiếc MPV giành cho chạy dịch vụ."
+    label: negative
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Màu sơn trắng của Vinfast VF 8 bị ố vàng ở nắp capo chỉ sau 1 năm, thiết kế thì ổn nhưng sơn thất vọng."
+    label: negative
+    aspect: "thiết kế"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 luôn làm tôi nhớ đến chi tiết vô-lăng dạng phẳng, ngồi vào là thấy thể thao hẳn."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Màn hình Mazda CX-5 nhỏ mà dùng mượt, Apple CarPlay nối dây nhận liền không cần chờ."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Cruise control của Toyota Corolla Altis giữ làn ổn định, chạy cao tốc chân tôi được nghỉ hẳn."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai Tucson bản cao có ghế thông gió, mùa hè nóng 38 độ mà lên xe là mát ngay."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Cảnh báo điểm mù của Kia Seltos hay báo nhầm xe máy, thi thoảng nó réo lên oan cho mình."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Màn hình cảm ứng của Honda City giật lag mỗi lần trời lạnh, bấm 3 lần mới ăn lệnh."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 9 có hệ thống giọng nói hay nhận sai lệnh tiếng Việt, gọi mở cửa sổ nó mở rèm."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Phanh của Vinfast VF 6 ăn ngay khi thử phanh gấp trong bãi, tự tin hơn xe xăng tôi từng đi."
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner có 7 túi khí tiêu chuẩn, chở con cái đi xa thấy nhẹ lòng hẳn."
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsubishi Xpander Cross có camera 360 độ, lót bánh vào chỗ hẹp ở chợ là tự tin luôn."
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Đèn pha tự động của Kia Morning cảm ứng nhanh, vào hầm là bật sáng không cần nhắc."
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Phanh của Hyundai Stargazer có vẻ mềm, đạp sâu rưỡi mới dừng hẳn mà xe đầy người."
+    label: negative
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 5 Plus cảnh báo va chạm báo liên tục trên đường đông, chạy 30km/h nó vẫn réo."
+    label: negative
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Innova Cross không có gói ADAS bản thấp, cùng tiền xe Nhật khác thì đầy."
+    label: negative
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Bảo dưỡng định kỳ xe Mazda tại hãng hết 1.2 triệu, họ báo trước từng hạng mục rõ ràng."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Đại lý Vinfast có ứng dụng đặt lịch, xe vào đúng giờ hẹn, thủ tục 10 phút là xong."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai trả bảo hành pin xe điện trong vòng 1 tuần, thay luôn cả cụm không tính tiền."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Đội kỹ thuật của đại lý Toyota kiểm tra 24 hạng mục mỗi lần bảo dưỡng, giấy ghi chi tiết đàng hoàng."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Hotline của Mercedes trả lời chậm, gọi 3 lần mới có người nghe máy vào giờ hành chính."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Đại lý Ford bắt mua gói bảo dưỡng trọn đời mới nhận xe, cảm giác như bị ép kèm hàng."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia báo giá sửa cửa sau va chạm nhỏ tới 8 triệu, ra tiệm ngoài chỉ hết 3 triệu."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Thiết kế của Toyota Camry 2026 giữ nguyên khung cũ, chỉ đổi đèn hậu nhìn kỹ mới thấy."
+    label: neutral
+    aspect: "thiết kế"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 8 thiết kế thì đẹp thật, nhưng số đo khoang chân hàng sau không hơn VF 7 là mấy."
+    label: neutral
+    aspect: "thiết kế"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Ford Territory có vai xe góc cạnh đúng phong cách Mỹ, người thích tròn trịa sẽ chê gắt."
+    label: neutral
+    aspect: "thiết kế"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 9 có cửa sổ trời hai tấm rộng, về đêm nằm ngắm sao trong xe được luôn."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Hilux 2026 bịa lại cản trước nhìn nặng nề, đèn pha như của xe cũ chỉ đổi khung."
+    label: negative
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 đèn hậu liền khối nhìn đêm rất đẹp, đâu cần độ gì thêm."
+    label: positive
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Mâm của Mazda2 theo tôi là đẹp nhất phân khúc, không cần đổi mâm nữa."
+    label: positive
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner mặt ga-lăng to đùng, đeo biển quảng cáo di động vậy thôi."
+    label: negative
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Sơn xe Vinfast VF 7 dễ bám bụi đường đỏ, hai ngày không rửa là xám xịt cả xe."
+    label: negative
+    aspect: "thiết kế"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Corolla Cross bản 2026 thêm màu mới, nhìn cũng ổn mà chẳng đặc biệt gì."
+    label: neutral
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Cửa sổ Kia K5 viền crôm kéo quanh nóc, nhìn cao ráo hẳn so với giá."
+    label: positive
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 5 Plus nhỏ gọn, đỗ nơi chật hẹp dễ hơn hẳn xe nhà hàng xóm."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Camry có sạc không dây cho điện thoại, đặt xuống là sạc luôn tiện phết."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai SantaFe bản cao có màn hình phụ cho hành khách, chuyến đi trẻ con không tranh nhau điện thoại."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 9 trợ lý giọng nói hay hiểu nhầm giọng miền Trung, gọi 3 lần mới ra."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Màn hình của Ford Everest đơ luôn sau khi cập nhật, phải tháo ắc-quy reset mới sống lại."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Sorento có nhớ ghế 2 vị trí, sáng đi chiều về một nút là xong."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Cửa hộc để ly của Toyota Veloz có làm nóng/làm mát, uống trà mùa đông vẫn nóng."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 có camera 360 nét, góc chết nhỏ hẹp nào cũng thấy rõ."
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Innova Cross có 6 túi khí mọi bản, điểm cộng lớn cho gia đình đông con."
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsubishi Xforce có phanh tay điện tử + auto hold, kẹt xe dốc cầu Hà Nội nhẹ cả chân."
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai Accent không có ổn định thân điện tử bản thấp, đọc thông số xong thấy lo cho người mới chạy."
+    label: negative
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF e34 có camera lùi nhưng không vạch dẫn hướng, lùi chỗ chật cứ lo va."
+    label: negative
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner có 7 túi khí tiêu chuẩn tại Việt Nam, điểm cộng lớn so với vài đối thủ."
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Honda CR-V có cảnh báo buồn ngủ phát hiện mắt nhắm, chạy đêm về quê an tâm hơn."
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Ford Territory bản tiêu chuẩn không có túi khí rèm, đọc spec xong hơi hụt hẫng."
+    label: negative
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Mazda CX-8 có phanh tự động khẩn cấp hoạt động chuẩn, thử trong bãi đỗ không xảy ra chuyện gì."
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Vios bản base không có camera lùi, chỉ có cảm biến, quen rồi thì thôi."
+    label: neutral
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 7 với VF 8 cùng ngôn ngữ thiết kế, đứng xa khó phân biệt ai là ai."
+    label: neutral
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 9 to và dày dặn hơn Ford Explorer chút xíu, đứng cạnh mới thấy."
+    label: neutral
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Thiết kế Toyota Innova Cross hiện đại hơn Innova đời cũ nhiều, hết cái dáng xe gia đình nhàm chán."
+    label: positive
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Kia K5 nhìn thể thao hơn Toyota Camry thế hệ này, Camry thì sang trọng kiểu người trung niên."
+    label: neutral
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 vs Hyundai Tucson về ngoại hình, Tucson nhìn sang hơn một bậc dù cùng tầm tiền."
+    label: negative
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Vios 2026 giữ nguyên kiểu dáng 3 năm liền, nhìn phát chán liền không muốn vào showroom."
+    label: negative
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Mercedes GLC thiết kế tinh hơn BMW X3, từng đường gân là có chủ đích chứ không rườm rà."
+    label: positive
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Vinfast VF 7 đèn pha nhìn xấu hơn VF 6, không hiểu nhà thiết kế nghĩ gì."
+    label: negative
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Innova Cross ADAS đầy đủ hơn Fortuner bản thấp, phân khúc cao mà ít đồ an toàn thì kỳ."
+    label: positive
+    aspect: "an toàn"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Tucson camera 360 nét hơn Kia Sportage, so trực tiếp hai xe cùng chỗ đỗ là thấy ngay."
+    label: positive
+    aspect: "an toàn"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 8 hệ thống phanh khẩn cấp ăn nhanh hơn Toyota Camry hybrid khi thử cùng tốc độ."
+    label: positive
+    aspect: "an toàn"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Toyota Vios chỉ có 2 túi khí bản thấp, trong khi Mitsubishi Attrage đã 7 túi, cân lại đi hãng ơi."
+    label: negative
+    aspect: "an toàn"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Seltos bản cao vs Honda HR-V bản cao: Seltos nhiều công nghệ an toàn hơn hẳn một bậc."
+    label: positive
+    aspect: "an toàn"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 màn hình 15 inch ăn đứt màn hình 10 inch của đối thủ Nhật cùng giá."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Camry không có Apple CarPlay không dây, trong khi Kia K5 có sẵn, rõ ràng là tụt hậu."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai SantaFe có 2 màn hình 12.3 inch liền nhau, nhìn sang hơn hẳn Toyota Fortuner bản cùng tiền."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 9 có ghế massage, Ford Explorer bản thấp không có, tiền chênh 200 triệu nhưng giá trị khác biệt."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Màn hình của Mazda3 nhỏ và không cảm ứng rộng, so với Hyundai Elantra thì thua về tiện nghi rõ."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner có cửa gió hàng 3, Kia Carnival có luôn ghế sưởi hàng 3, đắt hơn mà đáng."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Vinfast VF 6 có kết nối xe từ xa qua app, mở máy lạnh trước khi lên xe mùa hè là hạnh phúc."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Morning không có kiểm soát hành trình bản thấp, còn Hyundai i10 bản cùng tiền thì có."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Corolla Altis vs Honda Civic về tiện nghi: Civic nhiều đồ chơi hơn nhưng bảo hành ngắn hơn."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast bảo hành 7 năm, Toyota chỉ 3 năm, ai chạy lâu dài thì con số này nặng ký lắm."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Đại lý Hyundai đông khách nên đặt lịch bảo dưỡng phải chờ 1 tuần, Toyota thì 2 ngày là có slot."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Kia hỗ trợ cứu hộ miễn phí 10 năm, Ford chỉ 5 năm, chạy đường dài thì chuyện này quan trọng."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Mitsubishi phụ tùng chờ hàng hơi lâu, thay cánh cửa sau va chạm mất 3 tuần mới có hàng."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 6 bảo dưỡng xe điện gần như không tốn, chỉ kiểm tra phần mềm và lọc gió."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Camry giữ giá rồi nhưng chi phí bảo dưỡng mỗi lần cao hơn Kia K3 khoảng 40%."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast có trạm sửa chữa lưu động tới nhà, hỏng nhẹ không cần chạy ra đại lý."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Honda hotline giờ ngoài 17h30 là không ai nghe, trong khi Toyota 24/7 luôn có người."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Mercedes có chương trình gọi xe đưa đón khi bảo dưỡng, phiền phức đưa xe đi lại giảm hẳn."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Mazda đại lý nhỏ tỉnh lẻ thiếu phụ tùng, vành xe chờ 1 tháng mới về, Toyota thì sẵn."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Thiết kế xe Vinfast VF 6 đẹp không mọi người, mình thấy đuôi xe hơi cụt?"
+    label: negative
+    aspect: "thiết kế"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 8 mâm 20 inch có đẹp ngoài thực tế không, trong ảnh nhìn hơi to?"
+    label: negative
+    aspect: "thiết kế"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Camry 2026 có bản màu đen nhám không, nhìn trong video rất sang?"
+    label: positive
+    aspect: "thiết kế"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 7 có mấy màu sơn, màu nào bán chạy nhất vậy mọi người?"
+    label: neutral
+    aspect: "thiết kế"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Kia K5 đèn sau chạy qua có đẹp không, mình thích kiểu đèn liền ngang?"
+    label: positive
+    aspect: "thiết kế"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner Legender khác bản thường chỗ nào về ngoại hình vậy anh em?"
+    label: neutral
+    aspect: "thiết kế"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 9 có kích thước lớn nhất phân khúc không hay Ford Explorer vẫn hơn?"
+    label: neutral
+    aspect: "thiết kế"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Palisade Calligraphy có lưới tản nhiệt kiểu mới không, nhìn ảnh nhìn không rõ?"
+    label: positive
+    aspect: "thiết kế"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 5 Plus có gói trang bị ADAS không hay chỉ bản cao mới có?"
+    label: neutral
+    aspect: "an toàn"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Innova Cross bản 2026 có thêm cảnh báo cửa mở khi chạy không vậy mọi người?"
+    label: positive
+    aspect: "an toàn"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Sorento có túi khí giữa hàng ghế trước không, đọc spec thấy thiếu thiếu gì đó?"
+    label: negative
+    aspect: "an toàn"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 hệ thống giữ làn hoạt động tốt trên đường Hồ Chí Minh không, ai chạy rồi cho ý kiến?"
+    label: positive
+    aspect: "an toàn"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner có camera hành trình phía trước không hay chỉ camera lùi thôi?"
+    label: negative
+    aspect: "an toàn"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsubishi Pajero Sport có chế độ địa hình gồm mấy chế độ, leo núi đất đỏ có ổn không?"
+    label: positive
+    aspect: "an toàn"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 9 có cánh cửa sập khi mất điện không, mình lo chuyện này khi mua xe điện?"
+    label: negative
+    aspect: "an toàn"
+    style: question
+    difficulty: hard
+    noise_types: []
+  - text: "Hyundai SantaFe 2026 có cảm biến áp suất lốp không, bản thấp có luôn không mọi người?"
+    label: neutral
+    aspect: "an toàn"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 8 có chức năng tự đỗ xe không, dùng thực tế có chính xác không vậy?"
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Camry 2026 có sạc điện thoại không dây bản thấp không hay chỉ bản cao?"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Carnival có ghế captain seat chỉnh điện không, hạng 2 chỉnh được mấy hướng vậy?"
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 có kết nối CarPlay không dây chưa, bản cập nhật mới có chưa mọi người?"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Mercedes GLC có màn hình kỹ thuật số kính mắt không, nhìn thực tế có nét không?"
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner bản thấp có điều hòa hàng 2 không hay chỉ điều hòa đơn vùng?"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 9 có mấy loa, âm thanh Meridian có xứng tiền không mọi người?"
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Accent có khóa proximity không hay vẫn phải rút chìa khóa ra mở?"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Kia K5 có sưởi ghế hàng trước không, mùa đông Hà Nội cần lắm đó mọi người?"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 có app theo dõi xe từ xa không, báo vị trí xe đâu ra đó không mọi người?"
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast có mấy trung tâm bảo dưỡng ở Hà Nội, có đông khách không vậy mọi người?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Corolla Cross bảo dưỡng mỗi 10.000 km hay 5.000 km vậy mọi người?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Seltos đặt lịch bảo dưỡng online được không hay phải gọi điện tới đại lý?"
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Honda City sửa chữa dột nước sàn có được bảo hành không, xe hết bảo hành chưa vậy?"
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 8 thay pin sau 8 năm có tốn tiền không hay miễn phí hoàn toàn?"
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Vios đổi nhớt 1 lần hết bao nhiêu, có gói bảo dưỡng trọn gói không mọi người?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Mazda CX-5 đại lý nào ở HCM care khách tốt nhất vậy, xin kinh nghiệm với?"
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Ford Ranger gọi cứu hộ trên cao tốc có mất phí không, giờ hành chính gọi có nhanh không?"
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Mercedes có gói bảo dưỡng định kỳ trọn gói 5 năm không, mua có lời không mọi người?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Thiết kế đẹp."
+    label: positive
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Đuôi xe cụt, nhìn thiếu cân đối."
+    label: negative
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Mâm đẹp, màu sơn đều."
+    label: positive
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Cản trước thô, đèn pha tối."
+    label: negative
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Ngoại hình ổn, không nổi bật."
+    label: neutral
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "7 túi khí, phanh ABS."
+    label: positive
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Camera lùi mờ, khó nhìn."
+    label: negative
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Cảnh báo điểm mù chính xác."
+    label: positive
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Không có ổn định thân."
+    label: negative
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "An toàn cơ bản, đủ chuẩn."
+    label: neutral
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Màn hình to, nét."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "App hay lỗi, kết nối chậm."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "CarPlay nối liền mạch."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Loa thường, âm thanh tạm."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Bảo dưỡng rẻ, nhân viên nhiệt tình."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Chờ phụ tùng 3 tuần."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Hotline không ai nghe."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Đặt lịch online, có xe đưa đón."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Bảo hành tiêu chuẩn, không thêm gì."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Thiết kế Vinfast VF 6 nhìn quáaa đẹp ngoài đời, ảnh chụp không nổi bằng."
+    label: positive
+    aspect: "thiết kế"
+    style: short
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Toyota Yaris Cross an toàn cơ bản dc, thêm camera 360 thì tốt hơn."
+    label: neutral
+    aspect: "an toàn"
+    style: short
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Kia K5 đèn hậu đẹp quáaa, ban đêm nhìn từ xa là thấy liền."
+    label: positive
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: [elongation]
+  - text: "Vinfast VF 5 Plus ko có túi khí rèm, hơi tiếc chỗ này."
+    label: negative
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Toyota Camry có sạc điện thoại cx tiện, để điện thoại xuống là chạy."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Hyundai Accent bản base màn hình nhỏ quá, nhìn chưa hiện đại 😐"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Vinfast VF 9 camera 360 nét, đáng tiền đấy."
+    label: positive
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Thiết kế Mazda3 kiểu nữa là lỗi thời rồi."
+    label: negative
+    aspect: "thiết kế"
+    style: short
+    difficulty: medium
+    noise_types: []
+  - text: "Màn hình Ford Everest đơ liên tục, cập nhật hoài không hết lỗi 😡"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Bảo dưỡng Toyota hết 800k, hợp lý."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Đại lý Vinfast hổ trợ lịch hẹn nhanh, có xe đưa đón."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Vinfast VF 7 ngoại hình này chắc 5 năm nữa nhìn vẫn ok, thời thượng mà không quá mốt."
+    label: positive
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner Legender mặt ca-lăng to nhìn hơi lố, nhưng khách doanh nhân thích."
+    label: neutral
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 6 đuôi xe nhìn từ xa cứ tưởng xe sang loại lớn, thiết kế đắt giá thật."
+    label: positive
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Seltos mâm 17 inch xấu quá, đổi mâm khác tốn thêm 8 triệu nữa 😡"
+    label: negative
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Toyota Innova Cross nhìn ngoài giống xe khách 9 chỗ, đúng chất gia đình Việt luôn."
+    label: neutral
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 9 to như con tàu, đỗ bãi xe chung cư tôi là mê cung mới mở được."
+    label: neutral
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Mercedes GLB thiết kế vuông vức kiểu hộp, ai thích dáng tròn trĩnh sẽ không hợp."
+    label: negative
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Camry đèn hậu đêm qua nhìn phát mê luôn, kiểu led chạy dọc sang phết."
+    label: positive
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 5 Plus chạy app đặt xe mở khóa tự động, hành khách lên xe không cần chìa khóa."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Vios màn hình có CarPlay nhưng dây cắm hay lỏng, thi thoảng ngắt giữa chừng khó chịu."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 8 có đầu tư loa 14 cái nghe hay, nhạc bass dày mà không chát tai."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Morning không có điều hòa tự động, chỉnh tay mỗi sáng trời rét là phiền lắm rồi."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai Crena có Apple CarPlay không dây chạy mượt, nghe nhạc offline online đều ổn."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner có ghế lái chỉnh điện nhớ 2 vị trí, đổi người chạy là 1 nút xong."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 có app mở khóa và khởi động từ xa, mùa đông sưởi xe trước khi lên như khách sạn."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Yaris Cross camera lùi nét thấp, trời tối nhìn màn hình cứ mờ mờ lo lo."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 sưởi ghế mùa đông Bắc Bộ là chân lý, không tưởng tượng nổi sống thiếu nó."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsubishi Attrage có cruise control đơn giản, giữ tốc là chính, đỡ mỏi chân đường dài."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Bảo dưỡng Toyota Vios mỗi 5.000 km, chủ xe gọi hotline được nhắc lịch không cần nhớ."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 7 đại lý giờ mở khắp tỉnh, đi tỉnh nào cũng có chỗ sửa pin để ý."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Seltos báo giá thay lốp gồm cả công cân chỉnh, không phát sinh thêm đồng nào."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner đặt lịch bảo dưỡng phải chờ 5 ngày, đông khách quá thì phải nói trước."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Tucson sửa máy lạnh mất 2 tuần, mùa hè oi ả mà xe nằm đại lý là cực hình."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 bảo dưỡng định kỳ báo qua app, xe vào giờ hẹn chính xác tới phút."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Ford Territory chính sách bảo hành đọc kỹ lại thấy nhiều điều khoản trừ, hơi bức xúc."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Mazda CX-5 nhân viên kỹ thuật giải thích từng hạng mục thay thế, trong veo hết mức."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Innova Cross đổi nhớt thêm gói bảo dưỡng trọn gói 5 năm, tính ra tiết kiệm 20%."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Honda CR-V đại lý gọi nhắc bảo dưỡng 3 lần trong tuần, phiền thật sự không cần thiết."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 8 bảo hành 10 năm pin, chạy taxi cũng đỡ lo chuyện pin xuống cấp."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Giá xe Hyundai Accent giảm gần 40 triệu so với đầu năm, mua lúc này là hợp lý nhất."
+    label: positive
+    aspect: "giá cả"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Lăn bánh 3 năm bán lại Toyota Yaris Cross, tôi mất chưa tới 15%, giữ tiền thật sự tốt."
+    label: positive
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 6 bản cao đầu đủ tiện nghi mà rẻ hơn đối thủ Nhật chừng 120 triệu, đáng tiền thật."
+    label: positive
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Chi phí owning của xe điện Vinfast thấp hơn xe xăng rõ rệt, sạc ở nhà chỉ tốn vài trăm nghìn tháng."
+    label: positive
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia K3 lăn bánh dưới 700 triệu bản tầm trung, so với Mazda3 thì mềm hơn một chút."
+    label: positive
+    aspect: "giá cả"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner bán lại được giá, năm thứ 5 vẫn lấy về gần 70% giá mua, quá hời."
+    label: positive
+    aspect: "giá cả"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Mercedes GLC đắt hơn BMW X3 khoảng 80 triệu cùng bản, nhưng lại được nhiều đồ chơi hơn."
+    label: positive
+    aspect: "giá cả"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Stargazer giá đang thấp nhất phân khúc MPV 7 chỗ, hợp gia đình đông người ít tiền."
+    label: positive
+    aspect: "giá cả"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Mua Toyota Vios bảnbase giờ lăn bánh chưa tới 500 triệu, rẻ chưa thấy trước đây."
+    label: positive
+    aspect: "giá cả"
+    style: comment
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Vinfast VF 5 Plus giờ cx dễ mua hơn trước, đại lý giảm thêm 20 triệu kèm phụ kiện."
+    label: positive
+    aspect: "giá cả"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Ford Ranger Wildtrak đắt nhưng dựng lại bán vẫn cháy hàng, giá trị giữ tốt thật sự."
+    label: positive
+    aspect: "giá cả"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Toy ta Corolla Cross giữ giá ghê lắm, tôi bán xe 4 năm tuổi chỉ lỗ nhẹ so với xe mới."
+    label: positive
+    aspect: "giá cả"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Mazda CX-5 đang có gói trả góp lãi suất 0%, mua lúc này nhẹ ví hẳn anh em ạ."
+    label: positive
+    aspect: "giá cả"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Xe Vinfast xe miễn phí sạc 1 năm, tính ra tiết kiệm thêm chục triệu nữa đó."
+    label: positive
+    aspect: "giá cả"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Đặt cọc Toyota Innova Cross chờ 2 tháng mới có xe, hãng chẳng giảm giá lấy một đồng."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 8 giá bản cao ngang xe sang Đức nhập, trong khi chất lượng hoàn thiện chưa tương xứng."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Đại lý Hyundai trả giá trade-in xe cũ thấp hơn thị trường 30 triệu, nói giảm giá thật ra trừ vào đó."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: hard
+    noise_types: []
+  - text: "Honda City bản cao giờ lăn bánh gần 620 triệu, tiền đó mua xe Nhật khác lớn hơn được rồi."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Ford Territory mới ra mắt giá cao rồi 6 tháng sau giảm mạnh, người mua sớm thiệt thòi."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Mercedes A200 đắt hơn BMW 218i tới 100 triệu mà trang bị chẳng hơn gì, tính lại thấy không đáng."
+    label: negative
+    aspect: "giá cả"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 giá chênh VF 6 tới 150 triệu nhưng khác biệt chủ yếu là size, hơi phí."
+    label: negative
+    aspect: "giá cả"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Seltos bản cao gần 800 triệu trong khi Toyota Corolla Cross bản thấp rẻ hơn mà giữ giá hơn."
+    label: negative
+    aspect: "giá cả"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Camry hybrid giá cao hơn bản xăng 130 triệu, bao nhiêu năm tiết kiệm xăng mới hòa vốn được."
+    label: negative
+    aspect: "giá cả"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Mitsubishi Xforce ra giá hơi chát so với kỳ vọng, cùng tiền mua Xpander Cross còn dư."
+    label: negative
+    aspect: "giá cả"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Honda HR-V giá không giảm trong khi đối thủ giảm hết, hãng Nhật kỳ cục thật."
+    label: negative
+    aspect: "giá cả"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 9 giá giờ cx đã mềm hơn trước nhưng vẫn trên 1.5 tỷ, người mua cần cân nhắc."
+    label: negative
+    aspect: "giá cả"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Giá xe giờ down liên tục, mua sớm là lỗ ngay anh em tính kỹ nhé."
+    label: negative
+    aspect: "giá cả"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 đang bán giá niêm yết 750 triệu cho bản Plus, không kèm khuyến mãi."
+    label: neutral
+    aspect: "giá cả"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner máy dầu bản cao niêm yết 1.335 triệu, tặng kèm phụ kiện cơ bản."
+    label: neutral
+    aspect: "giá cả"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Chi phí sử dụng xe điện Vinfast gồm sạc và bảo dưỡng định kỳ, mỗi tháng khoảng 1 triệu."
+    label: neutral
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Carnival niêm yết 1.845 triệu bản Deluxe, đại lý thu thêm phí trước bạ hỗ trợ."
+    label: neutral
+    aspect: "giá cả"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Giá xe Mazda CX-8 biến động nhẹ theo quý, hiện chênh khoảng 20 triệu so với đầu năm."
+    label: neutral
+    aspect: "giá cả"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Toy Vios bản trung lăn bánh 530 triệu, tùy đại lý tặng thêm đồ hoặc giảm tiền mặt."
+    label: neutral
+    aspect: "giá cả"
+    style: conversational
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Giá xe Hyundai SantaFe Calligraphy là 1.155 triệu, thấp hơn đời cũ một chút."
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 7 bản Plus giá bao nhiêu lăn bánh đầy đủ, có trả góp 90% được không?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Corolla Cross giảm giá được nhiều nhất bao nhiêu, mua cuối quý có rẻ hơn không mọi người?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Kia K5 có bản nào dưới 800 triệu không, hay toàn bản cao thôi vậy anh em?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Ford Everest máy dầu với máy xăng chênh giá bao nhiêu, đáng đầu tư máy dầu không?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Honda City hay Toyota Vios giữ giá hơn, ai bán xe cũ rồi cho xin kinh nghiệm?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Mercedes GLC 300 4MATIC niêm yết 2.599 triệu, giá thực tế tại đại lý bao nhiêu vậy?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 8 thuê pin hay mua đứt có lợi hơn, tính dài hạn thì sao mọi người?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: hard
+    noise_types: []
+  - text: "Giá xe này ổn."
+    label: neutral
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Rẻ hơn đối thủ rõ."
+    label: positive
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Đắt mà không đáng."
+    label: negative
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Giữ tiền tốt, bán lại lỗ ít."
+    label: positive
+    aspect: "giá cả"
+    style: short
+    difficulty: medium
+    noise_types: []
+  - text: "Giá cao, khuyến mãi ít 😡"
+    label: negative
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Vinfast VF 7 giá ok, nhưng phí sạc trạm hơi cao."
+    label: neutral
+    aspect: "giá cả"
+    style: short
+    difficulty: medium
+    noise_types: []
+  - text: "Toy ta rẻ hơn nghĩ nhiều, quà tặng đủ."
+    label: positive
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Honda City giá giờ cx dễ chịu, trả góp nhẹ."
+    label: positive
+    aspect: "giá cả"
+    style: short
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Kia K3 xuống giá nhanh quáaa, người mua sớm lỗ to."
+    label: negative
+    aspect: "giá cả"
+    style: short
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Đại lý Ford chưa đồng bộ giá, mỗi nơi mỗi giá khác nhau."
+    label: negative
+    aspect: "giá cả"
+    style: short
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner value for money ở phân khúc này, bán lại vẫn cao."
+    label: positive
+    aspect: "giá cả"
+    style: short
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Xăng Vinfast VF 7 sạc 1 lần chạy được quãng 420km thực tế, đủ đi liên tỉnh."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Corolla Cross hybrid chỉ tốn 4.5 lít/100km phố, máy dầu ắt hẳn phải học hỏi."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Seltos 1.4 turbo chạy hỗn hợp 6.8 lít, với SUV đô thị là thuộc nhóm tiết kiệm."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai Accent chạy nghề mỗi tháng chỉ hết 2 triệu xăng, rẻ hơn xe cũ của tôi 1/3."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Vios 1.5 đường trường chỉ 5 lít/100km, chạy nghề grab biết ơn máy này."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsubishi Attrage tiết kiệm xăng số 1 phân khúc sedan giá rẻ, 4.8 lít/100km là chuyện thường."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Innova Cross hybrid tiết kiệm hơn bản xăng cũ tới 3 lít, cải thiện rõ."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Honda CR-V hybrid chạy phố chỉ 5.5 lít, Mazda CX-5 bản cùng tiền thì 8 lít, chênh nhau rõ."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 6 đi phượt 300km núi vẫn còn 25% pin, lên dốc tiêu hao chấp nhận được."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "VF 8 sạc nhanh 24 phút từ 10% lên 80%, ghé trạm uống cà phê xong đi tiếp luôn."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Xe tôi chạy phố 7 lít/100km, vừa đủ không tốn lắm."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner máy dầu 8.5 lít/100km tải nhẹ, con số hãng công bố là đúng thực tế."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF e34 thực tế chạy 280km mỗi lần sạc đầy, thấp hơn công bố nhưng chấp nhận được."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Carnival nặng 2.2 tấn chạy 10 lít/100km nội đô, mức trung bình của MPV cỡ này."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai Tucson xăng tiêu hao thực tế bao nhiêu lít phố, ai chạy rồi cho số đi ạ?"
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 9 pin 90 kWh chạy được bao nhiêu km cao tốc mở điều hòa max?"
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Corolla Cross hybrid 4.5 lít hay 5 lít thực tế, số hãng hay số thật vậy mọi người?"
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsubishi Xpander chạy bao nhiêu xăng phố vậy các bác, nghe nói 8-9 lít?"
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Xăng 7 lít."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Tiết kiệm xăng, chạy nghề lời."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Đi 400km hết nửa bình, ổn."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Xăng 10 lít phố, hao quáaa 😡"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: [elongation, emoji]
+  - text: "Toy Camry hybrid chỉ 5 lít, mê thật."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Kia Morning cx ít xăng, 5.5 lít thôi."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Máy dầu thì bền mà xăng thì mượt, chọn kiểu nào cũng có cái giá."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Ford Everest máy dầu tải nặng 11 lít/100km phố, kéo 7 người thì con số đó là đúng."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 8 bật điều hòa max chạy cao tốc chỉ còn 300km range, hao hơn công bố nhiều."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai SantaFe 2.5 xăng phố 11 lít, nặng máy cũ kỹ, xã viên tôi than thở suốt."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner máy xăng hao hơn máy dầu 2.5 lít, chọn máy xăng chỉ để đỡ ồn mà tốn xăng thường."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 range rớt nhanh khi chạy 120km/h, 100km đầu mất 22% pin, hơi kém."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Sorento máy xăng hao hơn Hyundai SantaFe hybrid tới 3 lít/100km, nên chọn bản hybrid."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Mitsubishi Xforce chạy phố 9.5 lít là bình thường, nghe anh em cùng xe than rồi."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Honda City 1.5 tiêu xăng ok dc, nhưng bật lạnh full thì lên 8 lít liền."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "VF 5 plus range thực tế chỉ 250km, cho vào city chạy là được chứ đừng đi xa."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Toyota Yaris Cross hybrid 4.8 lít not bad, đáng tiền nếu chạy nhiều."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Vinfast VF 6 hao pin hơn VF 7 dù nhẹ hơn, phần mềm quản lý pin cần cải thiện."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: hard
+    noise_types: []
+  - text: "Đi 100km mất 15 lít, quá đắt 😡"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Ghế da của Hyundai SantaFe cao cấp thật, ngồi 4 tiếng đường dài lưng vẫn thoải mái."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Camry hoàn thiện nội thất tinh xảo, đường may đều, nhựa lơ là ít hẳn so với đời cũ."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 9 có 3 hàng ghế chỉnh điện, khách ngồi hàng cuối cũng khen thoải mái."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Carnival có ghế captain seat hàng 2 rộng như ghế salon, chở đối tác toàn khen."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Nội thất Mazda CX-5 thiết kế tối giản tinh tế, các nút bấm bố trí hợp tay người lái."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Khoang lái Kia K5 rộng hơn Toyota Camry rõ, người cao 1m8 ngồi vẫn thoải mái hai hàng."
+    label: positive
+    aspect: "nội thất"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 8 nội thất sang hơn VF 7 hẳn, vật liệu mềm phủ nhiều chỗ chạm tay."
+    label: positive
+    aspect: "nội thất"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Innova Cross hàng 3 rộng hơn Mitsubishi Xpander chút, chở đủ 7 người lớn không chật."
+    label: positive
+    aspect: "nội thất"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Cabin Toyota Vios đơn giản mà chắc chắn, Nhật bản vậy đấy, dùng bền là chính."
+    label: positive
+    aspect: "nội thất"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Mình ngồi CX-8 hàng 3 vừa đủ, hai đứa nhỏ nằm suốt chặng dài Hà Nội - Hải Phòng vẫn thoải."
+    label: positive
+    aspect: "nội thất"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Corolla Cross nội thất ổn áp trong tầm giá, chẳng sang nhưng chẳng lỗi gì."
+    label: neutral
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 cabin chất liệu nhựa cứng là chính, trong tầm tiền thì chấp nhận."
+    label: neutral
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Seltos nội thất theo kiểu thể thao, người thích sang trọng sẽ thấy hơi tối màu."
+    label: neutral
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner hàng 2 chỉnh được góc ngả, hàng 3 phẳng để đồ thì tiện hơn ngồi."
+    label: neutral
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Khoang hành lý Kia Carnival với ghế 3 gập phẳng, vừa chở người vừa chở đồ linh hoạt."
+    label: neutral
+    aspect: "nội thất"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Nội thất Vinfast vf 9 cx nhiều màn hình quá, người lớn tuổi phải học lại cách dùng."
+    label: neutral
+    aspect: "nội thất"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode, brand_alias]
+  - text: "Hyundai Accent nội thất đơn giản vậy thôi, hỏi cabin rộng không thì trả lời là đủ dùng."
+    label: neutral
+    aspect: "nội thất"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Innova Cross hàng 3 có bị thấp mặt ghế không, ngồi lâu có mỏi chân không mọi người?"
+    label: neutral
+    aspect: "nội thất"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 có ghế massage hàng trước không hay chỉ sưởi ghế thôi vậy?"
+    label: neutral
+    aspect: "nội thất"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Nhựa cứng nhiều, nghe lạch cạch 😡"
+    label: negative
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Ghế êm, cabin yên tĩnh."
+    label: positive
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Hàng 3 chật, chỉ trẻ con ngồi dc."
+    label: negative
+    aspect: "nội thất"
+    style: short
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Nội thất ổn, không màu mè."
+    label: neutral
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Hoàn thiện rấttt tỉ mỉ, ưng ghê."
+    label: positive
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: [elongation]
+  - text: "Toyota Innova máy dầu kêu gõ rõ khi nguội máy, ngồi trong nghe ồn hơn xe xăng cùng lớp."
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Ghế sau Honda CR-V ngả không sâu, ngồi hàng 2 đường dài tôi bị đau lưng mỗi lần."
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 5 Plus cabin chỗ để đồ ít quá, chai nước đủ chỗ mà giấy tờ chẳng có ngóc ngách."
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Seltos taplo nghiêng về lái nhưng vật liệu nhựa bóng dễ bám vết xước, nhìn rầu."
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Yaris Cross khoang chân hàng 2 chật hơn Xpander rõ ràng, người cao ngồi khổ."
+    label: negative
+    aspect: "nội thất"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 6 cabin ồn hơn Mazda CX-5 ở tốc độ cao, nói chuyện phải to hơn thường."
+    label: negative
+    aspect: "nội thất"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai Accent nội thất nhựa bóng toàn tập, cầm tay là biết rẻ hơn K3 một bậc."
+    label: negative
+    aspect: "nội thất"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsubishi Attrage cabin mỏng dính, dễ bám bụi và nhanh cũ, dùng 1 năm nhìn như 3 năm."
+    label: negative
+    aspect: "nội thất"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Nội thất Toyota Raize nhìn như xe giá rẻ, tiền gần 600 triệu mà vậy là khó chịu 😡"
+    label: negative
+    aspect: "nội thất"
+    style: comment
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Ford Territory màn hình dọc to nhưng logic điều khiển rối, chỉnh điều hòa mất 3 lớp menu."
+    label: negative
+    aspect: "nội thất"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Động cơ Mazda CX-5 2.5 tăng tốc mượt mà, vượt xe cao tốc chỉ một nhịp chân ga."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Corolla Cross hybrid vận hành êm ái, lên 80km/h máy xăng im bặt nhờ điện."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 7 mô-men điện tức thời, vượt xe ở dải 60-80km/h không cần hạ số."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Sorento diesel 2.2 kéo đủ 7 người lên đèo vẫn êm, không hề đuối sức."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Honda Civic RS máy 1.5 turbo rú hay, âm thanh động cơ khiến tài xế mê đường case."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner máy dầu 2.8 khỏe hơn máy xăng 2.7 rõ ràng khi kéo, chọn máy dầu là đúng."
+    label: positive
+    aspect: "động cơ"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 9 tăng tốc 0-100 nhanh hơn Ford Explorer bản thấp, điện luôn có lợi thế."
+    label: positive
+    aspect: "động cơ"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Máy Mazda3 2.0 đáp ứng đủ cho phố, không phải loại bốc nhưng đủ dùng hằng ngày."
+    label: neutral
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Corolla Altis 1.8 vận hành trơn tru đều đặn, không vồ không chậm, kiểu Nhật điển hình."
+    label: neutral
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF e34 động cơ một mô tơ đủ sức đi lại đô thị, chạy cao tốc lâu thì thấy hơi đuối."
+    label: neutral
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Morning máy 1.2 nhỏ chạy 60km/h là êm, lên cao tốc thì biết giới hạn của nó."
+    label: neutral
+    aspect: "động cơ"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Máy Mitsu Attrage 3 xi-lanh có rung nhẹ khi dừng đèn đỏ, quen rồi thì thôi."
+    label: neutral
+    aspect: "động cơ"
+    style: comment
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Vinfast VF 7 lên cao tốc cảm giác lấy điện thế nào, ai chạy thường xuyên chỉ giúp?"
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner 2.4 máy dầu mới có khỏe hơn bản 2.8 đời cũ không anh em?"
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Honda CR-V 1.5 turbo có bị máy ì khi đầy người không, ai đi cả gia đình rồi trả lời giúp."
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Máy yếu, vượt xe mệt 😡"
+    label: negative
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Bốc đầu ga, đi đã."
+    label: positive
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Toy ta chạy 10 năm máy vẫn ngon."
+    label: positive
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Động cơ Vinfast VF 6 lên dốc rú to mà chậm, tải 5 người là rõ nhất."
+    label: negative
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Accent máy 1.4 cũ kỹ, lên 100km/h phải đạp sâu rú lên mới vượt nổi xe tải."
+    label: negative
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Vios yếu hơn Honda City một nhịp ở tầm trung gian, ai mê tăng tốc sẽ thất vọng."
+    label: negative
+    aspect: "động cơ"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Seltos máy 1.4 turbo dính lỗi chậm hộp số ở dải tốc thấp, khởi hành giật cục khó chịu."
+    label: negative
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Máy Mẹc GLC 200 yếu hơn BMW 520i rõ ở tầm tốc trung, tiền chênh mà máy kém hơn."
+    label: negative
+    aspect: "động cơ"
+    style: comparison
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Toyota Innova Cross hybrid lên đốc dốc không bằng bản máy dầu cũ, điện hồi chậm."
+    label: negative
+    aspect: "động cơ"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Ford Territory 1.5 turbo overall bad ở tốc độ thấp, hộp số chậm xuống số, khó chịu."
+    label: negative
+    aspect: "động cơ"
+    style: comment
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Hyundai Stargazer máy 1.5 cũ kỹ, chở đủ 7 người là phải đạp sâu liên tục, mệt."
+    label: negative
+    aspect: "động cơ"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "7 túi khí tiêu chuẩn, hãng chịu đầu tư an toàn thật."
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai SantaFe có gói Highway Driving Assist, chạy cao tốc giữ làn và giữ khoảng cách tự động."
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Camry có phanh khẩn cấp tự động ăn chính xác, thử trong bãi đỗ là biết ngay."
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Sorento có 8 túi khí và cảnh báo hành khách sau, chở trẻ em an tâm hơn hẳn."
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Honda CR-V có HUD hiển thị tốc độ trên kính, mắt không rời đường khi theo dõi."
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 8 an toàn dc đánh giá cao trong thử nghiệm va chạm, điểm cao của hãng nội."
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Toyota Innova Cross có 6 túi khí + VSC, chuẩn an toàn gia đình Việt luôn mọi người ạ."
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsubishi Xpander Cross 7 túi khí giá dưới 700 triệu, hiếm xe nào chịu làm vậy."
+    label: positive
+    aspect: "an toàn"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "An toàn cơ bản đủ dùng."
+    label: neutral
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Cảnh báo lệch làn hay báo nhầm, đang chạy nó réo oan 😡"
+    label: negative
+    aspect: "an toàn"
+    style: short
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Toyota Fortuner bảnbase không có camera 360, tiền hơn 1 tỷ mà thiếu đồ an toàn này hơi thiếu."
+    label: negative
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 6 hệ thống giữ làn can thiệp hơi mạnh, đang bóp côn nó kéo tay lái bất ngờ."
+    label: negative
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Seltos cảnh báo va chạm trước báo muộn khi xe máy cắt làn sát, còn phải tin tay lái mình."
+    label: negative
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Accent bảnbase không có ổn định thân điện tử, tuổi xe này mà thiếu thứ này là hụt hẫng."
+    label: negative
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Vios chỉ 2 túi khí bảnbase so với 7 túi của Attrage, an toàn kém hơn rõ trong cùng tầm tiền."
+    label: negative
+    aspect: "an toàn"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 9 dùng camera hành trình thay gương, nắng chiếu vào màn hình là mờ hết khó thấy."
+    label: negative
+    aspect: "an toàn"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Honda City không có cảnh báo điểm mù bản thấp, Mazda2 cùng giá đã có đủ bộ."
+    label: negative
+    aspect: "an toàn"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Yaris Cross cảm biến sau hay kêu oan, đỗ bãi đông nó réo liên tục khó chịu."
+    label: negative
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Bảo dưỡng xe Mazda định kỳ 6 tháng 1 lần, gói trọn 5 năm hết khoảng 12 triệu."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Corolla Cross đại lý gọi nhắc lịch đúng hẹn, xe vào sớm 15 phút là tiếp nhận ngay."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 7 có chính sách bảo hành 7 năm, tôi chạy taxi vẫn ít lo hỏng hóc nhất."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai Tucson bảo dưỡng lần đầu miễn phí, thay dầu và kiểm tra 20 hạng mục rõ ràng."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Kia K3 cứu hộ miễn phí 24/7, xe die giữa đường gọi 40 phút có xe kéo tới."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner phụ tùng luôn sẵn tại đại lý, sửa chữa không phải chờ đặt hàng như hãng khác."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast có app đặt lịch sửa chữa, chọn giờ rảnh là xe vào đúng khung đó, tiện hơn gọi điện."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Đại lý Hyundai ở tỉnh tôi thiếu thợ giỏi, sửa máy phải chờ chuyên gia từ HN xuống."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Honda City sửa lỗi cảm biến từ đại lý 3 lần chưa dứt, mỗi lần phải chờ hết buổi làm việc."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner đổi nhớt hãng báo giá 1.4 triệu, ra tiệm ngoài chỉ 600 nghìn, chênh nhau quá."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF e34 có thời gian chờ phụ tùng pin lâu, thay module mất 3 tuần mới có hàng."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Seltos bảo dưỡng lần 3 hết 3.2 triệu, cao hơn dự kiến của tôi nhiều 😡"
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Mazda đại lý bắt mua gói bảo dưỡng trước mới giao xe, kiểu ép tiêu dùng khó chịu."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Ford Everest phụ tùng đắt gấp đôi tiệm ngoài, sửa nhẹ cũng triệu rưỡi khó chấp nhận."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast bảo hành 7 năm cx hơn Toyota 3 năm nhiều, chạy dài thì hãng nội có lợi thế."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Bảo dưỡng Toyota Fortuner hết bao nhiêu 1 lần, có gói trọn gói 5 năm không mọi người?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 có được miễn phí sạc ở trạm V-Green không hay chỉ bản cũ vậy mọi người?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Seltos bảo hành máy và hộp số bao nhiêu năm, có mở rộng được không vậy?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Chờ phụ tùng 2 tuần."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Hotline xuyên đêm ko ai nghe 😡"
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: [teencode, emoji]
+  - text: "Toyota chăm sóc khách hàng dc, nhắc lịch đều đặn."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Vinfast VF 7 cập nhật phần mềm OTA miễn phí, xe cũ có tính năng mới như được tặng xe."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Camry có 2 màn hình 12.3 inch liền mạch, nhìn hiện đại hẳn so với đời trước."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai SantaFe có ghế lái massage, chạy đường dài bớt mỏi lưng rõ rệt."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Kia Carnival có cửa sổ trời hàng 2, trẻ con mê lắm mỗi chuyến đi xa."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Mazda CX-5 có Apple CarPlay không dây kết nối mượt, cầm điện thoại lên xe là tự nối."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 9 có camera 360 + cảm biến 12 điểm, đỗ xe chật dễ hơn xe cũ tôi nhiều."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner Legender có màn hình 10 inch + DVD, bảnbase thì thiếu trầm trọng đồ tiện nghi."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Honda CR-V có hàng loạt tính năng nhưng bản thấp thiếu lắm, phải lên bản cao mới đáng."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Seltos có sạc không dây nhưng vị trí đặt máy hơi thấp, rút điện thoại hơi khó."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Corolla Cross có cruise control nhưng thiếu adaptive, giữ tốc thủ công thôi."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Màn hình nhỏ mà ok dc, dùng chính."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Hyundai Accent có bản nào sạc điện thoại không dây không, hay toàn cắm dây vậy mọi người?"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Innova Cross có ghế chỉnh điện hàng 2 không, hay chỉ hàng lái vậy anh em?"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 7 trợ lý giọng nói hiểu tiếng Việt tốt, gọi mở điều hòa là chạy ngay."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Corolla Cross tiện nghi ít hơn Kia K5 rõ, cùng tiền Nhật thua Hàn về đồ chơi."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 app điều khiển từ xa hay lỗi, mở điều hòa 3 lần mới ăn lệnh phiền thật 😡"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Toyota Vios màn hình 8 inch chậm chạp, kết nối CarPlay phải cắm dây chờ lâu mới nhận."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Thiết kế Hyundai Elantra của 2026 mũi sắc hơn, lưới tản nhiệt rộng tạo cảm giác rộng."
+    label: positive
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 7 đèn hậu liền ngang nhìn đêm rất sang, một chi tiết thiết kế ăn tiền."
+    label: positive
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner Legender thiết kế thô cá tính, người thích xe mạnh mẽ sẽ ưng ngay."
+    label: positive
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Kia K5 thân xe dài thấp thể thao, đứng cạnh Toyota Camry trẻ trung hẳn 10 tuổi."
+    label: positive
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Mazda CX-5 thiết kế KODO nhìn vẫn đẹp sau 5 năm, không lỗi mốt kiểu xe Nhật chăm chút."
+    label: positive
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Vios 2026 giữ nguyên dáng 3 năm liền, nhìn phát chán liền muốn đổi xe khác."
+    label: negative
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 5 Plus đuôi xe cụt gọn, một phần khoang hành lý bị hy sinh cho dáng xe."
+    label: negative
+    aspect: "thiết kế"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Accent 2026 mặt ca lăng to đùng, nhìn hơi lố với sedan tầm trung như vậy."
+    label: negative
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Mazda CX-8 sườn xe dài nhưng dáng nặng nề, đứng cạnh Kia Carnival thua về thanh thoát."
+    label: negative
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Fortuner Legender vs bản thường: chỉ khác cản và đèn, tiền chênh 60 triệu không đáng."
+    label: negative
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 9 ngoại hình to đẹp, nhưng đèn pha kém hơn Toyota Camry về độ tỏa xa đêm mưa."
+    label: negative
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Mâm xe Mazda3 đẹp nhất phân khúc sedan, không cần độ mâm gì thêm cả."
+    label: positive
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Innova Cross nhìn như MPV gia đình, ổn áp không màu mè, đúng chất người Việt."
+    label: neutral
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Thiết kế Vinfast vf 6 cx ok, không đặc biệt nhưng không xấu."
+    label: neutral
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: [teencode, brand_alias]
+  - text: "Thiết kế xe Toyota Fortuner 2026 có gì mới so với bản cũ vậy mọi người?"
+    label: neutral
+    aspect: "thiết kế"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 7 có mấy màu sơn, màu nào bán chạy nhất trong các showroom hiện nay?"
+    label: neutral
+    aspect: "thiết kế"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Kia K5 nhìn ngoài có đẹp không, qua ảnh chụp bên showroom thấy hơi mờ mờ?"
+    label: neutral
+    aspect: "thiết kế"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Mâm xấu, đèn pha tối 😡"
+    label: negative
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Thiết kế đẹp, mâm to đã mắt."
+    label: positive
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Ngoại hình ổn, chẳng nổi bật."
+    label: neutral
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Camry thiết kế vẫn sang chảnh rấttt, đứng hàng lâu vẫn đẹp."
+    label: positive
+    aspect: "thiết kế"
+    style: short
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Cảm biến va chạm của Tucson nhạy, lùi chỗ đông người ko lo trầy xước."
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Về an toàn, Fortuner hơn CX-8 rõ khi cả hai đều có gói giữ làn nhưng Toy ổn định hơn ở tốc độ cao."
+    label: positive
+    aspect: "an toàn"
+    style: comparison
+    difficulty: hard
+    noise_types: [brand_alias]
+  - text: "Vinfast VF 7 phanh rấttt chắc tay."
+    label: positive
+    aspect: "an toàn"
+    style: short
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Mazda CX-5 2024 có thêm cảnh báo điểm mù ko các bác?"
+    label: neutral
+    aspect: "an toàn"
+    style: question
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Xe hien tai trang bi 2 tui khi, du dung trong do thi nhung chua vuot troi so voi doi thu."
+    label: neutral
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "ABS va EBD la cau hinh chuan cua Honda City, doc ky bang thong so se thay."
+    label: neutral
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Nghe nói Seltos đợt trước có đợt triệu hồi, giờ bác nào dùng cho xin thông tin bản mới đã sửa chưa ko?"
+    label: neutral
+    aspect: "an toàn"
+    style: question
+    difficulty: hard
+    noise_types: [teencode]
+  - text: "Cả Vinfast VF 6 lẫn Xpander đều đạt 4 sao về an toàn tại thử nghiệm va chạm Đông Nam Á."
+    label: neutral
+    aspect: "an toàn"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Kia Sonet co camera 360 ban cao."
+    label: neutral
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Mình để ý hãng nào cũng quảng cáo an toàn 5 sao, thực tế chạy xe Hàn vẫn thấy đỡ chắc hơn xe Đức chút."
+    label: neutral
+    aspect: "an toàn"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Cửa xe Kia Seltos tự khóa khi chạy, tính năng an toàn cơ bản hoạt động đều đặn không gặp trục trặc gì."
+    label: neutral
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Phanh xe Vinfast từng bị triệu hồi vì lỗi dò nhiên liệu, chạy xa nhìn lại gương em mới thấy hồi hộp."
+    label: negative
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Tucson bản tiêu chuẩn chỉ có 2 túi khí, đọc thông số xong thất vọng 😡"
+    label: negative
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Sao xe Hàn mấy bản thường ko có hỗ trợ phanh khẩn cấp vậy mọi người?"
+    label: negative
+    aspect: "an toàn"
+    style: question
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Anh em cẩn thận với xe cũ giá rẻ, nhiều con từng va đập nặng mà vẫn bán như thường, đừng ham rẻ."
+    label: negative
+    aspect: "an toàn"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Về mảng an toàn, Mẹc GLC hơn hẳn BMW 320i đời cũ vì thêm gói tránh va chạm chủ động."
+    label: negative
+    aspect: "an toàn"
+    style: comparison
+    difficulty: hard
+    noise_types: [brand_alias]
+  - text: "VF 3 thiếu gói an toàn 😡"
+    label: negative
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: [emoji, brand_alias]
+  - text: "Ford Territory 2025 có sạc không dây cho hàng ghế sau ko mọi người?"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Mình thấy màn hình trung tâm của Honda City cỡ 8 inch, kết nối ổn, tính năng đủ xài."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Dieu hoa tu dong 2 vung la diem chung cua phan lon ban trung trong phan khuc nay."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Các bác dùng trợ lý ảo tiếng Việt trên Vinfast VF 6 thấy nó nhận lệnh ra sao?"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Cruise control thích ứng xuất hiện trên cả Tucson lẫn Corolla Cross, khác nhau chủ yếu ở giao diện."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Chia khoa thong minh van chay chuan."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Mình thấy overall good về mảng tiện nghi trên xe Hàn tầm 700 triệu, chẳng thiếu gì lắm."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: hard
+    noise_types: [code_switching]
+  - text: "Màn hình cảm ứng của Kicks thỉnh thoảng đơ vài giây, CarPlay tự ngắt giữa đường khó chịu."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "VF e34 quảng cáo hỗ trợ lái nâng cao mà dùng thực tế vẫn ko đc như mô tả 😡"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: hard
+    noise_types: [teencode, emoji, brand_alias]
+  - text: "Ai gặp lỗi sạc chậm ở trạm Vinfast chưa, cắm gần tiếng mới đc 60%?"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Gói công nghệ trên CX-8 đắt hơn CX-5 mà chẳng thêm mấy tính năng đáng giá, looks poor với tầm tiền."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: hard
+    noise_types: [code_switching]
+  - text: "Loa Kicks nghe bad, chán."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: easy
+    noise_types: [code_switching]
+  - text: "Bảo dưỡng làm quen Vinfast mất bao lâu, có phải chờ đặt lịch trước nhiều ngày ko?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Tram dich vu cua Ford o tinh nho, phu tung dat ve mat khoang mot tuan."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Chính sách mở rộng bảo hành của VF ghi rõ trên app, muốn xem thì vào mục chi phí."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: comment
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Mình thay lốp ở tiệm ngoài, chỉ đem xe hãng khi hết bảo hành thôi các bác ạ."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Giá bảo dưỡng định kỳ của Mazda rẻ hơn Toyota một chút trong ba năm đầu."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "App Vinfast đặt lịch vẫn chạy ổn."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: medium
+    noise_types: []
+  - text: "Đổi nhớt Toyota hết gần 2 triệu, báo giá xong mới nói thêm phí công, kiểu này khó quay lại."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Mitsu xử lý bảo hành theo đúng quy trình, gọi hotline lúc bận thì phải gọi lại 😐"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: comment
+    difficulty: easy
+    noise_types: [brand_alias, emoji]
+  - text: "Sao phụ tùng VF 6 hay thiếu hàng vậy, chờ đúng hai tuần mới đc?"
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: [teencode, brand_alias]
+  - text: "Anh em cẩn thận đọc hợp đồng bảo hành mở rộng, chữ nhỏ toàn mục loại trừ chứ chẳng thêm gì đáng giá."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: hard
+    noise_types: []
+  - text: "Cứu hộ của Vinfast nhanh hơn Hyundai trong nội thành, nhưng ra ngoài tỉnh thì service poor lắm."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: hard
+    noise_types: [code_switching]
+  - text: "Thay phụ kiện hãng đắt poor."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: [code_switching]
+  - text: "Hai lần hẹn bảo dưỡng đầu xe đều bị lùi lịch vào phút cuối, chán hẳn."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "VF 3 giá 240 triệu mà trang bị đầy đủ, tính ra value for money hàng đầu phân khúc xe nhỏ."
+    label: positive
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching, brand_alias]
+  - text: "Đại lý Hyundai đang giảm 30 triệu cho Tucson, mua lúc này hời 👍"
+    label: positive
+    aspect: "giá cả"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Giá Vios hiện quá hời."
+    label: positive
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Cùng tầm 600 triệu, chọn CX-5 hơn Tucson vì rẻ hơn gần chục triệu mà đồ chơi không kém."
+    label: positive
+    aspect: "giá cả"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Anh em mua Kia Seltos bản 1.4 cuối năm vừa rồi cũng được kèm nhiều quà tặng."
+    label: positive
+    aspect: "giá cả"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Giá lăn bánh VF 5 bản Plus hiện tại bao nhiêu rồi các bác, nghe đồn vừa hạ thêm?"
+    label: positive
+    aspect: "giá cả"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Xe cũ đời 2021 chạy 5 vạn km giờ định giá được bao nhiêu nhỉ?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Bang gia niem yet cua Honda City 2025 giu nguyen so voi nua cuoi nam truoc."
+    label: neutral
+    aspect: "giá cả"
+    style: comment
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Lệ phí trước bạ xe điện chỉ 0%, cộng vào tổng giá lại thấy chênh ít hơn tưởng tượng."
+    label: neutral
+    aspect: "giá cả"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Mình để ý giá Vinfast VF 7 nhích lên chút so với lúc ra mắt, trong khi đối thủ giữ nguyên."
+    label: neutral
+    aspect: "giá cả"
+    style: conversational
+    difficulty: hard
+    noise_types: []
+  - text: "Mẹc GLC đắt hơn BMW 320i khoảng 300 triệu ở cùng bản máy xăng."
+    label: neutral
+    aspect: "giá cả"
+    style: comparison
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Giá lăn bánh khoảng 545 triệu."
+    label: neutral
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Lux SA chạm mốc hơn 1,2 tỷ sau khi nâng cấp, mức giá vượt xa giá trị nó mang lại."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Mình thấy Honda City hạ bao nhiêu cũng chưa đủ, từ giá gốc lên tới lăn bánh vẫn đội."
+    label: negative
+    aspect: "giá cả"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Xe Hàn tăng giá đợt này 20 triệu là sao, lương tăng đâu mà theo kịp 😡?"
+    label: negative
+    aspect: "giá cả"
+    style: question
+    difficulty: hard
+    noise_types: [emoji]
+  - text: "Các bác ơi, Toyota tăng giá Vios 3 đợt liên tiếp mà đồ chơi y nguyên, ko rõ để làm gì."
+    label: negative
+    aspect: "giá cả"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Cùng dung tích, Fortuner đắt hơn Everest nhưng trang bị kém hơn, số tiền chênh coi như mất trắng."
+    label: negative
+    aspect: "giá cả"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Giá xe Vinfast tăng chán 😡"
+    label: negative
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Đặt cọc VF 8 từ đầu năm, đến giờ giá nhích thêm 25 triệu mà xe vẫn chưa về, nản."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Mình thấy overall giá xe Trung Quốc rẻ hơn xe Hàn chừng 10%, tuỳ người cân nhắc."
+    label: neutral
+    aspect: "giá cả"
+    style: conversational
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Mazda CX-5 chạy nội thành bình quân 7,5 lít/100km, với cỡ xe này mình thấy hợp lý."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Xăng Yaris tốn ít hơn xe cũ của mình chạy cùng tuyến 👍"
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "VF 5 chạy đỡ tốn điện rấttt."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: medium
+    noise_types: [elongation, brand_alias]
+  - text: "Fortuner máy dầu tiết kiệm hơn Everest rõ ở dải tốc độ cao, chạy 100km/h chỉ tốn khoảng 7 lít."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Mình chạy City hybrid mỗi tuần 100km mà bình xăng vẫn còn, đỡ lo giá xăng."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 6 đi quãng ngắn trong phố chỉ tốn chừng 10k tiền điện mỗi ngày, tiết kiệm thấy rõ."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Chế độ Eco của Tucson giảm hẳn mức tiêu thụ, chạy đường trường rất vừa ví 👍"
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Xăng City khá ít tốn."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Mazda CX-8 chạy thực tế bao nhiêu lít trên 100km, số công bố mình thấy hơi thấp?"
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vios may xang tieu thu khoang 6 lit noi thanh va 4,5 lit cao toc theo dong ho."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Đồng hồ của Corolla Cross hybrid hiển thị 4,1 lít/100km sau 2.000 km đầu tiên."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Mức tiêu hao của Xpander trung bình average."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: [code_switching]
+  - text: "Nghe anh em chạy dài bảo VF 9 lên speed cao là pin tụt, mình thử cũng thấy rơi rõ hơn khi vượt 100 km/h."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: hard
+    noise_types: [code_switching, brand_alias]
+  - text: "Mức tiêu thụ của Tucson bản xăng cao hơn Corolla Cross hybrid khoảng 2 lít trong cùng điều kiện."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Xpander chở đủ người bật điều hòa nhảy lên 10 lít/100km, con số vượt xa quảng cáo."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Máy dầu Everest tiết kiệm gì đâu, chạy phố vẫn 9 lít 😡"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "VF 8 quảng cáo 400km thực tế đc bao nhiêu, sao chạy 280km đã phải sạc?"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: hard
+    noise_types: [teencode, brand_alias]
+  - text: "Anh em ai cũng than Kicks chạy cao tốc tốn xăng, mình đo thử đúng thật, đồng hồ lơ lửng 7,8 lít."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Trong hai bản máy xăng, Innova ăn xăng hơn CX-8 mà giá lại cao hơn, kém hiệu quả khó bỏ qua."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Xăng Xpander tốn khá bad."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: [code_switching]
+  - text: "VF e34 chạy cao tốc tụt pin nhanh bất thường, 100 km đầu đã mất gần 40%, thật không ổn."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Accent đời cũ uống xăng như xe cỡ lớn, mỗi tháng tốn thêm gần cả triệu 😡"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Chạy đúng lịch bảo dưỡng mà xe vẫn tốn xăng quáaa, có bác nào bị giống em ko?"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: hard
+    noise_types: [teencode, elongation]
+  - text: "Ghế da VF 7 bản cao êm và thoáng khí, ngồi dài đường lưng không hề mỏi."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Nội thất Tucson sang rấttt."
+    label: positive
+    aspect: "nội thất"
+    style: short
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Chất liệu ghế và khoảng để chân của Mẹc GLC nhỉnh hơn BMW 320i cùng đời một bậc."
+    label: positive
+    aspect: "nội thất"
+    style: comparison
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Mình ưng nhất khoang lái Camry, gỗ và kim loại phối vừa mắt, sáng ra mở cửa thấy dễ chịu."
+    label: positive
+    aspect: "nội thất"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Cốp Xpander rộng, nhét thêm cả xe đạp con 👍"
+    label: positive
+    aspect: "nội thất"
+    style: comment
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Hàng ghế sau của VF 9 gập phẳng thành giường, chuyến Đà Lạt cả nhà nằm ngủ ngon lành."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Vô lăng bọc da êm tay."
+    label: positive
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Về nội thất, Vinfast VF 8 dùng nhiều chất liệu mềm hơn Kia Sorento ở tầm giá tương đương."
+    label: positive
+    aspect: "nội thất"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "CX-5 bản cao có thương hiệu âm thanh nào không các bác?"
+    label: neutral
+    aspect: "nội thất"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Nội thất Seltos dùng nhiều nhựa cứng ở vùng chạm tay, điểm xuyết thêm đường chỉ màu tương phản."
+    label: neutral
+    aspect: "nội thất"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Khoang hanh ly cua Accent 475 lit, thuoc nhom trung binh cua phan khuc sedan nho."
+    label: neutral
+    aspect: "nội thất"
+    style: comment
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Mình thấy nội thất Vinfast VF 6 tối giản kiểu xe điện mới, thích thì mê còn không thì thấy hơi trống."
+    label: neutral
+    aspect: "nội thất"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Hàng ghế ba của Xpander rộng hơn Rush một chút, còn chất liệu thì ngang nhau."
+    label: neutral
+    aspect: "nội thất"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Ghe sau Corolla Cross vua du."
+    label: neutral
+    aspect: "nội thất"
+    style: short
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Kia Carnival có màn hình giải trí riêng cho hai hàng ghế sau không mọi người?"
+    label: neutral
+    aspect: "nội thất"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Da ghế của Fadil mới một năm đã bong từng mảng, hãng bảo do thời tiết, khó chấp nhận 😡"
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: hard
+    noise_types: [emoji]
+  - text: "Nội thất Attrage toàn nhựa cứng, nhìn poor 😡"
+    label: negative
+    aspect: "nội thất"
+    style: comment
+    difficulty: easy
+    noise_types: [brand_alias, code_switching, emoji]
+  - text: "Sao Rush bản cao vẫn ko có ghế chỉnh điện hàng trước vậy, dùng lâu mỏi lưng thật?"
+    label: negative
+    aspect: "nội thất"
+    style: question
+    difficulty: hard
+    noise_types: [teencode]
+  - text: "Anh em à, khoang lái nhìn sang mà ngồi một tiếng là lưng đau, ghế cứng như đá."
+    label: negative
+    aspect: "nội thất"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Seltos bản tiêu chuẩn thua xa bản cao cấp về nội thất, mất hẳn màn hình kỹ thuật số và ghế chỉnh điện."
+    label: negative
+    aspect: "nội thất"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Mùi nội thất VF 3 hăng quá 😡"
+    label: negative
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: [emoji, brand_alias]
+  - text: "Cửa taplo của City kêu lạch cạch mỗi lần qua gờ giảm tốc, hai lần sửa chưa hết 😡"
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Khoang lái Accent chật bad."
+    label: negative
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: [code_switching]
+  - text: "Đuôi xe Vinfast VF 8 với dải đèn xuyên thanh mảnh, nhìn buổi tối sang và dễ nhận diện."
+    label: positive
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Mặt nạ Tucson quáaa ngầu."
+    label: positive
+    aspect: "thiết kế"
+    style: short
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Sơn hai tông màu của CX-5 bản Signature nhìn xịn hơn giá tiền 👍"
+    label: positive
+    aspect: "thiết kế"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Vinfast VF 7 sắp ra bản nâng cấp đổi mặt trước không mọi người?"
+    label: neutral
+    aspect: "thiết kế"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Mình nhìn thiết kế Innova Crysta thấy thiên về bề thế, ít góc cạnh hơn thế hệ cũ."
+    label: neutral
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Màu sơn xanh đêm của Seltos phải nhìn gần mới thấy đổi tông."
+    label: neutral
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Mình thấy overall looks good phần mui xe coupe của VF 6, còn hông xe thì vẫn mảnh."
+    label: neutral
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: hard
+    noise_types: [code_switching, brand_alias]
+  - text: "Kích thước tổng thể của Corolla Cross và Kicks chênh nhau chưa đầy 5 cm."
+    label: neutral
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Đuôi xe Kia Sonet gọn gàng."
+    label: neutral
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Mặt trước VF e34 bị chê chỉa hất xuống nên hãng phải chỉnh lại, người mua bản đầu tiếc đó."
+    label: negative
+    aspect: "thiết kế"
+    style: review
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Mâm xe Accent bản thường nhìn poor xấu 😡"
+    label: negative
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: [code_switching, emoji]
+  - text: "Sao Vios đời mới ko đổi thiết kế gì đáng kể, nhìn chán hơn đối thủ nhỉ?"
+    label: negative
+    aspect: "thiết kế"
+    style: question
+    difficulty: hard
+    noise_types: [teencode]
+  - text: "Anh em xem hình CX-8 bản mới chưa, lưới tản nhiệt to đùng nhìn rối cả mặt xe."
+    label: negative
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Mặt trước Sonet chán quá 😡"
+    label: negative
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Động cơ 2.0 của Camry chạy êm và đủ sức vượt xe trong thành phố, bật mạnh điều hòa vẫn không yếu đi."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Trong phân khúc máy dầu, Everest rú hơn Fortuner một nhịp khi bấm vượt, dư sức bám theo."
+    label: positive
+    aspect: "động cơ"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Máy Vios chạy êm rấttt."
+    label: positive
+    aspect: "động cơ"
+    style: short
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Anh em thích cảm giác lái thì chọn CX-5 2.5, chạm ga là xe vọt lên, đáng từng đồng."
+    label: positive
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Động cơ hybrid của Corolla Cross chạy phố siêu tiết kiệm, khởi động êm ru 👍"
+    label: positive
+    aspect: "động cơ"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Xe mới mua có cần rà máy sau 1.000 km đầu không các bác?"
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "May 1.5 cua Accent cong suat 115 ma luc, phu hop di chuyen chu yeu trong do thi."
+    label: neutral
+    aspect: "động cơ"
+    style: comment
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Động cơ 1.5 của Kia Seltos hoạt động mượt ở dải vòng tua thấp."
+    label: neutral
+    aspect: "động cơ"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Mình đổi từ xe xăng sang Vinfast VF 5, cảm giác ga ban đầu khác xa nhưng quen dần cũng ổn."
+    label: neutral
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Dung tích động cơ của Tucson 1.6 và CX-5 2.0 chênh nhau khoảng 0,4 lít."
+    label: neutral
+    aspect: "động cơ"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Máy 320i chạy êm đều."
+    label: neutral
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Máy 1.5 của City quá yếu khi chở đủ 5 người lên dốc, đạp sâu vòng tua gào mà xe không nhích."
+    label: negative
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Động cơ Kicks ba xi lanh rung rõ khi dừng đợi đèn đỏ 😡"
+    label: negative
+    aspect: "động cơ"
+    style: comment
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Nhiều người bảo VF 3 ga đầu yếu, chạy thật sự có kém vậy không mọi người?"
+    label: negative
+    aspect: "động cơ"
+    style: question
+    difficulty: hard
+    noise_types: [brand_alias]
+  - text: "Chán cái máy 1.6 của Accent lắm rồi, lên cao tốc 100 km/h là ko còn sức vút nữa."
+    label: negative
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Xpander yếu hơn cả Vios về tăng tốc dù khoang xe to hơn, chọn nhầm là tiếc."
+    label: negative
+    aspect: "động cơ"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Động cơ diesel của Ranger ù ở vòng tua thấp, vào số liên tục nghe tiếng gõ kim loại khó chịu."
+    label: negative
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Đồng hồ vòng tua của CX-5 dao động quanh 1.800 rpm khi chạy 80 km/h."
+    label: neutral
+    aspect: "động cơ"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Tucson có 6 túi khí và cân bằng điện tử tiêu chuẩn, chạy cao tốc thấy yên tâm hẳn 👍"
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Toyota Fortuner phanh chắc, phanh khẩn cấp tự động cứu mình một lần ở vành đai 3 👍"
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "VF 7 có cảnh báo điểm mù nhạy, chạy đêm cx thấy an tâm hơn hẳn 👍"
+    label: positive
+    aspect: "an toàn"
+    style: conversational
+    difficulty: hard
+    noise_types: [teencode, emoji, brand_alias]
+  - text: "Ford Territory có mấy túi khí và bản cao đã có gói ADAS chưa các bác?"
+    label: neutral
+    aspect: "an toàn"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Vios số lượng túi khí tùy bản."
+    label: neutral
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Mình chạy Vinfast Lux A2.0 trên phố một tháng, cảnh báo va chạm nhắc nhiều lúc đường thoáng nhưng chưa phiền."
+    label: neutral
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Honda CR-V đời 2024 có theo gói Honda Sensing từ bản nào ko?"
+    label: neutral
+    aspect: "an toàn"
+    style: question
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Chạy 500 cây đầu với VF 6, mình thấy chế độ hạn chế tốc độ hơi khó quen chứ chưa phiền."
+    label: neutral
+    aspect: "an toàn"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Cả Kia Seltos lẫn Hyundai Creta đều 6 túi khí, khác nhau chỉ ở gói ADAS tùy chọn."
+    label: neutral
+    aspect: "an toàn"
+    style: comparison
+    difficulty: hard
+    noise_types: []
+  - text: "Seltos có camera 360 từ bản giữa."
+    label: neutral
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Nghe nói Ford Everest bản mới thêm gói ADAS, có an toàn hơn bản cũ hả các bác?"
+    label: neutral
+    aspect: "an toàn"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Mazda CX-5 chạm nhẹ vào bướm là cảnh báo va chạm kêu inh ỏi dù đường thoáng, rất khó chịu."
+    label: negative
+    aspect: "an toàn"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai Accent bản tiêu chuẩn chỉ có 2 túi khí, tiết kiệm kiểu này ko chịu nổi."
+    label: negative
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Vinfast VF e34 báo lỗi phanh liên tục trên quãng dốc, có bác nào gặp tình trạng tương tự chưa?"
+    label: negative
+    aspect: "an toàn"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Mình chạy thử VF 5, phanh hồi khá mềm nên lúc xuống dốc thật sự ko yên tâm 😡"
+    label: negative
+    aspect: "an toàn"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode, emoji, brand_alias]
+  - text: "Toy ta khong canh bao diem mu dang tiec."
+    label: negative
+    aspect: "an toàn"
+    style: short
+    difficulty: hard
+    noise_types: [missing_diacritics, brand_alias]
+  - text: "Màn hình của Honda City RS có hỗ trợ không dây cho iPhone chưa mọi người?"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Fortuner Legender đã có phanh tay điện tử."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Mình dùng bản máy dầu Ford Ranger Wildtrak, màn 12 inch hiển thị ổn nhưng giọng trợ lý đọc tiếng Việt còn máy móc."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Tucson và Kia Sportage cùng nền tảng, khác nhau rõ nhất ở cụm đồng hồ kỹ thuật số 12,3 inch."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 bản Eco của mình không có ghế chỉnh điện hàng sau, dùng cx thường thôi."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode, brand_alias]
+  - text: "Màn hình Ford Territory có đc cập nhật bản đồ offline ko hay phải dùng 4G?"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Điều hoà Toyota Vios chỉ một vùng, đông người là hàng ghế sau liên tục kêu nóng."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Màn hình cảm ứng của Mazda CX-5 chậm rõ rệt, chạm xong phải chờ nửa giây mới phản hồi 😡"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "So voi Kia Carnival, Toyota Innova Cross khong co rem che nang hang sau, tien nghi cho be kem han."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: hard
+    noise_types: [missing_diacritics]
+  - text: "Ngồi Hyundai Creta bản tiêu chuẩn, không có gập ghế sau điện mà chênh chỉ vài chục triệu, tiếc quáaa."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Kia Seltos bản 2025 đổi điều hoà sang điều khiển màn hình, có nút dự phòng nào không vậy?"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast Lux SA chưa có CarPlay, poor."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Đổi nhớt và lọc dầu Ford Ranger hết bao nhiêu, các bác cho xin bảng giá tham khảo?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Mình đưa Vinfast VF 3 đi kiểm tra định kỳ, giờ giữ xe khoảng hai ngày và có gọi báo trước."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Chi phí bảo dưỡng định kỳ Hyundai Accent thấp hơn Toyota Vios ở vài hạng mục, cao hơn ở một số khác."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Kia hẹn bảo dưỡng đầu tiên ở mốc 1.000 km."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Honda City hết bảo hành rồi, phụ tùng hãng giờ chỉ đắt hơn ngoài tiệm một chút."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Toy ta có chính sách bảo hành 3 năm hay 100.000 km, áp dụng cho Vios mua cuối 2025 không?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Đặt linh kiện Mazda được hai tuần, đại lý trả lời hàng về theo lịch kho nhưng chưa có mốc cụ thể."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Đại lý Vinfast trả lời ticket bảo hành chậm quá, service kiểu này lấy lòng khách bằng gì?"
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Kia từ chối bảo hành côn bộ với lý do lái sai cách, quá đáng 😡"
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Mang xe Mitsubishi ra hãng thì đổ lỗi khách tự ý độ, phụ tùng chờ tháng lun, bực quáaa."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: hard
+    noise_types: [teencode, elongation, brand_alias]
+  - text: "Dai ly Hyundai xuong suot, dat lich bao duong khong ai tra loi, ho so sua chua thi mat."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: hard
+    noise_types: [missing_diacritics]
+  - text: "Vinfast VF 3 bản Plus 318 triệu mà đủ sáu túi khí, mức giá này hiếm đối thủ theo kịp."
+    label: positive
+    aspect: "giá cả"
+    style: comment
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Mua Hyundai Tucson giữa 2026 được ưu đãi 50 triệu tiền mặt, chốt nhanh kẻo hết chương trình 👍"
+    label: positive
+    aspect: "giá cả"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Vinfast VF 6 bản Plus ra mắt 2026 giá bao nhiêu, có tăng so với đầu năm không?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Toyota Corolla Cross hybrid nhỉnh hơn bản xăng khoảng 90 triệu, mình đang cân nhắc xem đc không."
+    label: neutral
+    aspect: "giá cả"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Mazda CX-8 chỉ ưu đãi quà, không giảm tiền mặt, cx tùy người tính."
+    label: neutral
+    aspect: "giá cả"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Mẹc GLC đủ tiền chứ không rẻ."
+    label: neutral
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Hyundai Santa Fe Calligraphy 2026 niêm yết bao nhiêu, average tầm 1,4 tỷ đúng không các bác?"
+    label: neutral
+    aspect: "giá cả"
+    style: question
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Mình đặt cọc Vinfast VF 6 đầu năm, đến giờ xe về tăng thêm 15 triệu, tiền cọc không bảo vệ được giá."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: hard
+    noise_types: [brand_alias]
+  - text: "Kia Sorento lai chèn gói phụ kiện ba chục triệu mới giao xe, cộng dồn thấy rấttt hớ."
+    label: negative
+    aspect: "giá cả"
+    style: conversational
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Gia xe Vinfast VF 7 tang lien tuc ma trang bi khong doi, khach cu nhu bi cuoi."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: hard
+    noise_types: [missing_diacritics, brand_alias]
+  - text: "Toyota Corolla Cross hybrid đi nội đô chỉ 4,2 lít/100 km, đầy bình chạy gần nghìn cây."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "VF 3 chạy điện một cây có vài trăm đồng, xe xăng cx thua xa."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: [brand_alias, teencode]
+  - text: "Mazda CX-8 bản 2.5 turbo tiết kiệm hơn hẳn Ford Everest máy dầu trên cao tốc theo đồng hồ mình theo dõi."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Honda City số tự động chỉ tốn 5,8 lít."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Chạy Vinfast VF 7 Plus một tháng, mình sạc đêm ở nhà hết chưa tới 300 nghìn cho 600 cây 👍"
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: easy
+    noise_types: [emoji, brand_alias]
+  - text: "Hyundai Accent đi tỉnh 5,5 lít/100 km, ổn áp quá 👍"
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "VF e34 sạc trạm V-Green có ưu đãi giờ thấp điểm, vậy tổng chi phí mỗi cây rẻ hơn Vios nhiều đc ko?"
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias, teencode]
+  - text: "Kia Seltos bản 1.4 chạy phố 7 lít/100 km, not bad cho dòng gầm cao."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Toy ta Innova Cross hybrid tiêu hao bao nhiêu lít khi chở đủ 7 người lên đèo?"
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Vinfast VF 5 thực tế chạy 280 cây."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Mình chạy Ford Ranger Raptor phố lẫn trường, đồng hồ trung bình dao động 9 đến 11 lít tùy giờ cao điểm."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Vios đi tỉnh cx chỉ 5 lít, nhưng vào giờ cao điểm Hà Nội là lên 8 lít ngay."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Mitsu Xpander chạy đường trường hết mấy lít, có bác nào ghi số cụ thể chưa?"
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Hyundai Santa Fe máy xăng 2.5 uống xăng inh ỏi, trong phố đồng hồ cx 13 lít/100 km."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Ford Territory bản 1.5 turbo quảng cáo 6,5 lít nhưng mình chạy thực tế trong đô thị hơn 9 lít, chênh quá xa."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Fortuner máy dầu nặng hơn nhưng tiết kiệm hơn Mitsubishi Pajero Sport rõ rệt, chênh tới hai lít trên 100 km."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "VF 8 mở điều hoà thì quãng đường tụt nhanh rấttt, có bác nào đo giống mình chưa?"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: medium
+    noise_types: [elongation, brand_alias]
+  - text: "Chạy Toyota Raize thành phố xăng lên tận 10 lít, đau lòng quá 😡"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Xe Hyundai Tucson may xang tieu hao hon cong bo, trong pho dong ho luon 12 lit qua ngan."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: hard
+    noise_types: [missing_diacritics]
+  - text: "Mazda CX-5 quảng cáo tiết kiệm mà thực tế phố 10 lít, poor thật sự, nghe quảng cáo ko tin đc."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: hard
+    noise_types: [teencode, code_switching]
+  - text: "Toyota Land Cruiser Prado uống xăng như thế thì nuôi tháng hết bao nhiêu, có bác tính giúp chưa?"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Toy ta Camry hybrid tiết kiệm hơn hẳn, mua Camry bản xăng 2.5Q là chọn nhầm, tiêu hao hơn tới hai lít."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comparison
+    difficulty: hard
+    noise_types: [brand_alias]
+  - text: "Ghế ngồi Mazda CX-8 hàng hai gập phẳng thành giường, đưa hai bé đi quãng dài các cháu ngủ ngon lành."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: []
+  - text: "Vinfast VF 7 khoang hành lý nuốt được ba vali lớn, đi sân bay không phải sắp xếp gì 👍"
+    label: positive
+    aspect: "nội thất"
+    style: comment
+    difficulty: easy
+    noise_types: [emoji, brand_alias]
+  - text: "Kia Carnival hàng ghế thứ hai chỉnh điện trượt ngang, rộng hơn Toyota Innova rõ, ghế ba ngồi cx dễ chịu 👍"
+    label: positive
+    aspect: "nội thất"
+    style: comparison
+    difficulty: medium
+    noise_types: [teencode, emoji]
+  - text: "Hyundai Santa Fe bọc da nappa mềm quá."
+    label: positive
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Mình ưa bảng điều khiển vật lý của Toyota Vios, chỉnh điều hoà bằng tay vẫn tiện hơn màn hình."
+    label: positive
+    aspect: "nội thất"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Ngồi Mercedes GLC lâu không mỏi lưng, đệm ghế êm rấttt."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: [elongation]
+  - text: "Vinfast VF 6 cách âm khoang lái tốt, cabin quiet khi chạy cao tốc."
+    label: positive
+    aspect: "nội thất"
+    style: comment
+    difficulty: medium
+    noise_types: [code_switching, brand_alias]
+  - text: "Mazda CX-5 bản Deluxe có ghế da hay nỉ, các bác chỉ giúp?"
+    label: neutral
+    aspect: "nội thất"
+    style: question
+    difficulty: easy
+    noise_types: []
+  - text: "Fortuner hàng ghế ba gập phẳng được."
+    label: neutral
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF e34 dùng da nhân tạo, cảm giác khá ổn với tầm giá nhưng chưa mềm bằng da thật."
+    label: neutral
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Toy ta Raize hàng ghế sau ngả được mấy mức, chở người lớn tuổi ngồi đường dài có mỏi không?"
+    label: neutral
+    aspect: "nội thất"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Nhựa cứng phủ khắp táp lô của Mitsubishi Xpander, gõ vào nghe đoàn đoàn rất rẻ tiền."
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 5 không có rèm che nắng và túi đồ cửa lái hẹp, chở đồ cồng kềnh sao nhét đây các bác?"
+    label: negative
+    aspect: "nội thất"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Nội thất Kia Sonet nhựa cứng toàn tập 😡"
+    label: negative
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Mazda CX-3 ghế sau chật, ngồi ba người lớn là ép nhau, đi xa mình ko dám chở đủ."
+    label: negative
+    aspect: "nội thất"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Hyundai Stargazer mùi nhựa mới ám cả tuần, cabin smell bad cho gia đình có bé nhỏ."
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Ghe sau Mitsu Xpander du va nong, nguoi cao ngoi cham tan dau."
+    label: negative
+    aspect: "nội thất"
+    style: comment
+    difficulty: hard
+    noise_types: [missing_diacritics, brand_alias]
+  - text: "Vinfast VF 3 kiểu dáng vuông vức đáng yêu, chị em trong nhà nhìn phát là chốt."
+    label: positive
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Mặt đèn LED của Kia Sorento nhìn đêm rấttt sang, hơn hẳn mặt đen của Hyundai Santa Fe đời trước."
+    label: positive
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Mẹc GLA đỗ góc phố nhìn phát là mê 👍"
+    label: positive
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: [brand_alias, emoji]
+  - text: "Vinfast VF 7 sơn xanh dương, còn có màu nào hợp nam giới không?"
+    label: neutral
+    aspect: "thiết kế"
+    style: question
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Vinfast VF 6 lưới tản nhiệt kín nhìn như mặt nạ, trưa nắng phản chiếu hơi kỳ."
+    label: negative
+    aspect: "thiết kế"
+    style: comment
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Vinfast VF 8 đổi cản trước mà tổng thể nặng nề hơn, có bác nào thấy bản cũ đẹp hơn không?"
+    label: negative
+    aspect: "thiết kế"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Toy ta Yaris Ativ nhìn như xe chạy dịch vụ, đứng cạnh Honda City nhã nhặn thua sạch phần ngoại hình."
+    label: negative
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Mat truoc Kia Sonet roi ram qua."
+    label: negative
+    aspect: "thiết kế"
+    style: short
+    difficulty: hard
+    noise_types: [missing_diacritics]
+  - text: "VF 7 bản mới thêm la zăng to nhưng tổng thể cx nặng nề, nhìn kỳ quáaa 😡"
+    label: negative
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: hard
+    noise_types: [brand_alias, teencode, elongation, emoji]
+  - text: "Mazda CX-5 2.5 turbo lên dốc đèo Prenn vẫn gằn đều, không phải đạp sâu chân ga."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Toyota Vios chạy 3 năm động cơ chưa một lần trục trặc, đáng tin đc."
+    label: positive
+    aspect: "động cơ"
+    style: comment
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Vinfast VF 8 cầm 5,8 giây lên 100, rơ ra ngã tư là át hẳn dòng xăng cùng chỗ."
+    label: positive
+    aspect: "động cơ"
+    style: conversational
+    difficulty: easy
+    noise_types: []
+  - text: "Vinfast VF 6 bản Eco động cơ 128 mã lực, chở đủ 5 người lên đèo có đuối không các bác?"
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Toyota Corolla Cross bản 1.8 xăng chạy êm nhưng vượt xe trên quốc lộ cần đạp ga dứt khoát mới nhích."
+    label: neutral
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Hyundai Creta máy 1.5 đủ dùng trong phố."
+    label: neutral
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsu Outlander máy 2.0 gầm ga bao nhiêu mã lực, kéo được xe moóc nhỏ không?"
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Ford Ranger rung rõ ở vô lăng mỗi lần đề máy buổi sáng."
+    label: negative
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Dong co VF 6 chay cao toc mat pin nhanh, ve toi con 20 phan tram, qua lo lang."
+    label: negative
+    aspect: "động cơ"
+    style: review
+    difficulty: hard
+    noise_types: [missing_diacritics, brand_alias]
+  - text: "Toyota Fortuner 2.7 xăng lên đèo hụt hơi rõ, trong khi bản máy dầu của chính hãng vẫn bò dẻo."
+    label: negative
+    aspect: "động cơ"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Hyundai Tucson máy xăng leo dốc dài là nóng máy, quạt hút gằn to, có bác nào gặp chưa?"
+    label: negative
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: []
+  - text: "Kia Seltos hụt ga lúc vượt xe."
+    label: negative
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: []
+  - text: "Mazda CX-8 turbo giữa trưa Hà Nội cx chậm ăn ga, ra hãng họ bảo bình thường, bực thật 😡"
+    label: negative
+    aspect: "động cơ"
+    style: conversational
+    difficulty: hard
+    noise_types: [teencode, emoji]
+  - text: "Toy Vios máy nhỏ mà chưa bao giờ làm mình thất vọng trên dốc cao."
+    label: positive
+    aspect: "động cơ"
+    style: comment
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Máy dầu Fortuner 2.8 của Toy kéo 2 tấn có ì không mấy bác, em định lên đời?"
+    label: neutral
+    aspect: "động cơ"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Mình chạy VF e34 gần một năm, cảm nhận máy móc chỉ là average thôi, không tệ đâu."
+    label: neutral
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: [code_switching, brand_alias]
+  - text: "Máy Kia K3 chạy bình thường 😐"
+    label: neutral
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "VF 8 sạc đầy leo dốc đèo Hải Vân mà máy rống lên ko trôi, ai gặp giống em ko?"
+    label: negative
+    aspect: "động cơ"
+    style: question
+    difficulty: hard
+    noise_types: [teencode, brand_alias]
+  - text: "Palisade túi khí đủ, camera cũng có, an toàn cơ bản vậy thôi 😐"
+    label: neutral
+    aspect: "an toàn"
+    style: conversational
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Toyota Corolla Cross có 6 túi khí và cân bằng điện tử, mức an toàn cơ bản của phân khúc."
+    label: neutral
+    aspect: "an toàn"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Mitsubishi Xpander không có nhiều ADAS nhưng phanh ABS với EBD thì đủ, dùng thông thường vẫn ổn."
+    label: neutral
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: []
+  - text: "Mazda3 với Kia K3 đều có phanh khẩn cấp tự động, chung một mức trang bị an toàn."
+    label: neutral
+    aspect: "an toàn"
+    style: comparison
+    difficulty: easy
+    noise_types: []
+  - text: "Mình xem xe Honda City thấy trang bị an toàn chỉ là basic thôi, không chê cũng không khen."
+    label: neutral
+    aspect: "an toàn"
+    style: conversational
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Con Toy Corolla Cross của tôi có cảnh báo lệch làn, hoạt động thỉnh thoảng báo hơi muộn một nhịp."
+    label: neutral
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "VF 3 bản tiêu chuẩn ko có phanh tay điện tử, giữ xe dốc toàn đạp chân cực lắm."
+    label: negative
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode, brand_alias]
+  - text: "Mình dùng thử màn hình Kia Seltos một tuần, kết nối CarPlay ổn định, chất lượng vậy thôi anh em."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: []
+  - text: "Toyota Camry có sạc điện thoại không dây nhưng tốc độ chậm, đặt cả chuyến đi mới đầy 70%."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "VF 6 có sạc nhanh DC 250kW ko hay chỉ sạc chậm tại nhà vậy mọi người?"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: medium
+    noise_types: [teencode, brand_alias]
+  - text: "Xe Hyundai Tucson có app điều khiển từ xa, dùng cũng tiện vậy thôi các bác ạ 😐"
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Hệ thống giải trí của Kia K3 dùng một thời gian thấy ổn định, chất lượng âm thanh hơi basic."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Mitsu Xpander Cross thêm cổng sạc sau cho hàng ghế hai, tiện cho hành khách đi xa."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "App Vinfast kết nối với VF 6 hay mất sóng, mình bấm mở khóa từ xa mấy lần mới ăn, bực mình."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Điều hòa VF 8 chạy chưa được 30 phút là pin tụt 5%, lắp thêm cái này ko đáng 😡"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: hard
+    noise_types: [teencode, emoji, brand_alias]
+  - text: "Màn hình Ford Everest bản tiêu chuẩn chậm hơn hẳn Territory, cùng hãng mà trải nghiệm chênh nhau một đời."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Honda City màn hình giữ nguyên như đời cũ vậy mà giá tăng, honestly bad move đúng không mọi người?"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: question
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Cruise control của Mazda CX-8 hay bung giữa cao tốc, mình tắt lun vì sợ hơn dùng."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: hard
+    noise_types: [teencode]
+  - text: "Ghế của Hyundai SantaFe bọc da mềm, đi Hà Nội đến Ninh Bình ba tiếng không thấy mỏi lưng."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "Nội thất VF 9 sang hơn Ford Explorer ở chi tiết ốp gỗ, cảm giác ngồi vào là thấy khác."
+    label: positive
+    aspect: "nội thất"
+    style: comparison
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Mình ngồi thử hàng ghế ba của Mitsubishi Xpander, trẻ con thì ok còn người lớn thì vậy 😐"
+    label: neutral
+    aspect: "nội thất"
+    style: conversational
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Da ghế VF e34 nứt chân ghế lái sau 2 năm, hãng bảo do dùng nhiều, mình nghe ko thuyết phục đâu."
+    label: negative
+    aspect: "nội thất"
+    style: conversational
+    difficulty: hard
+    noise_types: [teencode, brand_alias]
+  - text: "Vì sao ghế sau CX-5 dựng vậy mà hãng vẫn bán, ngồi hơn một tiếng là đau lưng 😡?"
+    label: negative
+    aspect: "nội thất"
+    style: question
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Mâm của Vinfast VF 6 bản Plus nhìn rấttt thể thao, giữ nguyên khỏi độ gì cho mất gốc."
+    label: positive
+    aspect: "thiết kế"
+    style: comment
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Vinfast VF 8 mâm 21 inch, số đo la-zăng lớn nhất dòng VF hiện tại, nhìn tổng thể vẫn cân."
+    label: neutral
+    aspect: "thiết kế"
+    style: comment
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "VF 7 màu xanh xám ngoài đời ra sao vậy các bác, ảnh trên web nhìn không rõ?"
+    label: neutral
+    aspect: "thiết kế"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Honda City bản 2026 đổi cản trước, mình nhìn khác chút chứ tổng thể vẫn y nguyên 😐"
+    label: neutral
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Đuôi xe Vinfast VF 6 cụt hơn VF 7 rõ rệt, chọn VF 6 vì giá mà nhìn mã thì cứ tiếc."
+    label: negative
+    aspect: "thiết kế"
+    style: comparison
+    difficulty: hard
+    noise_types: [brand_alias]
+  - text: "Toy Vios chạy grab cả tuần chỉ hết 500k xăng, nghề chạy xe mà đc vậy là vừa ý."
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode, brand_alias]
+  - text: "Vinfast VF 9 chạy cao tốc pin tụt nhanh kinh khủng, sạc hai lần cho một chuyến dài, ko chịu nổi 😡"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: hard
+    noise_types: [teencode, emoji, brand_alias]
+  - text: "Vios đời mới hao hơn đời cũ 0.5 lít vậy mà hãng quảng cáo tiết kiệm, this is confusing thật sự mọi người?"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: question
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Bảo dưỡng Mazda định kỳ ở đại lý gần nhà, báo giá từng hạng mục trước rồi mới làm, không phát sinh."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: []
+  - text: "dai ly toyota o tinh toi nhan bao duong dung gio hen, thu tuc cung nhanh khong loi le gi."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Kia báo trước từng hạng mục bảo dưỡng, đồng ý mới làm, cách làm việc minh bạch rõ."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: comment
+    difficulty: easy
+    noise_types: []
+  - text: "Mercedes có xe đưa đón khi bảo dưỡng còn Mazda thì khách tự mang xe đến, hai bên phục vụ khác nhau mỗi kiểu."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: medium
+    noise_types: []
+  - text: "Bảo hành VF 7 còn bao nhiêu năm khi mua lại xe cũ vậy mọi người?"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: question
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Kia cứu hộ miễn phí còn Mazda thu phí từng chuyến, so lại thấy poor service thật sự."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: comparison
+    difficulty: hard
+    noise_types: [code_switching]
+  - text: "App Vinfast cx mượt, mở điều hòa từ xa là xe lạnh sẵn, trải nghiệm tốt thật."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Đồ công nghệ nhiều, đỉnh thật 👍"
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "VF 9 cập nhật OTA hoài, xe cũ mà tính năng cứ mới, mê cái điểm này."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Cụm màn hình của Kia K5 hiện đại quáaa, kết nối CarPlay không dây mượt luôn."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: easy
+    noise_types: [elongation]
+  - text: "Dịch vụ của Mazda overall good, nhắc lịch đúng hẹn, sửa nhanh gọn."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: comment
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Cứu hộ 24/7 có thật, gọi là có, phục vụ lun ổn."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Toy ta bảo dưỡng rẻ hơn nghĩ, nhân viên hướng dẫn rõ ràng, ưng á."
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "7 túi khí cộng gói ADAS đầy đủ, an tâm chở con nhỏ 👍"
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Phanh khẩn cấp Toyota Camry phản hồi rấttt nhanh, thử một lần là tin luôn."
+    label: positive
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Cảnh báo điểm mù hoạt động chính xác, chạy cao tốc ko lo."
+    label: positive
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Ga ăn ngay, lên số mượt, đi phượt đã 👍"
+    label: positive
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Máy Mitsu khỏe, kéo người cùng đồ đạc lên Trường Sơn vẫn không đuối."
+    label: positive
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Động cơ hybrid của Corolla Cross overall good, êm và lên ga không trễ."
+    label: positive
+    aspect: "động cơ"
+    style: review
+    difficulty: easy
+    noise_types: [code_switching]
+  - text: "Dáng xe trẻ trung, đèn hậu liền ngang đẹp rấttt."
+    label: positive
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: [elongation]
+  - text: "Toy Innova Cross bản Legender nhìn sang hẳn, cản trước mạnh mẽ hợp đàn ông."
+    label: positive
+    aspect: "thiết kế"
+    style: comment
+    difficulty: easy
+    noise_types: [brand_alias]
+  - text: "Ngoại hình cx tạm, không xấu cũng không đẹp."
+    label: neutral
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Thiết kế nhìn ổn, không màu mè 😐"
+    label: neutral
+    aspect: "thiết kế"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Mặt trước VF 5 theo mình thấy bình thường, tùy mắt người nhìn thôi."
+    label: neutral
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Mâm xe đẹp nhưng thiết kế tổng thể bình thường, không có điểm nào nổi bật."
+    label: neutral
+    aspect: "thiết kế"
+    style: review
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Xe nay co mau moi khong hay van giu dang cu anh em nhi?"
+    label: neutral
+    aspect: "thiết kế"
+    style: question
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Phần đuôi xe mới thiết kế average, phần trước nhìn tạm được."
+    label: neutral
+    aspect: "thiết kế"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Ghế êm, cabin đầy đủ dùng 😐"
+    label: neutral
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Nội thất cx đủ tiêu chuẩn tầm tiền, chẳng có gì đặc biệt."
+    label: neutral
+    aspect: "nội thất"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Kia Seltos cabin tối màu theo mình là bình thường, dùng lâu ít bẩn."
+    label: neutral
+    aspect: "nội thất"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Noi that xe du dung trong tam gia, khong sang nhung cung khong loi gi."
+    label: neutral
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Hàng 3 cx đủ ngồi người lớn cho chặng ngắn đúng không mọi người?"
+    label: neutral
+    aspect: "nội thất"
+    style: question
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Vật liệu cabin ở mức average, so với tiền thì chấp nhận được."
+    label: neutral
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Máy chạy dc, không bốc cũng không ì."
+    label: neutral
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Vận hành đều, đủ dùng hằng ngày 😐"
+    label: neutral
+    aspect: "động cơ"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Toy Altis máy 1.8 chạy đều đều, kiểu vậy đó, thích bốc thì không hợp."
+    label: neutral
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "May chay pho du moi ngay, len cao toc thi phai dap sau chut moi vuot duoc xe."
+    label: neutral
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Máy bản mới average so với kỳ vọng, vẫn đủ dùng chứ chẳng có điểm nhấn."
+    label: neutral
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Bảo dưỡng theo lịch cx thuận tiện, giá tầm trung."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Đại lý gần nhà, vào bảo dưỡng nhanh 😐"
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "VF chính sách bảo hành dài, nhưng điểm đổi phụ tùng ít thì phải cân nhắc."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Dich vu bao duong on ap, khong re cung khong dat, lam viec theo lich hen dung gio."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Trang bị an toàn cơ bản dc, cần gì phải lên bản cao."
+    label: neutral
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Túi khí đủ, cảm biến ổn 😐"
+    label: neutral
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Ban cao co them giu lan khong hay chi ban cao nhat moi co vay?"
+    label: neutral
+    aspect: "an toàn"
+    style: question
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "Toy Vios bảnbase 2 túi khí, tùy người coi trọng cái gì thôi."
+    label: neutral
+    aspect: "an toàn"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Gói ADAS bản trung average, có dùng được nhưng phản hồi không nhanh."
+    label: neutral
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Camera lut ro dang dung, cam bien sau hoat dong on dinh khong bao oan."
+    label: neutral
+    aspect: "an toàn"
+    style: review
+    difficulty: easy
+    noise_types: [missing_diacritics]
+  - text: "6 túi khí tiêu chuẩn, cx ổn trong tầm giá này."
+    label: neutral
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Tiêu hao 7 lít phố, mức trung bình của lớp xe 😐"
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "VF 6 sạc một lần đi trong tuần vừa đủ, tính ra bình thường."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Giá niêm yết cx vậy, thực tế trả thêm tí phụ kiện."
+    label: neutral
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Mức giá bản cao average so với đối thủ, không rẻ cũng không đắt."
+    label: neutral
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Man hinh du lon, ket noi CarPlay cham mot chut nhung van dung duoc."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Đề máy sáng sớm ko nổ, phải đề 2-3 lần mới lên, mệt."
+    label: negative
+    aspect: "động cơ"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Máy rung rõ ở 80km/h, lái không yên 😡"
+    label: negative
+    aspect: "động cơ"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "Máy Mitsu Xpander lên đèo rú to mà chậm, chở đủ người là bất lực."
+    label: negative
+    aspect: "động cơ"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Động cơ bản mới overall bad, ga trễ và lên tốc chậm hẳn đời trước."
+    label: negative
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Xăng hao quá trời mà hãng ko chịu nhận lỗi, 12 lít phố là thường."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Đổ đầy bình chạy có 350km, hao đến phát mệt 😡"
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "VF 7 chạy cao tốc pin tụt nhanh, 200km đầu đã mất gần nửa."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Tiêu hao thực tế overall bad so với số hãng công bố, chênh nhau 2 lít."
+    label: negative
+    aspect: "mức tiêu hao nhiên liệu"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Nhựa cứng toàn taplo, cửa kính lạch cạch, chắc chắn ko như quảng cáo."
+    label: negative
+    aspect: "nội thất"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Ghế da nứt có 2 năm dùng, nhìn cũ sờn 😡"
+    label: negative
+    aspect: "nội thất"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Mẹc GLB hàng 3 chật như tủ đựng đồ, người lớn ngồi là hình phạt."
+    label: negative
+    aspect: "nội thất"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Can trong xe nhua cung, dung mot nam da thay xu xin rat nhanh."
+    label: negative
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Đuôi xe cụt nhìn ko cân, chụp ảnh góc sau là thấy khó chịu."
+    label: negative
+    aspect: "thiết kế"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Ca lăng to đùng nhìn lố, đèn pha lại tối 😡"
+    label: negative
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Toy Vios dáng 3 năm ko đổi, đứng cạnh K3 thấy cũ hẳn một thế hệ."
+    label: negative
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Thiết kế ngoại thất bản mới overall bad, càng nhìn càng thấy nặng nề."
+    label: negative
+    aspect: "thiết kế"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Đặt lịch bảo dưỡng chờ 1 tuần mới có slot, hotline thì ko ai bắt máy."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Sửa 3 lần chưa dứt lỗi, mỗi lần mất nguyên buổi 😡"
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Phụ tùng Mitsu chờ 3 tuần mới về, xe nằm garage nhìn mà tức."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Dai ly lam viec cham, sua nhe cung phai de xe ca ngay, tien thi nhieu."
+    label: negative
+    aspect: "dịch vụ hậu mãi"
+    style: review
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Mua 6 tháng hãng giảm 40 triệu, tiền mất ko thấy đâu."
+    label: negative
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Giá cao mà đồ chơi không có gì, không đáng tiền 😡"
+    label: negative
+    aspect: "giá cả"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "VF 8 giá ngang xe Đức mà giữ giá kém xa, bán lại là lỗ nặng."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Chính sách giá đại lý overall poor, mỗi nơi báo mỗi kiểu, không minh bạch."
+    label: negative
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Cảm biến sau báo oan liên tục, lót xe bãi đông ko dám tin."
+    label: negative
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Giữ làn can thiệp mạnh tay quá, đang chạy nó giật lái luôn 😡"
+    label: negative
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Chi co 2 tui khi o ban thap, doi thu cung gia da co bay tui roi."
+    label: negative
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "App kết nối lỗi hoài, mở điều hòa từ xa 3 lần ko ăn, phiền thật."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "Màn hình hay treo, phải khởi động lại xe mới hết, bực 😡"
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Trải nghiệm hệ thống giải trí overall poor, giọng nói hiểu sai liên tục."
+    label: negative
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Thiết kế nhìn quen quen, tạm ổn 😐"
+    label: neutral
+    aspect: "thiết kế"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Dáng xe cx tùy người thích, mình thấy bình thường."
+    label: neutral
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "K3 cabin theo mình là tạm, chẳng sang mà chẳng tệ."
+    label: neutral
+    aspect: "nội thất"
+    style: comment
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Chất liệu nội thất average, dùng được trong tầm tiền này."
+    label: neutral
+    aspect: "nội thất"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Máy chạy đều, không có gì để chê cũng chẳng có gì để khen 😐"
+    label: neutral
+    aspect: "động cơ"
+    style: comment
+    difficulty: medium
+    noise_types: [emoji]
+  - text: "May on dinh khi chay pho, len cao toc thi can dap ga sau them chut."
+    label: neutral
+    aspect: "động cơ"
+    style: review
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Bảo dưỡng đúng lịch cx ổn, giá không có gì bất ngờ."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "Toy bảo dưỡng nhắc lịch đều, trải nghiệm bình thường không phàn nàn gì."
+    label: neutral
+    aspect: "dịch vụ hậu mãi"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "An toàn cơ bản đủ dùng, đi phố thì ổn 😐"
+    label: neutral
+    aspect: "an toàn"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Trang bị ADAS average, có tốt hơn không có nhưng chưa đặc biệt."
+    label: neutral
+    aspect: "an toàn"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Xăng 8 lít phố cx tùy kiểu chạy, mình thấy bình thường."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: comment
+    difficulty: medium
+    noise_types: [teencode]
+  - text: "VF 5 range vừa đủ đi lại nội thành, tính ra mức trung bình."
+    label: neutral
+    aspect: "mức tiêu hao nhiên liệu"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Giá thị trường như vậy, mua sớm muộn cũng thế 😐"
+    label: neutral
+    aspect: "giá cả"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Man hinh vua du dung, tinh nang co ban day du, khong co gi dac biet."
+    label: neutral
+    aspect: "công nghệ & tiện nghi"
+    style: review
+    difficulty: medium
+    noise_types: [missing_diacritics]
+  - text: "Ga nhạy máy êm, chạy phượt một mình cũng thấy đã rấttt."
+    label: positive
+    aspect: "động cơ"
+    style: comment
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Sạc ở nhà đi cả tuần, chi phí xăng gần như bằng không 👍"
+    label: positive
+    aspect: "mức tiêu hao nhiên liệu"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Ghế da êm, cabin yên tĩnh, ngồi đường dài ko mỏi lưng."
+    label: positive
+    aspect: "nội thất"
+    style: review
+    difficulty: easy
+    noise_types: [teencode]
+  - text: "K5 dáng thấp rộng nhìn vẫn đẹp sau 3 năm dùng, mâm nguyên bản đã mắt."
+    label: positive
+    aspect: "thiết kế"
+    style: conversational
+    difficulty: medium
+    noise_types: [brand_alias]
+  - text: "Gọi cứu hộ nửa tiếng có mặt, phục vụ chu đáo 👍"
+    label: positive
+    aspect: "dịch vụ hậu mãi"
+    style: short
+    difficulty: easy
+    noise_types: [emoji]
+  - text: "Giá bán kèm khuyến mãi hiện tại value for money, tính ra hời hẳn."
+    label: positive
+    aspect: "giá cả"
+    style: review
+    difficulty: medium
+    noise_types: [code_switching]
+  - text: "Phanh ăn và cảnh báo va chạm nhạy rấttt, chạy đêm yên tâm hơn hẳn."
+    label: positive
+    aspect: "an toàn"
+    style: comment
+    difficulty: medium
+    noise_types: [elongation]
+  - text: "Trợ lý giọng nói hiểu tiếng Việt tốt, nói là mở điều hòa lun."
+    label: positive
+    aspect: "công nghệ & tiện nghi"
+    style: conversational
+    difficulty: medium
+    noise_types: [teencode]

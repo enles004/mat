@@ -1,0 +1,37 @@
+{
+  "chosen_view": "raw",
+  "config_checksum": "7f47b60eaa08c5c31b408b1062e4b40616648ea5227151b8fedb334fa66a17f6",
+  "dataset_checksum": "1675769ac6872f2fff06ab2b4f6ae9f2458a6d7b21f3c59ea38472d2d5c30043",
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "schema_version": "1",
+  "split_manifest_checksum": "026716cd132dd799a1eae17365fa19151b222333713394f67f1fdc6cd9265a4e",
+  "tokenizer": "none",
+  "views": {
+    "normalized": {
+      "fold_macro_f1": [
+        0.6373477213342834,
+        0.6599003433293835,
+        0.6335507246376811,
+        0.6193628009417483,
+        0.6312833206397563
+      ],
+      "mean_macro_f1": 0.6362889821765705,
+      "oof_row_count": 720
+    },
+    "raw": {
+      "fold_macro_f1": [
+        0.6445729000820187,
+        0.6675426771424812,
+        0.6388051810732223,
+        0.5986416529228514,
+        0.6380154166619412
+      ],
+      "mean_macro_f1": 0.6375155655765029,
+      "oof_row_count": 720
+    }
+  }
+}

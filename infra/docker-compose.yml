@@ -1,0 +1,112 @@
+services:
+  ai:
+    build:
+      context: ..
+      dockerfile: ai/Dockerfile
+    environment:
+      MAT_MODEL_BACKEND: baseline
+      MAT_BASELINE_ARTIFACT_DIR: /app/artifacts/baseline
+      MAT_MAX_REQUEST_BYTES: "65536"
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health-check', timeout=2)"
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped
+
+  ai-gpu:
+    profiles:
+      - gpu
+    build:
+      context: ..
+      dockerfile: ai/Dockerfile.gpu
+      args:
+        GIT_REVISION: ${GIT_REVISION:-}
+    environment:
+      MAT_MODEL_BACKEND: transformer
+      MAT_BASELINE_ARTIFACT_DIR: /app/artifacts/container
+      MAT_MAX_REQUEST_BYTES: "65536"
+    ports:
+      - "8000:8000"
+    volumes:
+      - gpu-artifacts:/app/artifacts
+      - gpu-hf-cache:/app/.hf-cache
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities:
+                - gpu
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health-check', timeout=2)"
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 300s
+    restart: unless-stopped
+
+  web:
+    build:
+      context: ..
+      dockerfile: frontend/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://127.0.0.1:8000}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+
+
+  # Transformer serving on CPU: fetches the pinned Hub artifact on first
+  # boot (no GPU needed for inference), then serves it. No training here.
+  #   docker compose --profile trans up --build ai-trans
+  ai-trans:
+    profiles:
+      - trans
+    build:
+      context: ..
+      dockerfile: ai/Dockerfile
+    environment:
+      MAT_MODEL_BACKEND: transformer
+      MAT_TRANSFORMER_ARTIFACT_DIR: /app/artifacts/transformer/champion
+      MAT_MAX_REQUEST_BYTES: "65536"
+    entrypoint:
+      - sh
+      - -c
+      - uv run --frozen --no-sync python scripts/release_fetch_transformer.py && exec uv run --frozen --no-sync uvicorn main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - trans-artifacts:/app/artifacts/transformer/champion
+      - trans-hf-cache:/home/mat/.cache/huggingface
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health-check', timeout=2)"
+      interval: 10s
+      timeout: 3s
+      retries: 5
+      start_period: 120s
+    restart: unless-stopped
+
+
+volumes:
+  gpu-artifacts:
+  gpu-hf-cache:
+  trans-artifacts:
+  trans-hf-cache:
+

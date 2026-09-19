@@ -1,0 +1,120 @@
+schema_version: "1"
+dictionary_version: "2.0.0"
+rules:
+  - id: hyundai_h_dot
+    category: brand
+    pattern: '(?<!\w)H\.(?!\w)'
+    replacement: Hyundai
+    context_any: [xe, hãng, nhà, ô tô, oto, car]
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-BRAND-001
+  - id: toy_to_toyota
+    category: brand
+    pattern: '(?<!\w)toy(?![a-zA-Z])'
+    replacement: Toyota
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-BRAND-002
+  - id: vf_to_vinfast
+    category: brand
+    pattern: '(?<!\w)vf(?![a-zA-Z])'
+    replacement: Vinfast
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-BRAND-003
+  - id: mitsu_to_mitsubishi
+    category: brand
+    pattern: '(?<!\w)mitsu(?![a-zA-Z])'
+    replacement: Mitsubishi
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-BRAND-004
+  - id: mec_to_mercedes
+    category: brand
+    pattern: '(?<!\w)(mec|mẹc)(?![a-zA-Z])'
+    replacement: Mercedes
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-BRAND-005
+  - id: ko_to_khong
+    category: negation
+    pattern: '(?<!\w)(ko|khum|k)(?!\w)'
+    replacement: không
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-NEG-001
+  - id: cx_to_cung
+    category: teencode
+    pattern: '(?<!\w)cx(?!\w)(?!\s*-?\s*\d)'
+    replacement: cũng
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-TEEN-001
+  - id: dc_to_duoc
+    category: teencode
+    pattern: '(?<!\w)(dc|đc)(?!\w)'
+    replacement: được
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-TEEN-002
+  - id: elong_qua_to_qua
+    category: teencode
+    pattern: '(?<!\w)(?:quáa+|quaa+)(?!\w)'
+    replacement: quá
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-TEEN-003
+  - id: elong_rat_to_rat
+    category: teencode
+    pattern: '(?<!\w)(?:rấtt+|ratt+)(?!\w)'
+    replacement: rất
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-TEEN-004
+  - id: overall_good_to_tot
+    category: teencode
+    pattern: '(?<!\w)good(?!\w)'
+    replacement: tốt
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-TEEN-005
+  - id: overall_average_to_tam
+    category: teencode
+    pattern: '(?<!\w)average(?!\w)'
+    replacement: tạm
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-TEEN-006
+  - id: overall_bad_to_te
+    category: teencode
+    pattern: '(?<!\w)(?:bad|poor)(?!\w)'
+    replacement: tệ
+    context_any: []
+    flags: IGNORECASE
+    source:
+      kind: reviewed_internal
+      reference: MAT-NORM-TEEN-007

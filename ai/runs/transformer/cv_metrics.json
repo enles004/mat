@@ -1,0 +1,203 @@
+{
+  "candidate_type": "transformer",
+  "dataset_checksum": "1675769ac6872f2fff06ab2b4f6ae9f2458a6d7b21f3c59ea38472d2d5c30043",
+  "folds": [
+    {
+      "best_checkpoint_loading": {
+        "error_msgs": [],
+        "mismatched_keys": [],
+        "missing_keys": [],
+        "unexpected_keys": []
+      },
+      "duration_seconds": 9.069506451007328,
+      "fold": 0,
+      "macro_f1": 0.4447463674082379,
+      "peak_allocated_bytes": 1743851008,
+      "source_loading": {
+        "error_msgs": [],
+        "mismatched_keys": [],
+        "missing_keys": [
+          "classifier.dense.bias",
+          "classifier.dense.weight",
+          "classifier.out_proj.bias",
+          "classifier.out_proj.weight"
+        ],
+        "unexpected_keys": [
+          "lm_head.bias",
+          "lm_head.decoder.bias",
+          "lm_head.dense.bias",
+          "lm_head.dense.weight",
+          "lm_head.layer_norm.bias",
+          "lm_head.layer_norm.weight"
+        ]
+      },
+      "validation_row_count": 144
+    },
+    {
+      "best_checkpoint_loading": {
+        "error_msgs": [],
+        "mismatched_keys": [],
+        "missing_keys": [],
+        "unexpected_keys": []
+      },
+      "duration_seconds": 7.862834482002654,
+      "fold": 1,
+      "macro_f1": 0.33791477873666104,
+      "peak_allocated_bytes": 1761871360,
+      "source_loading": {
+        "error_msgs": [],
+        "mismatched_keys": [],
+        "missing_keys": [
+          "classifier.dense.bias",
+          "classifier.dense.weight",
+          "classifier.out_proj.bias",
+          "classifier.out_proj.weight"
+        ],
+        "unexpected_keys": [
+          "lm_head.bias",
+          "lm_head.decoder.bias",
+          "lm_head.dense.bias",
+          "lm_head.dense.weight",
+          "lm_head.layer_norm.bias",
+          "lm_head.layer_norm.weight"
+        ]
+      },
+      "validation_row_count": 144
+    },
+    {
+      "best_checkpoint_loading": {
+        "error_msgs": [],
+        "mismatched_keys": [],
+        "missing_keys": [],
+        "unexpected_keys": []
+      },
+      "duration_seconds": 7.793943677999778,
+      "fold": 2,
+      "macro_f1": 0.749230919423059,
+      "peak_allocated_bytes": 1762395648,
+      "source_loading": {
+        "error_msgs": [],
+        "mismatched_keys": [],
+        "missing_keys": [
+          "classifier.dense.bias",
+          "classifier.dense.weight",
+          "classifier.out_proj.bias",
+          "classifier.out_proj.weight"
+        ],
+        "unexpected_keys": [
+          "lm_head.bias",
+          "lm_head.decoder.bias",
+          "lm_head.dense.bias",
+          "lm_head.dense.weight",
+          "lm_head.layer_norm.bias",
+          "lm_head.layer_norm.weight"
+        ]
+      },
+      "validation_row_count": 144
+    },
+    {
+      "best_checkpoint_loading": {
+        "error_msgs": [],
+        "mismatched_keys": [],
+        "missing_keys": [],
+        "unexpected_keys": []
+      },
+      "duration_seconds": 6.785039216003497,
+      "fold": 3,
+      "macro_f1": 0.6458764665286404,
+      "peak_allocated_bytes": 1760364032,
+      "source_loading": {
+        "error_msgs": [],
+        "mismatched_keys": [],
+        "missing_keys": [
+          "classifier.dense.bias",
+          "classifier.dense.weight",
+          "classifier.out_proj.bias",
+          "classifier.out_proj.weight"
+        ],
+        "unexpected_keys": [
+          "lm_head.bias",
+          "lm_head.decoder.bias",
+          "lm_head.dense.bias",
+          "lm_head.dense.weight",
+          "lm_head.layer_norm.bias",
+          "lm_head.layer_norm.weight"
+        ]
+      },
+      "validation_row_count": 144
+    },
+    {
+      "best_checkpoint_loading": {
+        "error_msgs": [],
+        "mismatched_keys": [],
+        "missing_keys": [],
+        "unexpected_keys": []
+      },
+      "duration_seconds": 6.893837982992409,
+      "fold": 4,
+      "macro_f1": 0.6247968247968249,
+      "peak_allocated_bytes": 1761871360,
+      "source_loading": {
+        "error_msgs": [],
+        "mismatched_keys": [],
+        "missing_keys": [
+          "classifier.dense.bias",
+          "classifier.dense.weight",
+          "classifier.out_proj.bias",
+          "classifier.out_proj.weight"
+        ],
+        "unexpected_keys": [
+          "lm_head.bias",
+          "lm_head.decoder.bias",
+          "lm_head.dense.bias",
+          "lm_head.dense.weight",
+          "lm_head.layer_norm.bias",
+          "lm_head.layer_norm.weight"
+        ]
+      },
+      "validation_row_count": 144
+    }
+  ],
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "mean_macro_f1": 0.5605130713786847,
+  "model_family": "bamibert",
+  "model_source": {
+    "file_checksums": {
+      "model.safetensors": "c8c8abe5914f2543bd6a65019b685dacf25ad39da5f01b680b082876e1947627"
+    },
+    "intended_use": "The model is intended for research and educational purposes.",
+    "license_id": "bsd-3-clause-clear, other",
+    "license_metadata": {
+      "license": [
+        "bsd-3-clause-clear",
+        "other"
+      ],
+      "license_link": "https://www.qualcomm.com/site/responsible-ai-license",
+      "license_name": "qualcomm-responsible-ai-license"
+    },
+    "license_text": "This model is released under the BSD 3-Clause Clear license and the Qualcomm responsible AI license: https://www.qualcomm.com/site/responsible-ai-license",
+    "model_card_checksum": "6b23dbeffa7ed1e3b4ccf95fb5d6b9eb2f8e8041b334042f54f9c3926c128b61",
+    "repo_id": "Qualcomm-AI-Research/BamiBERT",
+    "revision": "57bc1340debbe4e348ec549047a763caebe4a977",
+    "transformers_requirement": "<=5.5.0"
+  },
+  "oof_row_count": 720,
+  "probability_audit": {
+    "maximum_probability": 0.7382849994371739,
+    "maximum_sum_error": 2.220446049250313e-16,
+    "minimum_probability": 0.0775060650964007
+  },
+  "schema_version": "1",
+  "split_manifest_checksum": "026716cd132dd799a1eae17365fa19151b222333713394f67f1fdc6cd9265a4e",
+  "token_length_audit": {
+    "config_limit": 2048,
+    "maximum_observed_tokens": 36,
+    "model_limit": 2048,
+    "row_count": 720,
+    "tokenizer_limit": null
+  }
+}

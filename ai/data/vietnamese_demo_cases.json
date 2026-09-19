@@ -1,0 +1,438 @@
+{
+  "version": 1,
+  "description": "Authored exploratory cases for behavioral showcase; not a benchmark.",
+  "cases": [
+    {
+      "id": "TC-01",
+      "category": "teencode",
+      "text": "Con này đc giá lắm, máy ên k hề, chạy 300km liền chẳng nóng máy, đúng nghĩa xịn sò luôn á",
+      "human_interpretation": "clearly positive: praise for value, quiet engine and endurance; teencode spelling only ('đc', 'k', 'ên', 'xịn sò')",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "TC-02",
+      "category": "teencode",
+      "text": "Xăng ôi thật sự, đầy bình đi đc có 320km thui, ai định mua nghĩ kĩ nhé các chế ơi",
+      "human_interpretation": "negative: heavy fuel consumption called out with a warning to buyers; teencode 'đc', 'thui', forum address 'các chế'",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "TC-03",
+      "category": "teencode",
+      "text": "Đèo máy lạnh các thứ đều ổn áp, đc 1 năm rồi chưa phải mang đi sửa lần nào",
+      "human_interpretation": "positive: 'ổn áp' (playful spelling of ổn áp/ổn à) plus one trouble-free year of ownership",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "TC-04",
+      "category": "teencode",
+      "text": "Tui định đi svc định kỳ lần 3 mà chưa bit thay j ngoài dầu, mn cho e hỏi với ạ",
+      "human_interpretation": "neutral: an information question about scheduled service, no sentiment about the car itself; teencode 'svc', 'bit', 'j', 'mn', 'e'",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "TC-05",
+      "category": "teencode",
+      "text": "Chạy thử r` rồi: ga nhẹ mà vọt, phanh chắc, đỉnh nóc kịch trần bay phấp phới, khum tin đc luôn",
+      "human_interpretation": "positive: enthusiastic first-drive review; meme praise phrase used sincerely; teencode 'r`', 'khum', 'đc'",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "TC-06",
+      "category": "teencode",
+      "text": "Bánh trước mòn nhanh kinh khủng, mới 12k km đã phải thay, đồ trên xe cùi quá",
+      "human_interpretation": "negative: fast tyre wear at 12,000 km and a 'cùi' (low-quality) jab at parts",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SL-01",
+      "category": "slang",
+      "text": "Con này ngon à nha, máy bốc mà vẫn êm, đi một đoạn là mê liền",
+      "human_interpretation": "positive: forum slang 'ngon à nha', 'mê' for a punchy yet smooth engine",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SL-02",
+      "category": "slang",
+      "text": "Được mỗi cái ngoại hình, đi đc 2 vạn km thì đèn check engine sáng lụi tim luôn các bác ạ",
+      "human_interpretation": "mixed-leaning-negative: looks are its only merit, engine warning light at 20,000 km; 'được mỗi', 'lụi tim'",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SL-03",
+      "category": "slang",
+      "text": "Sáng nay đề mãi mới nổ, chưa biết tại sao, để mai méc thợ xem thế nào đã",
+      "human_interpretation": "negative-leaning worry: hard cold start this morning, cause unknown; 'méc' is playful but the complaint is real",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SL-04",
+      "category": "slang",
+      "text": "Đường trường thì phê thật, mà vào phố chật chội, số nhạy quá lại mỏi chân, tùy nhu cầu thôi",
+      "human_interpretation": "balanced: motorway joy vs city-bound fatigue; 'phê' slang; overall neutral verdict 'tùy nhu cầu'",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SL-05",
+      "category": "slang",
+      "text": "Còi xe nghe chán đời, bé xíu như còi xe đồ chơi, thay luôn cái kèn lớn cho đã",
+      "human_interpretation": "negative: horn sounds toy-like and depressing; 'chán đời', 'cho đã'",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SL-06",
+      "category": "slang",
+      "text": "Nội thất xẹn lắm, da êm ngồi vô là mê, màn hình to rõ, hết nước chấm",
+      "human_interpretation": "positive: premium-feeling interior; slang 'xẹn', 'hết nước chấm' (nothing left to criticise)",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MD-01",
+      "category": "missing-diacritics",
+      "text": "xe nay chay rat mem, may on va it an xang, danh cho ai hay di duong dai",
+      "human_interpretation": "positive: smooth, quiet, frugal; typed quickly with no tone marks",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MD-02",
+      "category": "missing-diacritics",
+      "text": "may lanh ko mat du goi la bat ca ngay, mang di ve sinh roi van nhu cu",
+      "human_interpretation": "negative: air conditioning never gets cold despite cleaning; 'ko' for không",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MD-03",
+      "category": "missing-diacritics",
+      "text": "cua xe mo la keng keng rat kho chiu, xe moi co 6 thang ma da the nay roi",
+      "human_interpretation": "negative: doors rattle annoyingly on a six-month-old car",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MD-04",
+      "category": "missing-diacritics",
+      "text": "sang nay em ru xe di rua o tiem gan nha, rua xong chup vai tam anh up len nhom cho vui",
+      "human_interpretation": "neutral: a car-wash photo post, no opinion about the vehicle; 'ru xe' for rửa xe",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MD-05",
+      "category": "missing-diacritics",
+      "text": "lo phanh banh cham, can than khi chay duong dong, con lai thi xe van ok",
+      "human_interpretation": "mixed: soft brakes need care in traffic, everything else fine",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MD-06",
+      "category": "missing-diacritics",
+      "text": "con xe nay di on dinh, giam soc mem, gia cung phai chan, nghi lai la nen mua",
+      "human_interpretation": "positive: stable, comfortable, fairly priced; ends with a buy recommendation",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "RG-01",
+      "category": "regional",
+      "text": "Giời ơi, con xe này ba năm rồi chưa phải sửa món nào, hàng này bền thật đấy",
+      "human_interpretation": "positive: three trouble-free years; Northern tone 'Giời ơi', 'món', 'bền thật đấy'",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "RG-02",
+      "category": "regional",
+      "text": "Răng mà máy nó rú dữ vậy tê, ra tiệm ni hỏi thì bảo hư mô-tơ, chừ phải chờ đặt đồ mới có mà sửa",
+      "human_interpretation": "negative: engine screaming, diagnosed a failed motor, now waiting on parts; Central particles 'răng', 'tê', 'ni', 'chừ'",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "RG-03",
+      "category": "regional",
+      "text": "Cái máy lạnh hông lạnh nổi nha bạn, chạy giữa trưa mà gió thổi vô vẫn ấm sờ soạng, chán hông muốn nói",
+      "human_interpretation": "negative: AC cannot cool in midday sun; Southern 'hông', 'nha', 'sờ soạng'",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "RG-04",
+      "category": "regional",
+      "text": "Chiếc này chạy êm ru, từ Hà Nội chạy thẳng xuống Vinh một mạch, người ngồi sau ngủ khì lúc nào không hay",
+      "human_interpretation": "positive: serene long-distance ride, rear passenger slept; Northern 'êm ru', 'ngủ khì'",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "RG-05",
+      "category": "regional",
+      "text": "Tao thấy con này lượn lách trong phố à nha, mượt lắm, mà lên cao tốc tải nặng thì hơi đuối, mày cân nhắc theo nhu cầu nhe",
+      "human_interpretation": "mixed: nimble in town but weak on the highway when loaded; Southern 'tao/mày', 'nha', 'nhe'; verdict left to use case",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "RG-06",
+      "category": "regional",
+      "text": "Xe ni nhìn được, chạy cũng êm, mà lên dốc nớ ì lắm, muốn vượt xe phải về số thấp chờ nó gắt lên mới đi được",
+      "human_interpretation": "mixed: presentable and smooth but sluggish on climbs; Central 'ni', 'nớ'",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "NG-01",
+      "category": "negation",
+      "text": "Máy không hề ồn như đồn đại đâu, thực ra còn êm hơn cả con xe Nhật tôi đi trước đây",
+      "human_interpretation": "positive: negated rumour ('không hề ồn') then raised with a comparison",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "NG-02",
+      "category": "negation",
+      "text": "Không phải là không hao xăng, nhưng với thân máy 1.5 thì mức đó cũng chưa tới mức đáng lo",
+      "human_interpretation": "double negation admits fuel use ('không phải là không hao') yet concludes it is acceptable; mixed-leaning-neutral",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "NG-03",
+      "category": "negation",
+      "text": "Xe này chẳng có gì để chê cả, giá vậy mà trang bị đủ thứ, mua rồi chưa lúc nào tiếc",
+      "human_interpretation": "positive: negated criticism ('chẳng có gì để chê') plus equipment and no regrets",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "NG-04",
+      "category": "negation",
+      "text": "Không tệ đâu, nhưng cũng chẳng có gì nổi bật, chạy thì ổn, nhìn thì nhạt, đúng tầm giá thôi",
+      "human_interpretation": "lukewarm: 'không tệ' is faint praise, 'chẳng nổi bật' caps it; neutral by design",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "NG-05",
+      "category": "negation",
+      "text": "Đừng mong cái treo nó mềm như xe sang, qua ổ gà một phát là hiểu ngay mình đi xe mấy trăm triệu",
+      "human_interpretation": "negative: imperative negation kills the luxury-suspension hope, pothole jab at the price point",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "NG-06",
+      "category": "negation",
+      "text": "Không phải là xe không đẹp, chỉ là màu này hợp với người lớn tuổi hơn, tôi thì vẫn thích màu đen",
+      "human_interpretation": "double negation concedes the car is not ugly; colour preference debate; neutral",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MX-01",
+      "category": "mixed-aspects",
+      "text": "Động cơ khỏe, vượt xe thoải mái, nhưng ốp nhựa trong xe lia lịa, đóng cửa nghe chát quá",
+      "human_interpretation": "mixed: strong engine vs cheap rattling plastics; net reads balanced",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MX-02",
+      "category": "mixed-aspects",
+      "text": "Ghế ngồi êm, cách âm cũng tạm, chỉ mỗi tội máy ăn xăng kinh khủng, tháng nào cũng đau đầu trừ tiền xăng",
+      "human_interpretation": "mixed-leaning-complaint: comfort praised but monthly fuel bills hurt; the 'chỉ mỗi tội' clause dominates the post",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MX-03",
+      "category": "mixed-aspects",
+      "text": "Màn hình giải trí lớn, camera lùi rõ, mà hệ thống hay treo, phải khởi động lại mới dùng tiếp được",
+      "human_interpretation": "mixed-leaning-negative: nice screen and camera but infotainment freezes and needs reboots",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MX-04",
+      "category": "mixed-aspects",
+      "text": "Đổi từ xe số sang xe này thì đỡ mỏi tay hẳn, đi trong phố sướng thật, tiếc là mỗi tháng tiền xăng tăng gấp đôi",
+      "human_interpretation": "mixed: trading up saved the wrist in traffic but doubled the fuel bill",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MX-05",
+      "category": "mixed-aspects",
+      "text": "Cách âm thì gọi là tuyệt, đóng cửa xong mở nhạc nghe sướng tai hẳn, giá thế này mà được vậy là quá hời",
+      "human_interpretation": "positive-dominant: excellent isolation at the price point, no real counterpoint",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "MX-06",
+      "category": "mixed-aspects",
+      "text": "Ngoại hình thể thao phây phây, nhưng hàng ghế sau chật thí, người cao ngồi phải cúi đầu, chở gia đình thì bất tiện lắm",
+      "human_interpretation": "mixed-leaning-negative: sporty looks undermined by a cramped, impractical rear bench for a family buyer",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SC-01",
+      "category": "sarcasm-idiom",
+      "text": "Ừ, tiết kiệm lắm, uống xăng như uống nước suối ấy, ai lưng túi ít tiền thì đừng dám đụng vào con này",
+      "human_interpretation": "sarcasm: 'tiết kiệm' is ironic, the idiom 'uống xăng như uống nước suối' means it drinks fuel; true sentiment negative",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SC-02",
+      "category": "sarcasm-idiom",
+      "text": "Cảm ơn hãng nhé, xe chưa đầy một năm mà đèn cảnh báo đã nháy chào tôi bao lần rồi đấy",
+      "human_interpretation": "sarcasm: ironic thanks to the maker for repeated warning lights in year one; true sentiment negative",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SC-03",
+      "category": "sarcasm-idiom",
+      "text": "Hay lắm, hôm qua mới ra khỏi xưởng, hôm nay máy lại rít lên cho nghe, chỗ này sửa xe giỏi thật đấy",
+      "human_interpretation": "sarcasm aimed at the garage: 'giỏi thật' is ironic, the fault returned a day after repair; negative",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SC-04",
+      "category": "sarcasm-idiom",
+      "text": "Mười năm rồi xe vẫn chịu khó chở cả nhà đi khắp nơi, đúng là con ngựa thép trung thành của gia đình tôi",
+      "human_interpretation": "genuine idiom: 'con ngựa thép trung thành' (faithful steel horse) after ten dependable years; positive",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SC-05",
+      "category": "sarcasm-idiom",
+      "text": "Cả xóm đều khen xe đẹp, chỉ có ví của tôi là không thấy đẹp theo",
+      "human_interpretation": "wry mixed: neighbours admire the car, the owner's wallet does not; net complaint about cost",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "SC-06",
+      "category": "sarcasm-idiom",
+      "text": "Em này mà chạy đèo thì đúng nghĩa cá gặp nước, vào cua dính dáp, phanh gọn, phê không tưởng",
+      "human_interpretation": "genuine idiom: 'cá gặp nước' (fish in water) for mountain-pass handling; positive",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "AS-01",
+      "category": "automotive-specific",
+      "text": "Hộp số CVT tăng tốc mượt, không hề có cảm giác giật khi đổ dốc, đi phố mà như trượt đi vậy",
+      "human_interpretation": "positive: jargon-backed praise for the CVT's seamless response",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "AS-02",
+      "category": "automotive-specific",
+      "text": "Turbo lag rõ lắm, đạp ga rồi phải chờ một nhịp mới có lực, muốn vượt xe phải tính trước quãng đường",
+      "human_interpretation": "negative: noticeable turbo lag forces planning ahead before overtaking",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "AS-03",
+      "category": "automotive-specific",
+      "text": "Hệ thống chống lệch làn hoạt động ổn, đi cao tốc bớt căng mình hẳn, tiền ADAS này đáng",
+      "human_interpretation": "positive: lane-keeping assist earns its keep on the highway",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "AS-04",
+      "category": "automotive-specific",
+      "text": "NVH chỉ ở mức tạm được, lên tới 100km/h là tiếng gió rít vào cabin, hai người ngồi trước phải nghiêng vào nhau mới nghe rõ",
+      "human_interpretation": "negative: wind noise intrudes at 100 km/h, conversations get difficult",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "AS-05",
+      "category": "automotive-specific",
+      "text": "Treo sau hơi mềm, chở ba người thêm đồ là xuống đáy, qua ổ gà lục đục, hay đi đường xấu thì nên cân nhắc",
+      "human_interpretation": "negative: soft rear suspension bottoms out when loaded and thuds over potholes",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "AS-06",
+      "category": "automotive-specific",
+      "text": "Vô-lăng nhẹ, quay đầu một tay cũng gọn, lùi chuồng nhờ camera với cảm biến là dễ ợt",
+      "human_interpretation": "positive: light steering plus sensors make parking ('lùi chuồng') effortless",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "CS-01",
+      "category": "code-switch-emoji",
+      "text": "Trade-in xong, chính thức là chủ nhân em này 🎉 chạy về nhà mà thấy đời lên hương hẳn",
+      "human_interpretation": "positive: new-owner joy, English 'trade-in', celebratory emoji",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "CS-02",
+      "category": "code-switch-emoji",
+      "text": "Check engine lại sáng rồi các bác ơi 😩 mới đưa về được đúng một tuần thôi mà",
+      "human_interpretation": "negative: warning light back one week after delivery; English 'check engine', weary emoji",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "CS-03",
+      "category": "code-switch-emoji",
+      "text": "Feeling lái ổn áp, êm và chắc, chỉ mỗi cái hand brake đặt ngược tay hơi vô lý thôi",
+      "human_interpretation": "mixed: driving feel approved, one absurd ergonomic complaint about the hand brake; neutral",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "CS-04",
+      "category": "code-switch-emoji",
+      "text": "Deal này nghe good đó bro, giá mềm thật, mà nghe nói dòng này hay hư hộp số, đang phân vân quá chừng",
+      "human_interpretation": "mixed: attractive price vs gearbox-reliability rumours, undecided; neutral",
+      "expected_label": "neutral",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "CS-05",
+      "category": "code-switch-emoji",
+      "text": "Test drive xong thực sự impressed, cabin quiet kinh khủng, đáng mọi đồng tiền bỏ ra",
+      "human_interpretation": "positive: genuinely impressed by the silent cabin during the test drive; English switched in",
+      "expected_label": "positive",
+      "notes": "Exploratory only; not a release gate."
+    },
+    {
+      "id": "CS-06",
+      "category": "code-switch-emoji",
+      "text": "Full tank hết 1.2 củ 😭 chai xăng này bao giờ mới vơi được không biết",
+      "human_interpretation": "negative: 1.2 million VND per fill-up and a crying emoji; complaint about running costs",
+      "expected_label": "negative",
+      "notes": "Exploratory only; not a release gate."
+    }
+  ]
+}

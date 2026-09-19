@@ -1,0 +1,597 @@
+{
+  "BYD Sealion 6 cho cảm giác tăng tốc liền mạch trong lần lái thử.": {
+    "negative": 0.21566676920765304,
+    "neutral": 0.32313744532630684,
+    "positive": 0.46119578546604006
+  },
+  "Ban nay co sau tui khi.": {
+    "negative": 0.39489078135130484,
+    "neutral": 0.39477006676576104,
+    "positive": 0.2103391518829342
+  },
+  "Bản mới cách âm tốt hơn chiếc sedan cũ mình từng lái.": {
+    "negative": 0.2161636991559776,
+    "neutral": 0.3956667106982399,
+    "positive": 0.3881695901457825
+  },
+  "Bản này có sáu túi khí.": {
+    "negative": 0.2719424005028302,
+    "neutral": 0.473455442026559,
+    "positive": 0.2546021574706109
+  },
+  "Bản này có thêm màu xám, giá không đổi so với năm ngoái.": {
+    "negative": 0.31303658398977385,
+    "neutral": 0.39371363707921986,
+    "positive": 0.29324977893100623
+  },
+  "Bản tiêu chuẩn dùng mâm 18 inch và camera lùi.": {
+    "negative": 0.212805965314158,
+    "neutral": 0.4438963145087042,
+    "positive": 0.34329772017713783
+  },
+  "Bảo hành 5 năm hoặc 150.000 km.": {
+    "negative": 0.22388224640482215,
+    "neutral": 0.4112037334168595,
+    "positive": 0.36491402017831825
+  },
+  "Bảo hành 5 năm hoặc 150.000 km. 🙂": {
+    "negative": 0.2712393102391528,
+    "neutral": 0.44978621725967816,
+    "positive": 0.278974472501169
+  },
+  "Cabin chật chội cho cả gia đình.": {
+    "negative": 0.4306779109725314,
+    "neutral": 0.34818447205323305,
+    "positive": 0.22113761697423556
+  },
+  "Cabin rộng rãi cho cả gia đình.": {
+    "negative": 0.20945843263736452,
+    "neutral": 0.38246380349252784,
+    "positive": 0.4080777638701075
+  },
+  "Camera bị trễ khi vào số lùi.": {
+    "negative": 0.4365677610605999,
+    "neutral": 0.359994303011649,
+    "positive": 0.20343793592775108
+  },
+  "Camera ko bị trễ khi vào số lùi.": {
+    "negative": 0.3643013787983861,
+    "neutral": 0.4020500785091506,
+    "positive": 0.23364854269246335
+  },
+  "Camera lùi hiển thị rất nét": {
+    "negative": 0.2828186105506286,
+    "neutral": 0.35674825059216037,
+    "positive": 0.36043313885721096
+  },
+  "Camera lùi hiển thị rất nét!!!": {
+    "negative": 0.27629468983075123,
+    "neutral": 0.3727262842843494,
+    "positive": 0.3509790258848993
+  },
+  "Chúc mừng mình, mua xe xong giá xăng tăng luôn.": {
+    "negative": 0.3457181784932752,
+    "neutral": 0.3231457328431353,
+    "positive": 0.3311360886635894
+  },
+  "Chạy đường dài không hề thấy mệt chút nào.": {
+    "negative": 0.27516233194746553,
+    "neutral": 0.4001437954431223,
+    "positive": 0.32469387260941207
+  },
+  "Chạy đường dài vẫn thoải mái 😊": {
+    "negative": 0.2617539233731206,
+    "neutral": 0.39993546572176397,
+    "positive": 0.3383106109051154
+  },
+  "Chạy đường dài vẫn thoải mái 🙂": {
+    "negative": 0.30046215218670336,
+    "neutral": 0.4155619688619042,
+    "positive": 0.28397587895139237
+  },
+  "Cửa đóng chắc và không có tiếng lọc xọc.": {
+    "negative": 0.3814044734407576,
+    "neutral": 0.3678557915995511,
+    "positive": 0.25073973495969126
+  },
+  "Cửa đóng lỏng và có tiếng lọc xọc.": {
+    "negative": 0.3875848383991072,
+    "neutral": 0.3569680723497481,
+    "positive": 0.25544708925114473
+  },
+  "Dong co rung manh luc no may.": {
+    "negative": 0.4040187368237638,
+    "neutral": 0.4052025816696053,
+    "positive": 0.19077868150663094
+  },
+  "Ghe lai chinh dien 8 huong.": {
+    "negative": 0.25579097335966505,
+    "neutral": 0.47299612589999895,
+    "positive": 0.271212900740336
+  },
+  "Ghế ngồi êm ái trên đường dài.": {
+    "negative": 0.3994619634427446,
+    "neutral": 0.38157150488562686,
+    "positive": 0.21896653167162858
+  },
+  "Ghế lái chỉnh điện 8 hướng.": {
+    "negative": 0.2130244853935725,
+    "neutral": 0.4221304423805119,
+    "positive": 0.36484507222591567
+  },
+  "Ghế ngồi êm ái trên đường dài.": {
+    "negative": 0.20767531141709683,
+    "neutral": 0.3765751924833373,
+    "positive": 0.4157494960995658
+  },
+  "Ghế sau   chật khi đủ ba người.": {
+    "negative": 0.3628139942611267,
+    "neutral": 0.3971512325238637,
+    "positive": 0.2400347732150095
+  },
+  "Ghế sau chật khi đủ ba người.": {
+    "negative": 0.32194906713909677,
+    "neutral": 0.41449214926583383,
+    "positive": 0.2635587835950694
+  },
+  "Ghế ôm lưng vừa vặn, đi xa đỡ mỏi 🙂": {
+    "negative": 0.3037503635351208,
+    "neutral": 0.3262396724936615,
+    "positive": 0.3700099639712177
+  },
+  "Giá mềm hơn bản cao cấp, còn trang bị an toàn giữ nguyên.": {
+    "negative": 0.2234049241496122,
+    "neutral": 0.34885104250006094,
+    "positive": 0.42774403335032674
+  },
+  "H. chạy êm khi đi phố.": {
+    "negative": 0.21349298612014844,
+    "neutral": 0.39947323596251455,
+    "positive": 0.38703377791733706
+  },
+  "Hay thật, xe mới mà ngày đầu đã báo lỗi.": {
+    "negative": 0.48321616317207844,
+    "neutral": 0.2751199222662618,
+    "positive": 0.24166391456165984
+  },
+  "Hay thật, xe mới nhận mà màn hình đã treo hai lần.": {
+    "negative": 0.5175537194686408,
+    "neutral": 0.2485046500071081,
+    "positive": 0.23394163052425104
+  },
+  "Hyundai chạy êm khi đi phố.": {
+    "negative": 0.20130755816095505,
+    "neutral": 0.37914138943405473,
+    "positive": 0.41955105240499024
+  },
+  "Hài lòng ghê, đổ đầy bình đi được có 200 cây.": {
+    "negative": 0.2620639928514584,
+    "neutral": 0.3529714351295469,
+    "positive": 0.38496457201899476
+  },
+  "Hài lòng với mức tiêu hao nhiên liệu của xe.": {
+    "negative": 0.21655049390827288,
+    "neutral": 0.4338508495402838,
+    "positive": 0.34959865655144334
+  },
+  "Hàng ghế sau thiếu chỗ duỗi chân.": {
+    "negative": 0.4061722153978651,
+    "neutral": 0.3649757773159698,
+    "positive": 0.22885200728616514
+  },
+  "Hàng ghế sau đủ chỗ duỗi chân.": {
+    "negative": 0.23189587254556546,
+    "neutral": 0.42509879500119263,
+    "positive": 0.34300533245324183
+  },
+  "Hôm qua mình lái thử 30 phút quanh khu đô thị.": {
+    "negative": 0.2749923852725268,
+    "neutral": 0.40638730095489883,
+    "positive": 0.3186203137725744
+  },
+  "Hệ thống giữ làn hoạt động chập chờn.": {
+    "negative": 0.45675392798144304,
+    "neutral": 0.32756369811777375,
+    "positive": 0.2156823739007833
+  },
+  "Hệ thống giữ làn hoạt động ổn định.": {
+    "negative": 0.2189431479291916,
+    "neutral": 0.4231730056023986,
+    "positive": 0.35788384646840987
+  },
+  "HỘP SỐ GIẬT KHI ĐI CHẬM.": {
+    "negative": 0.3937635566952715,
+    "neutral": 0.3677432542368635,
+    "positive": 0.2384931890678649
+  },
+  "Hộp số giật khi đi chậm.": {
+    "negative": 0.412332879068528,
+    "neutral": 0.3690124640652669,
+    "positive": 0.2186546568662052
+  },
+  "Jaecoo J7 tăng tốc bị giật.": {
+    "negative": 0.4606766284490881,
+    "neutral": 0.3400633572585735,
+    "positive": 0.19926001429233842
+  },
+  "Jaecoo J7 tăng tốc mượt.": {
+    "negative": 0.20823576169381539,
+    "neutral": 0.4045640689639157,
+    "positive": 0.3872001693422688
+  },
+  "KHOANG LÁI RẤT YÊN TĨNH.": {
+    "negative": 0.22529495964092666,
+    "neutral": 0.3860314081786707,
+    "positive": 0.3886736321804027
+  },
+  "KIA EV5 VẬN HÀNH ÊM VÀ CÁCH ÂM TỐT.": {
+    "negative": 0.19790706025907245,
+    "neutral": 0.3528094711822135,
+    "positive": 0.4492834685587141
+  },
+  "Khoang lái rất yên tĩnh.": {
+    "negative": 0.23006728290643386,
+    "neutral": 0.40135814930595454,
+    "positive": 0.36857456778761166
+  },
+  "Khoang sau hơi chật nhưng động cơ bốc và phản hồi chân ga tốt.": {
+    "negative": 0.3160425808564402,
+    "neutral": 0.35601800378051235,
+    "positive": 0.3279394153630475
+  },
+  "Không thể chê được độ êm của động cơ này.": {
+    "negative": 0.3587759758854219,
+    "neutral": 0.3744630979969966,
+    "positive": 0.2667609261175815
+  },
+  "Lần lái thử BYD Sealion 6 khá dễ chịu.": {
+    "negative": 0.2136863803392164,
+    "neutral": 0.39467752462239886,
+    "positive": 0.39163609503838476
+  },
+  "Lần lái thử BYD Sealion 6 khá mệt mỏi.": {
+    "negative": 0.48125510589860837,
+    "neutral": 0.30838580345295064,
+    "positive": 0.21035909064844094
+  },
+  "Màn hình mờ và thao tác lag.": {
+    "negative": 0.4721565657592238,
+    "neutral": 0.32545721934079064,
+    "positive": 0.20238621489998548
+  },
+  "Màn hình phản hồi chậm quá 😞": {
+    "negative": 0.4971761437066725,
+    "neutral": 0.3208567729667994,
+    "positive": 0.1819670833265281
+  },
+  "Màn hình sáng rõ và thao tác mượt.": {
+    "negative": 0.20949547693388762,
+    "neutral": 0.38481043283287164,
+    "positive": 0.4056940902332407
+  },
+  "Máy gằn khi tăng tốc": {
+    "negative": 0.41052072701266223,
+    "neutral": 0.36296009686062214,
+    "positive": 0.22651917612671565
+  },
+  "Máy gằn khi tăng tốc...": {
+    "negative": 0.43042961397583535,
+    "neutral": 0.36240149581416337,
+    "positive": 0.20716889021000123
+  },
+  "Máy hơi ồn lúc đề-pa nhưng lên đường trường lại rất mượt.": {
+    "negative": 0.4021887872075764,
+    "neutral": 0.3091423941227289,
+    "positive": 0.2886688186696947
+  },
+  "Mình không thích độ trễ chân ga.": {
+    "negative": 0.40428470342163525,
+    "neutral": 0.37622985447578905,
+    "positive": 0.2194854421025758
+  },
+  "Mình ko thích độ trễ chân ga.": {
+    "negative": 0.4306516895084778,
+    "neutral": 0.3626556327576408,
+    "positive": 0.20669267773388142
+  },
+  "Mình đang xem thông số của Jaecoo J7 bản dẫn động bốn bánh.": {
+    "negative": 0.22222594293129125,
+    "neutral": 0.4537220513541972,
+    "positive": 0.32405200571451154
+  },
+  "Mùi nhựa trong cabin khá khó chịu 😔": {
+    "negative": 0.498639271152567,
+    "neutral": 0.30540052122073547,
+    "positive": 0.19596020762669747
+  },
+  "Mùi nhựa trong cabin khá khó chịu 😞": {
+    "negative": 0.5002146253526384,
+    "neutral": 0.29947753443778424,
+    "positive": 0.20030784020957743
+  },
+  "Mẫu này êm hơn xe cũ của mình.": {
+    "negative": 0.22170729065339073,
+    "neutral": 0.42137810067657855,
+    "positive": 0.35691460867003066
+  },
+  "Mẫu này ồn hơn xe cũ của mình.": {
+    "negative": 0.4281882261999508,
+    "neutral": 0.35503533649105573,
+    "positive": 0.21677643730899349
+  },
+  "Mức tiêu hao cao hơn mẫu cùng phân khúc dù chạy cùng cung đường.": {
+    "negative": 0.23969935897217715,
+    "neutral": 0.42936207275929233,
+    "positive": 0.3309385682685306
+  },
+  "Mức tiêu hao khá tiết kiệm.": {
+    "negative": 0.2237138546455404,
+    "neutral": 0.42853624534042306,
+    "positive": 0.34774990001403655
+  },
+  "Mức tiêu hao rất hao xăng.": {
+    "negative": 0.3600460618367947,
+    "neutral": 0.40333006752021044,
+    "positive": 0.23662387064299478
+  },
+  "Nội thất đẹp nhưng phanh trễ khiến mình không yên tâm.": {
+    "negative": 0.48617389432583175,
+    "neutral": 0.2958984503382892,
+    "positive": 0.21792765533587902
+  },
+  "Nội thất đẹp nhưng vật liệu ọp ẹp.": {
+    "negative": 0.4980909058136514,
+    "neutral": 0.3044536354798611,
+    "positive": 0.19745545870648748
+  },
+  "Nội thất đẹp và vật liệu chắc chắn.": {
+    "negative": 0.21735520409350578,
+    "neutral": 0.38346874388955626,
+    "positive": 0.39917605201693795
+  },
+  "Omoda C5 cách âm khá tốt.": {
+    "negative": 0.21901011532062106,
+    "neutral": 0.4413148561376687,
+    "positive": 0.33967502854171017
+  },
+  "Phanh cho cảm giác chắc chắn.": {
+    "negative": 0.22639517310196022,
+    "neutral": 0.4020919235119943,
+    "positive": 0.3715129033860454
+  },
+  "Phanh chắc!!! Vô-lăng cũng rất thật tay.": {
+    "negative": 0.22234746416706205,
+    "neutral": 0.36249240205289,
+    "positive": 0.41516013378004785
+  },
+  "Phanh của H. phản hồi hơi trễ.": {
+    "negative": 0.4302619564577544,
+    "neutral": 0.372804148319816,
+    "positive": 0.19693389522242957
+  },
+  "Phanh của Hyundai phản hồi hơi trễ.": {
+    "negative": 0.42722023792745967,
+    "neutral": 0.3699909211312867,
+    "positive": 0.20278884094125377
+  },
+  "Phanh em va de kiem soat.": {
+    "negative": 0.3890237689205283,
+    "neutral": 0.4202728812370042,
+    "positive": 0.1907033498424675
+  },
+  "Phanh không cho cảm giác chắc chắn.": {
+    "negative": 0.34555397792772596,
+    "neutral": 0.3806415194897109,
+    "positive": 0.27380450258256317
+  },
+  "Phanh êm và dễ kiểm soát.": {
+    "negative": 0.21545112271975597,
+    "neutral": 0.41679129163206213,
+    "positive": 0.3677575856481819
+  },
+  "Phản hồi chân ga dễ kiểm soát.": {
+    "negative": 0.2244834973232749,
+    "neutral": 0.41428417350188135,
+    "positive": 0.3612323291748438
+  },
+  "Phản hồi chân ga thất thường.": {
+    "negative": 0.40562246779316063,
+    "neutral": 0.38091018419853084,
+    "positive": 0.2134673480083084
+  },
+  "Sau bảo dưỡng, vô-lăng không còn rung ở tốc độ thấp.": {
+    "negative": 0.3030738246862677,
+    "neutral": 0.37402774922488674,
+    "positive": 0.32289842608884556
+  },
+  "T. này giữ làn ổn định.": {
+    "negative": 0.23072440957557028,
+    "neutral": 0.43695176383975304,
+    "positive": 0.3323238265846767
+  },
+  "Tiếng lốp vọng lớn vào cabin.": {
+    "negative": 0.4055576391135681,
+    "neutral": 0.35501442837249064,
+    "positive": 0.2394279325139411
+  },
+  "Tiếng lốp được cách âm tốt.": {
+    "negative": 0.2381478623174464,
+    "neutral": 0.44882437757761784,
+    "positive": 0.31302776010493566
+  },
+  "Toyota này giữ làn ổn định.": {
+    "negative": 0.2127155874032412,
+    "neutral": 0.4248545292289897,
+    "positive": 0.3624298833677691
+  },
+  "Tuyệt vời, xe mới một tuần đã nằm xưởng hai lần.": {
+    "negative": 0.4080212071624774,
+    "neutral": 0.2628667729445698,
+    "positive": 0.3291120198929528
+  },
+  "Vô-lăng  nhẹ   và chính xác.": {
+    "negative": 0.2220338666573327,
+    "neutral": 0.4403293936589696,
+    "positive": 0.3376367396836977
+  },
+  "Vô-lăng nhẹ và chính xác.": {
+    "negative": 0.20980109920600687,
+    "neutral": 0.39833561200886003,
+    "positive": 0.3918632887851331
+  },
+  "Xe bị rung khi dừng đèn đỏ.": {
+    "negative": 0.404579937215126,
+    "neutral": 0.35713352262635845,
+    "positive": 0.23828654015851555
+  },
+  "Xe chay bi giat khi len doc va may keu rat to.": {
+    "negative": 0.41706296905745904,
+    "neutral": 0.38158271677688715,
+    "positive": 0.20135431416565389
+  },
+  "Xe chạy không êm.": {
+    "negative": 0.3420314216487743,
+    "neutral": 0.4105316768726467,
+    "positive": 0.24743690147857902
+  },
+  "Xe chạy rất êm.": {
+    "negative": 0.2333514782479548,
+    "neutral": 0.39306067538849354,
+    "positive": 0.3735878463635517
+  },
+  "Xe co cua so troi toan canh.": {
+    "negative": 0.28190333941781703,
+    "neutral": 0.4953342108466255,
+    "positive": 0.22276244973555753
+  },
+  "Xe có cửa sổ trời toàn cảnh.": {
+    "negative": 0.21393430055235604,
+    "neutral": 0.4109138252104761,
+    "positive": 0.3751518742371679
+  },
+  "Xe dùng hộp số tự động 6 cấp, dung tích bình xăng 55 lít.": {
+    "negative": 0.20833298721505758,
+    "neutral": 0.3570068333935753,
+    "positive": 0.43466017939136714
+  },
+  "Xe khum êm, qua đường xấu là rung cả cabin.": {
+    "negative": 0.2930629639887375,
+    "neutral": 0.2858150027303577,
+    "positive": 0.42112203328090486
+  },
+  "Xe không bị hụt ga khi vượt.": {
+    "negative": 0.29407454350361817,
+    "neutral": 0.4256546469900716,
+    "positive": 0.2802708095063101
+  },
+  "Xe không bị rung khi dừng đèn đỏ.": {
+    "negative": 0.2797587459997687,
+    "neutral": 0.41031961812114437,
+    "positive": 0.30992163587908694
+  },
+  "Xe không êm, chạy qua gờ giảm tốc là dội vào ghế.": {
+    "negative": 0.519189862651718,
+    "neutral": 0.24362386519212137,
+    "positive": 0.23718627215616062
+  },
+  "Xe không ồn chút nào, ngồi lâu vẫn thoải mái.": {
+    "negative": 0.25195148332428713,
+    "neutral": 0.33859688947165345,
+    "positive": 0.4094516272040595
+  },
+  "Xe ko bị hụt ga khi vượt.": {
+    "negative": 0.37489505883005353,
+    "neutral": 0.40398858479017924,
+    "positive": 0.2211163563797673
+  },
+  "Xe mới chạy ổn định ngay từ ngày đầu.": {
+    "negative": 0.2194252201122387,
+    "neutral": 0.37372729094340323,
+    "positive": 0.406847488944358
+  },
+  "Xe ồn, không muốn ngồi lâu.": {
+    "negative": 0.46461856054301814,
+    "neutral": 0.2907649544308918,
+    "positive": 0.24461648502609012
+  },
+  "omoda c5 cách âm khá tốt.": {
+    "negative": 0.21845760723712795,
+    "neutral": 0.44226594928672514,
+    "positive": 0.3392764434761468
+  },
+  "Điều hòa làm lạnh yếu.": {
+    "negative": 0.22494831757807923,
+    "neutral": 0.46025102675134677,
+    "positive": 0.314800655670574
+  },
+  "Điều hòa chỉ mát ở hàng ghế trước.": {
+    "negative": 0.34675178647887994,
+    "neutral": 0.400667359174587,
+    "positive": 0.252580854346533
+  },
+  "Điều hòa khum mát khi dừng lâu.": {
+    "negative": 0.2959735743714885,
+    "neutral": 0.43542878798832296,
+    "positive": 0.2685976376401885
+  },
+  "Điều hòa không mát khi dừng lâu.": {
+    "negative": 0.44239531279274524,
+    "neutral": 0.35067023393958485,
+    "positive": 0.20693445326766993
+  },
+  "Điều hòa làm lạnh yếu.": {
+    "negative": 0.390375935407446,
+    "neutral": 0.3892957447187291,
+    "positive": 0.22032831987382512
+  },
+  "Điều hòa mát nhanh, bù lại hộp số giật rõ khi kẹt xe.": {
+    "negative": 0.478097260437689,
+    "neutral": 0.2257972701730424,
+    "positive": 0.2961054693892687
+  },
+  "Điều hòa mát nhanh, hộp số sang số mượt.": {
+    "negative": 0.2246132184492715,
+    "neutral": 0.2856380040860672,
+    "positive": 0.48974877746466133
+  },
+  "Điều hòa mát nhanh, nhưng hộp số giật liên tục.": {
+    "negative": 0.5048161034275438,
+    "neutral": 0.23928927812669337,
+    "positive": 0.2558946184457628
+  },
+  "Điều hòa mát đều cả hai hàng ghế.": {
+    "negative": 0.23359599681320514,
+    "neutral": 0.447862736590073,
+    "positive": 0.3185412665967219
+  },
+  "Đúng là tiện nghi, cứ mưa là cảm biến lùi báo loạn.": {
+    "negative": 0.5112213187020003,
+    "neutral": 0.23906874772973002,
+    "positive": 0.24970993356826976
+  },
+  "Đúng là xe sang, mở điều hòa là nghe tiếng ve kêu.": {
+    "negative": 0.47793127787892387,
+    "neutral": 0.24723821359349155,
+    "positive": 0.27483050852758456
+  },
+  "Đại lý hẹn giao xe vào cuối tháng này.": {
+    "negative": 0.2610869950219396,
+    "neutral": 0.4385528063604225,
+    "positive": 0.30036019861763796
+  },
+  "Động cơ phản hồi chậm.": {
+    "negative": 0.39246578277207594,
+    "neutral": 0.38804014273487347,
+    "positive": 0.2194940744930506
+  },
+  "Động cơ phản hồi nhanh.": {
+    "negative": 0.22804656259522327,
+    "neutral": 0.4451660404714045,
+    "positive": 0.32678739693337217
+  },
+  "Động cơ rung mạnh lúc nổ máy.": {
+    "negative": 0.43371023755300236,
+    "neutral": 0.3431464097888014,
+    "positive": 0.22314335265819615
+  }
+}
